@@ -1,0 +1,103 @@
+$color_white:white;
+
+.calculator__container{
+  background: linear-gradient(to right, #F90043 , #E60040);
+  height:650px;
+.calculator__content{
+  margin-top:50px;
+  .calculator__text1{
+    text-align: right;
+    padding: 6px 8px 0 8px;
+    color:white;
+    font-size:30px;
+    font-weight: bold;
+    height:90px;
+    background: linear-gradient(to right, #3D3A53 , #312D46);
+    border-radius:0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border:none;
+}
+.calculator__text1::placeholder {
+  text-align:right;
+  color:white;
+  font-size:30px;
+  font-weight: bold;
+}
+.calculator__text2{
+  text-align: right;
+  height:60px;
+  background: linear-gradient(to right, #3D3A53 , #312D46);
+  border-radius:0;
+  border:none;
+  color:white;
+  font-size:30px;
+  font-weight: bold;
+}
+
+.calculator__text2::placeholder {
+  text-align:left;
+  padding-left:15px;
+  color:white;
+  font-size:30px;
+  font-weight: bold;
+}
+.calculator__operation{
+  height:70px;
+  padding:0;
+  .calculator__buttongrey{
+    background-color: #DCDCE6;
+    width:100%;
+    height:100%;
+    border-radius: 0px;
+    border-top:2px solid $color_white;
+    border-right:2px solid $color_white;
+    border-left:0px solid $color_white;
+    border-bottom:0px solid $color_white;
+    font-size:20px;
+    color:#625D74;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  .buttongrey__lastchild{
+    border-right:0px solid $color_white;
+  }
+  .calculator__number{
+    background-color: #F4F4F9;
+    width:100%;
+    height:100%;
+    border-radius: 0px;
+    border-right:2px solid $color_white;
+    border-bottom:2px solid $color_white;
+    border-left:0px solid $color_white;
+    border-top:0px solid $color_white;
+    font-size:20px;
+    color:#26203A;
+  }
+  .calculator__answer{
+    background-color: #F90043;
+    width:100%;
+    height:100%;
+    border-radius: 0px;
+    border-right:0px solid $color_white;
+    border-bottom:0px solid $color_white;
+    border-bottom-right-radius: 20px;
+    font-size:20px;
+    color:$color_white;
+    font-size:30px;
+    font-weight: bold;
+  }
+  .calculator__number--leftchild{
+    border-bottom-left-radius: 20px;
+  }
+
+}
+}
+}
+
+@media only screen and (max-width: 767px) 
+{
+  .calculator__container{
+    height:1000px;
+}
+}

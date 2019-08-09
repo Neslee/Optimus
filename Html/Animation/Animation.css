@@ -1,0 +1,169 @@
+body
+{
+  animation-name: movingtop;
+  margin-top: 0px;
+}
+hr{
+	margin-left: 5px;
+	width: 70px;
+	background-color: red;
+  height: 1px; 
+  border: 0;
+}
+h1{
+	margin: 4px 2px;
+	animation-name: movingdown;
+	animation-duration: 1.2s;
+}
+h5{
+	animation-name: movingtop;
+	animation-duration: 1.2s;
+	margin: 4px 2px;
+}
+.main::before{
+  content:"";
+  background-image: url('Back.jpg');
+  position: absolute;
+  width:100%;
+  height:100%;
+  z-index: -2;
+  left:0;
+  right:0;
+
+}
+.main::after{
+  position: absolute;
+  content:"";
+  background:linear-gradient(90deg,#0c20ff,#d109ef);
+  width:100%;
+  height:100%;
+  z-index: -1;
+  left:0;
+  right:0;
+  opacity: .85;
+}
+
+.main{
+  animation-name: movingtop;
+  animation-duration: 0s;
+	margin-left: 150px;
+	color:white;
+	font-family: arial;
+}
+
+.para{
+	animation-name: fadeIn;
+	animation-duration: 6s;
+	line-height: 25px;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: purple;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 2px;
+    width:150px;
+    border-radius: 20px;
+    animation-name: getintouch;
+}
+
+.twitter
+{
+	height:30px;
+	width:30px;
+	margin-left: -40px;
+	animation-name: movingtopimage;
+	animation-duration: 1s;
+	
+}
+.github
+{
+	height:30px;
+	width:30px;
+	margin-left: 15px;
+	animation-name: movingtopimage;
+	animation-duration: 2s;
+}
+.linkedin
+{
+	height:30px;
+	width:30px;
+	margin-left: 25px;
+	animation-name: movingtopimage;
+	animation-duration: 2.5s;
+}
+.left
+{
+	margin-left: 50px;
+  margin-top: 100px;
+	float:left;
+}
+.right{
+   margin-top: 100px;
+	float:right;
+}
+.neslee{
+	height:300px;
+	width:300px;
+	margin-top: 5px;
+	margin-left: 70px;
+	margin-right: 350px;
+  border-radius:150px;
+  animation-name: neslee;
+	animation-duration: 1.2s;
+	animation-delay: 0s;
+}
+@keyframes movingdown {
+    from {
+    	transform: translateY(-10px);
+    }
+    to {
+    	transform: translateY(0px);
+    }
+}
+@keyframes movingtop {
+    from {
+    	transform: translateY(10px);
+    }
+    to {
+    	transform: translateY(0px);
+    }
+}
+@keyframes neslee {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+}
+@keyframes getintouch {
+  from {
+    padding: 300px;
+  }
+  to {
+    padding: 250px;
+  
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes movingtopimage {
+    from {
+    	transform: translateY(60px);
+    }
+    to {
+    	transform: translateY(0px);
+    }
+}
+

@@ -1,0 +1,123 @@
+.trending-section{
+    
+    margin-left:40px;
+    margin-right:40px;
+    .head{
+        margin-bottom: 30px;
+    h3{
+        margin-bottom: 15px;
+       font-weight: 600;
+    }
+    .view-all {
+        margin-top:20px;
+        font-size: 18px;
+        color: #ff5d73;
+    }
+}
+
+.item{
+    background-color:white;
+   
+    .item-details{ 
+        .trending__title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 0;
+        }
+      
+        span{
+            color: #ff5d73;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    
+}
+}
+}
+
+@media screen and (max-width:$screen-xs-min)
+{
+    .trending-section{
+        margin-left:40px;
+        margin-right:40px;
+        .head{
+            margin-bottom: 80px;
+            h3
+            {
+               font-size:16px;
+                margin-left: 0px;
+               font-weight: 600;
+            }
+        .view-all {
+            margin-top:20px;
+            font-size: 18px;
+            color: #ff5d73;
+        }
+    }
+    
+    .item{
+        background-color:white;
+       
+        .item-details{ 
+            .image{
+                margin-bottom:20px;
+            }
+            .trending__title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 0;
+            }
+            span{
+                color: #ff5d73;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        
+    }
+    }
+    }
+}
+
+
+@media screen and (max-width:$screen-md-min)
+{
+    .trending-section{
+        margin-left:40px;
+        margin-right:40px;
+        .head{
+            margin-bottom: 80px;
+            h3
+            {
+               font-size:16px;
+                margin-left: 0px;
+               font-weight: 600;
+            }
+        .view-all {
+            margin-top:20px;
+            font-size: 18px;
+            color: #ff5d73;
+        }
+    }
+    
+    .item{
+        background-color:white;
+       
+        .item-details{ 
+            .image{
+                margin-bottom:20px;
+            }
+            .trending__title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 0;
+            }
+            span{
+                color: #ff5d73;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        
+    }
+    }
+    }
+}

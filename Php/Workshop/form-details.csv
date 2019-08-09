@@ -1,0 +1,5 @@
+fullname,email,password,re-password,phone,paddress,laddress,birth_date,gender,company,experience,location,food,tshirt,languages,session,hobbies
+Neslee,nesleepinto@yahoo.in,neslee,neslee,9845471591,Belthangady,Belthangady,09/27/1994 6:06 PM,male,Specbee Consulting Services,fresher,bangalore,nonveg,medium,english,yes,dancing
+Mahesh,mahesh@specbee.com,mahesh,mahesh,9999999999,Mangalore,Mangalore,09/27/1994 6:06 PM,male,Specbee Consulting Services,fresher,bangalore,nonveg,medium,kannada,no,kannada
+kiran,kiran@specbee.com,kiran,kiran,9854647352,Belthangady,Belthangady,09/27/1994 6:06 PM,male,Specbee Consulting Services,intermediate,bangalore,nonveg,large,hindi,yes,kannada
+manju,manju@specbee.com,manju,manju,8745637829,Mangalore,Mangalore,09/27/1994 6:06 PM,male,Specbee Consulting Services,intermediate,bangalore,nonveg,medium,english,no,dancing

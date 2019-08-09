@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+}
+.col-md-12{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.dashboard-header{
+    background-color: #0A0910;  
+    height: 100px;
+    padding-top: 30px;
+    color:white;
+}
+.dashboard-header h3{
+    margin: 0;
+}
+.dashboard-header a{
+    text-align: right;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 40px;
+    color:white;
+    background-color:#FF4000;
+}
+.dashboard-container{
+    padding-top: 40px;
+    height:500px;
+}
+.container-right{
+    padding-top: 40px;
+}
+.profile-image{
+    width: 60%;
+    border-radius: 50%;
+}
+.edit-image{
+    width:10%;
+}
+.name{
+    font-size:25px;
+}
+.email{
+    font-size:25px;
+}
+.gender{
+    font-size:25px;
+}
+.age{
+    font-size:25px;
+}

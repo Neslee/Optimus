@@ -1,0 +1,525 @@
+@import 'owl.carousel.min';
+@import 'bootstrap';
+@import 'bootstrap/_variables';
+@import 'layouts/header.scss';
+@import 'layouts/footer.scss';
+@import 'bootstrap/_glyphicons.scss';
+@import 'owl.carousel.min.scss';
+
+// edu subtitle
+// Author:Megha
+.subtile{
+    font-size: 16px;
+    color: rgb(184, 179, 179);
+}
+.courses{
+    border-radius: 20px;
+    border: 1px solid rgb(172, 127, 4);
+    padding: 7px;
+    background-color: #fff;
+}
+.courses:hover{
+    background-color: rgb(172, 127, 4);
+    color:#fff;
+}
+
+
+// Slider of department
+// Megha
+.home-page-slider{
+   padding-left: 250px;
+   padding-right: 250px;
+   margin-top: 20px;
+  
+    .item {
+       
+        .manegement{
+           width: 80%;
+           height: 50%;
+           margin-top: 20px;
+           background-color: #fff;
+           
+           .icon-m{
+              font-size: 70px;
+              margin-top:30px;
+           }
+           .text{
+                margin-top: 25px;
+               font-size: 17px;
+               font-weight: 900;
+               margin-bottom: 0px;
+           }
+           .number{
+               font-size: 18px;
+               color:rgb(184, 179, 179); 
+           }
+        }
+        .design{
+            margin-top: 10px;
+            width: 80%;
+            height: 50%;
+            
+            background-color: #fff;
+            .icon-m{
+                font-size: 70px;
+                margin-top:30px;
+             }
+        
+        .text{
+            margin-top: 25px;
+           font-size: 17px;
+           font-weight: 900;
+           margin-bottom: 0px;
+       }
+       .number{
+           font-size: 18px;
+           color:rgb(184, 179, 179); 
+       }
+       
+    }
+    }
+}
+
+.home-page-slider{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    .owl-nav{
+        display: block!important; 
+        .owl-prev{
+            position: absolute;
+            top: 50%;
+            left:100px;
+            border-radius: 50%;
+            background-color:rgb(214, 79, 79);
+            span{
+                font-size:40px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;  
+                
+            }
+            &:hover{
+                background-color: rgb(172, 127, 4);
+            }
+        }
+        .owl-next{
+            position: absolute;
+            top:50%;
+            right:100px;
+            border-radius: 50%;
+            span{
+                font-size:40px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;  
+            }
+            &:hover{
+                background-color: rgb(172, 127, 4);
+            }
+        }
+    }
+}
+// view all button
+// sahana
+.btn-view{
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    font-weight: 800;
+    border: 1px solid  rgb(172, 127, 4);
+    border-radius: 20px;
+    background-color: #fff;
+    margin-top: 30px;
+}
+// slider section
+.slider{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    .item{
+        .manegement1{
+            width: 280px;
+            height: 300px;
+            margin-top: 20px;
+            background-color: #fff;
+           
+           
+               .logo-image{
+                   position: absolute;
+                   width:100px;
+                   height: 100px;
+                   top:60px;
+                   left:176px;
+               }
+               .text1{
+                margin-top: 30px;
+               font-size: 18px;
+               font-weight: 900;
+               margin-bottom: 0px;
+           }
+           .number1{
+               font-size: 18px;
+               color:rgb(184, 179, 179); 
+           }
+           
+        }
+        .design1{
+            margin-top: 10px;
+            width: 280px;
+            height: 300px;
+            
+            background-color: #fff;
+            position: relative;
+
+            .logo-image{
+                position: absolute;
+                width:80px;
+                height: 80px;
+                top:100px;
+                left:176px;
+            }
+            .text1{
+             margin-top: 40px;
+            font-size: 18px;
+            font-weight: 900;
+            margin-bottom: 0px;
+        }
+        .number1{
+            font-size: 18px;
+            color:rgb(184, 179, 179); 
+        }
+        
+        }
+    }
+}
+
+.slider{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    
+    .owl-nav{
+        display: block!important; 
+        .owl-prev{
+            position: absolute;
+            top: 50%;
+            left:50px;
+            border-radius: 50%;
+            background-color:rgb(214, 79, 79);
+            span{
+                font-size:40px;
+                border: 1px solid  rgb(172, 127, 4);
+                border-radius: 50%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;  
+            }
+            &:hover{
+                background-color: rgb(172, 127, 4);
+            }
+        }
+        .owl-next{
+            position: absolute;
+            top:50%;
+            right:50px;
+            border-radius: 50%;
+            span{
+                font-size:40px;
+                border: 1px solid  rgb(172, 127, 4);
+                border-radius: 50%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;  
+            }
+            &:hover{
+                background-color: rgb(172, 127, 4);
+            }
+        }
+    }
+}
+
+// 
+
+// aritles of edu
+.art-image{
+    width:350px;
+}
+.heading{
+    font-size: 15px;
+    font-weight: 900;
+}
+.registration{
+    background-color: lightgrey;
+    padding-top: 15px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;  
+}
+
+// help and support
+*{
+    box-sizing: border-box;
+  }
+  .bdr{
+    border:1px solid red;
+  }
+  
+  .download_Edunews_sec{
+    background-image: url('../images/edu-down-img.jpg');
+    width:100%;
+  }
+    .padding_margin_none{
+      padding: 0px;
+      margin:0
+    }
+    
+  
+  
+  .edu_download{
+    float:right;
+    width:100%;
+    padding:10px;
+    padding: 60px 0px;
+    margin-right:100px;
+  
+  }
+  .edu_download_heading{
+    font-size:20px;
+    padding:5px
+  }
+  .edu_download_para{
+    font-size:15px;
+    padding:5px
+  }
+  .edu_download_input{
+    font-size:15px;
+    margin:10px 0px;
+    width:70%;
+    height: 45px;
+}
+
+
+  .edu_download_img1{
+    margin-left:30px;
+    width:150px;
+    height:50px;
+  }
+  .edu_download_img2{
+    margin-right:30px;
+    width:120px;
+    height:50px;
+  }
+  .fafa_style{
+    font-size:20px;
+    color:darkkhaki;
+  }
+  .help_and_support{
+    padding:20px 0px;
+  }
+  .QandA{
+    margin-left:40%;
+  }
+  
+  .institution{
+    margin-right:40%;
+  }
+     
+  
+//   footer section
+
+.foot-row-2{
+    margin-top:30px;
+    .foot-row-2-border{
+        border-right:0.5px solid black;
+        height:70%;
+    ul{
+        li{
+         color:$gray-light;
+        }
+        li:hover{
+            color:$brand-danger;
+           }
+    }
+    .foot-2-last{
+        ul{
+            li{
+                display: inline;
+                padding: 5px;
+            }
+        }
+    }
+}
+.row-2-right{
+    .row-2-right-first{
+        padding-bottom:50px;
+    .form-size{
+        padding:20px 30px;
+        width:100%;
+    }
+    .addon-back{
+        width:60px;
+        background-color: black;
+        color:white;
+    }
+    .addon-back:hover{
+        width:60px;
+        background-color: $brand-danger;
+        color: black;
+    }
+    .fa-footer{
+        font-size:20px;
+    }
+    
+}
+.row-2-right-second{
+    padding-bottom: 30px;
+    ul{
+        li{
+            display: inline;
+        }
+    }
+}
+.row-2-right-third{
+    padding-bottom: 30px;
+    ul{
+        li{
+            display: inline;
+            padding: 10px;
+            a{
+                color:black;
+            }
+        }
+    }
+    .fa-footer1{
+        font-size:24px;
+        color:$gray-light;
+    }
+    .fa-footer1:hover{
+        font-size:24px;
+        color:$brand-danger;
+    }
+}
+
+}
+}
+.foot-row-3{
+    border-top:0.1px solid black;
+    margin:0px 20px;
+    .foot-tag{
+        display: inline-block;
+        color:$gray-light;
+        padding-top: 20px;
+    }
+    .last-list{
+        padding-top:10px;
+    ul{
+          li{
+            display: inline;
+            padding: 10px;
+            margin-right:10px;
+            a{
+                text-decoration: none;
+                color:$gray-light;
+            }
+        }
+    }
+}
+.last-list{
+    ul{
+          li{
+            display: inline;
+            padding: 10px;
+            a:hover{
+                text-decoration: none;
+                color:$brand-danger;
+            }
+        }
+    }
+}
+}
+
+.footer_text{
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+}
+
+.footer-div{
+    color:white;
+    background-color: rgb(39, 39, 95);
+}
+
+@media(max-width:767px){
+
+
+
+    .last-list{
+        padding-top:10px;
+    ul{
+          li{
+            display: inline;
+            padding: 10px;
+            
+            a{
+                text-decoration: none;
+                color:$gray-light;
+            }
+        }
+    }
+}
+}
+
+// footer ends
+
+
+  @media(max-width:767px){
+.home-page-slider{
+    padding-left: 50px;
+        padding-right: 50px;
+}
+
+    .slider{
+        padding-left: 50px;
+        padding-right: 50px;
+        }
+    
+
+    .download_Edunews_sec{
+      background-image:none;
+    }
+    .edu_download{
+      margin:auto;
+    }
+  
+    .edu_download_img1{
+      margin-left:0;
+      width:120px;
+      height:30px;
+    }
+    .edu_download_img2{
+      margin-right:0;
+      width:120px;
+      height:30px;
+    }
+    
+    .QandA{
+      margin:auto;
+      padding:10px 0px;
+    }
+    
+    .institution{
+      margin:auto;
+      padding:10px 0px;
+    }
+  }
+  
+

@@ -1,0 +1,87 @@
+.champ_hide{
+  margin-top:10px;
+}
+.champ_show{
+  margin-top:10px;
+}
+.champ_show{
+display:none;
+}
+.champ_demo{
+  margin-top:60px;
+}
+.toggle_text{
+  margin-top:20px;
+}
+.div_color1{
+background-color:red;
+height:100px;
+margin-top:20px;
+display:none;
+}
+.div_color2{
+background-color:yellow;
+height:100px;
+margin-top:20px;
+display:none;
+}
+.div_color3{
+background-color:green;
+height:100px;
+margin-top:20px;
+display:none;
+}
+.fadein_button{
+  margin-top:20px;
+}
+.fadeout_button{
+  margin-top:20px;
+  display:none;
+}
+.slider{
+  margin-top:20px;
+  font-size:20px;
+  border:2px solid red;
+  background-color:yellow;
+}
+.specbee{
+  display:none;
+  background-color:green;
+  color:white;
+}
+.animation{
+  margin-top:20px;
+}
+.animation-text{
+background:red;
+color:white;
+height:100px;
+width:100px;
+position:absolute;
+}
+.slide{
+  margin-top:20px;
+  font-size:16px;
+}
+.slide_text{
+  margin-top:10px;
+  color:white;
+  background-color: #555;
+  padding: 50px;
+  display:none;
+}
+.callback{
+  font-size:18px;
+  margin-top:100px;
+}
+.callback_text{
+  margin-top:10px;
+}
+.chaining{
+  font-size:18px;
+  margin-top:100px;
+}
+.append{
+  margin-top:30px;
+  font-size:18px;
+}

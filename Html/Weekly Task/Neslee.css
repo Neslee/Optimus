@@ -1,0 +1,120 @@
+
+body{
+	background-color: #696969;
+	height:100%;
+	width:100%;
+	font-family: Georgia;
+}
+.header{
+	background-color: #66ff66;
+	height:10px;
+	margin-top: -7px;
+	margin-left: -7px;
+	margin-right: 20px;
+	width:100%;
+}
+.heading{
+	margin-left: 50px;
+	margin-top:60px;
+	float:left;
+}
+.menus{
+	float:right;
+	font-size:18px;
+	margin-top: 65px;
+	margin-right:10px;
+}
+.moderist{
+	padding-left: 50px;
+	font-size: 36px;
+	color:white;
+	margin: 2px 5px;
+}
+.psd{
+	margin: 2px 5px;
+	margin-top: -20px;
+	padding-left: 55px;
+	font-size: 15px;
+	color:white;
+}
+
+ul{ 
+    margin-top: 50px;
+    height: 1em;
+    width: 100%;
+} 
+
+nav ul{
+    margin: 0px;
+    padding: 16px;
+
+}
+
+nav ul li{
+    color:white;
+    display: inline-block;
+    list-style-type: none;
+    margin-left:50px;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+
+.links{
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px;
+   color: white;
+}
+
+a:hover{
+	background-color:#66ff66;
+}
+
+.left
+{
+	margin-left: 50px;
+	float:left;
+}
+.right{
+	float:right;
+}
+
+.neslee{
+	height:320px;
+	width:320px;
+	margin-top: 80px;
+	margin-right: 220px;
+    border-radius:250px;
+    border:20px solid #808080;
+}
+
+h1{
+	margin-top: 120px;
+	margin-left: 150px;
+	color:white;
+	font-size: 45px;
+}
+
+.para{
+	margin-top: 10px;
+	margin-left: 150px;
+	color:white;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.button {
+    background-color: #66ff66;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 150px;
+    width:170px;
+    border-radius: 20px;
+}

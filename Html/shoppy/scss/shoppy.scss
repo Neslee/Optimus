@@ -1,0 +1,29 @@
+@import 'bootstrap/_variables.scss';
+@import 'layouts/header.scss';
+@import 'layouts/footer.scss';
+@import 'layouts/slider.scss';
+@import 'layouts/offer.scss';
+@import 'layouts/deal.scss';
+@import 'layouts/arrival.scss';
+@import 'layouts/trending.scss';
+@import 'layouts/brand.scss';
+@import 'owl.carousel.min.scss';
+
+
+$max-width:100%;
+$white-color:white;
+$value_none:0;
+$extra-small:450px;
+
+#owl-demo .item{
+    margin: 3px;
+  }
+  #owl-demo .item img{
+    display: inline-block;
+    width: 450px;
+    height:80px;
+  }
+
+  body{
+    background-color: #f9f9f9;
+  }

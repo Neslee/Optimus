@@ -1,0 +1,221 @@
+.pagemarkup-left-content{
+    padding-right:40px;
+    padding-bottom:30px;
+}
+.page_markup_header{
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    margin-bottom:25px;
+    margin-top:0;
+}
+.pagemarkup-left-content .image{
+    height:300px;
+}
+.pagemarkup-left-content span{
+    color: #696969;
+    word-wrap: break-word;
+    font-family: 'Lora', serif;
+    line-height: 2;
+    font-size: 14px;
+}
+.pagemarkup-left-content p{
+    color: #696969;
+    word-wrap: break-word;
+    font-family: 'Lora', serif;
+    line-height: 2;
+    font-size: 14px;
+    margin-top:20px;
+}
+strong {
+    font-weight: 700;
+}
+.pagemarkup-left-content h1{
+    font-size: 28px;
+    color: #696969;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.pagemarkup-left-content h2{
+    font-size: 24px;
+    color: #696969;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 0;
+}
+.pagemarkup-left-content h3{
+    font-size: 20px;
+    color: #696969;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 0;
+}
+.pagemarkup-left-content h4{
+    font-size: 16px;
+    color: #696969;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 0;
+}
+.pagemarkup-left-content h5{
+    font-size: 14px;
+    color: #696969;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 0;
+}
+.pagemarkup-left-content h6{
+    font-size: 13px;
+    color: #696969;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 0;
+}
+.pagemarkup-left-content blockquote{
+    font-style: italic;
+    line-height: 1.6;
+}
+.block_image{
+    width:40px;
+    height:50px;
+    float:left;
+}
+.pagemarkup-left-content  .hungry{
+    padding: 10px 50px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+    font-style: italic;
+    line-height: 1.6;
+}
+.pagemarkup-left-content .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.pagemarkup-left-content tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.pagemarkup-left-content tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.pagemarkup-left-content a {
+    color: #393939;
+    text-decoration: none;
+}
+.pagemarkup-left-content a:hover {
+    color: #a161bf;
+    text-decoration: none;
+}
+.pagemarkup-left-content li{
+    color: #696969;
+    font-family: 'Lora', serif;
+    line-height: 2;
+    font-size: 14px;
+}
+.comment-form input[type="text"] {
+    border: 1px solid #eeeeee;
+    border-radius: 0;
+    height: 35px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    width: 100%;
+}
+textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    margin: 0;
+    width:100%;
+    border: 1px solid #eeeeee;
+}
+input[type=submit]:hover, .comment-form #submit:hover {
+    background: #a161bf;
+    color: #fff;
+}
+.comment-form .submit {
+    height: 35px;
+    background: #f2f2f2;
+    border: 0;
+    border-radius: 0;
+    padding: 0 80px;
+    text-transform: uppercase;
+}
+.clearing-left-content{
+    margin:0;
+    padding-bottom:30px;
+}
+.clearing_header{
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    margin-bottom:25px;
+    margin-top:0;
+}
+.clearing-left-content p{
+    color: #696969;
+    word-wrap: break-word;
+    font-family: 'Lora', serif;
+    line-height: 2;
+    font-size: 14px;
+    margin-top:20px;
+    padding-left:20px;
+}
+.clearing-left-content .image{
+    padding-left:20px;
+}
+.about-left-content{
+    margin:0;
+    padding-bottom:30px;
+}
+.about_header{
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    margin-bottom:25px;
+    margin-top:0;
+}
+.about-left-content p{
+    color: #696969;
+    word-wrap: break-word;
+    font-family: 'Lora', serif;
+    line-height: 2;
+    font-size: 14px;
+    margin-top:20px;
+    padding-left:20px;
+}
+.about-left-content h2{
+    padding-left:20px;
+    font-size: 24px;
+    color: #696969;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 0;
+}
+.about-left-content  ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #696969;
+    word-wrap: break-word;
+    font-family: 'Lora', serif;
+    line-height: 2;
+    font-size: 14px;
+}
+.about-left-content a {
+    color: #393939;
+    text-decoration: none;
+}
+.about-left-content a:hover {
+    color: #a161bf;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+

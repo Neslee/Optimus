@@ -1,0 +1,932 @@
+body, html {
+  margin: 0;
+  padding: 0; }
+
+.header {
+  margin: 20px 0;
+  height: 80px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #544c4c;
+  font-weight: 500; }
+
+.header .logo {
+  width: 250px;
+  float: left;
+  margin: 0 4px;
+  animation-name: specbee;
+  animation-duration: 1.2s; }
+
+.nav {
+  float: left;
+  padding-left: 90px;
+  margin-top: -4.5px; }
+
+.nav ul {
+  margin: 0;
+  padding-top: 5px; }
+
+.nav li {
+  display: inline-block;
+  padding: 1rem; }
+
+.nav a {
+  text-decoration: none;
+  padding: 0.2rem;
+  color: #3a1717; }
+
+.nav li:last-child a {
+  background-color: #040404c7;
+  color: white;
+  padding: 15px 22px;
+  font-weight: bold;
+  border-radius: 4px; }
+
+.nav i {
+  border: 1px solid #544c4c;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  margin: 3px; }
+
+.down {
+  transform: rotate(30deg);
+  -webkit-transform: rotate(45deg); }
+
+.cover-video {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 550px;
+  width: 100%;
+  top: 0px; }
+
+.cover-video .video {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  background-color: black; }
+
+.cover-video .video-text {
+  position: absolute;
+  font-family: sans-serif;
+  left: 30%;
+  top: 50px;
+  tranform: translateX(-50px);
+  text-align: center;
+  line-height: 10px; }
+
+.cover-video h1 {
+  color: red;
+  font-size: 45px;
+  font-weight: bold; }
+
+.cover-video h3 {
+  color: red;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 30px; }
+
+.cover-content {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 550px;
+  line-height: 12px; }
+
+.cover-content h2 {
+  color: #080808e6;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: sans-serif; }
+
+.cover-content h3 {
+  color: #544c4cb8;
+  font-size: 22px;
+  font-family: sans-serif; }
+
+.cover-content .left .video {
+  position: absolute;
+  float: left;
+  left: 100px;
+  top: 130px;
+  width: 600px;
+  height: 350px;
+  background-color: black;
+  animation-name: leftvideo;
+  animation-duration: 0.5s; }
+
+.cover-content .right {
+  position: absolute;
+  float: right;
+  left: 800px;
+  top: 130px;
+  line-height: 30px;
+  animation-name: rightpara;
+  animation-duration: 0.5s; }
+
+.cover-content .right h2 {
+  color: #433f3f;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: sans-serif; }
+
+.cover-content .right p {
+  color: #271c1ccf;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: sans-serif; }
+
+.cover-content button {
+  background-color: #040404c7;
+  padding: 15px 22px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #544c4c; }
+
+.benifits {
+  position: relative;
+  height: 950px;
+  width: 100%; }
+
+.benifits .image {
+  position: absolute;
+  width: 100%;
+  height: 500px; }
+
+.benifits .image-text {
+  position: absolute;
+  left: 32%;
+  top: 35px;
+  color: white;
+  line-height: 5px;
+  text-align: center; }
+
+.benifits .image-text h2 {
+  color: #191818d6;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: sans-serif; }
+
+.benifits .image-text h3 {
+  color: #544c4cb8;
+  font-size: 20px;
+  font-family: sans-serif; }
+
+.benifits .left {
+  font-family: sans-serif;
+  position: relative;
+  height: 450px;
+  width: 330px;
+  float: left;
+  left: 90px;
+  top: 180px;
+  background-color: #eceaea;
+  padding: 5px 20px;
+  animation-name: leftvideo;
+  animation-duration: 0.5s;
+  border-left: 2px solid #C0C0C0;
+  border-top: 2px solid #C0C0C0; }
+
+.benifits .left .image {
+  position: absolute;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  left: 110px;
+  top: 40px; }
+
+.benifits .left span {
+  font-family: sans-serif;
+  font-size: 23px; }
+
+.benifits .center span {
+  font-family: sans-serif;
+  font-size: 23px; }
+
+.benifits .right span {
+  font-family: sans-serif;
+  font-size: 23px; }
+
+.benifits .left .image:hover {
+  animation-name: benifitszoom;
+  animation-duration: 0.5s; }
+
+.benifits .center .image:hover {
+  animation-name: benifitszoom;
+  animation-duration: 0.5s; }
+
+.benifits .right .image:hover {
+  animation-name: benifitszoom;
+  animation-duration: 0.5s; }
+
+.benifits .left .para {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  font-size: 18px;
+  color: #544c4c;
+  line-height: 25px; }
+
+.benifit-vl1 {
+  position: absolute;
+  left: 360px;
+  top: 80px;
+  border-left: 2px solid #C0C0C0;
+  height: 300px; }
+
+.benifit-vl2 {
+  position: absolute;
+  left: 355px;
+  top: 80px;
+  border-left: 2px solid #C0C0C0;
+  height: 300px; }
+
+.benifits .center {
+  position: relative;
+  height: 450px;
+  width: 330px;
+  border-top: 2px solid #C0C0C0;
+  float: left;
+  font-family: sans-serif;
+  left: 90px;
+  top: 180px;
+  background-color: #eceaea;
+  padding: 5px 20px;
+  animation-name: leftvideo;
+  animation-duration: 0.5s; }
+
+.benifits .center .image {
+  position: absolute;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  left: 110px;
+  top: 40px; }
+
+.benifits .center .para {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  font-size: 18px;
+  color: #544c4c;
+  line-height: 25px; }
+
+.benifits .right {
+  position: relative;
+  height: 450px;
+  width: 330px;
+  font-family: sans-serif;
+  border-right: 2px solid #C0C0C0;
+  border-top: 2px solid #C0C0C0;
+  float: left;
+  left: 90px;
+  top: 180px;
+  background-color: #eceaea;
+  padding: 5px 20px;
+  animation-name: leftvideo;
+  animation-duration: 0.5s; }
+
+.benifits .right .image {
+  position: absolute;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  left: 110px;
+  top: 40px;
+  text-align: justify; }
+
+.benifits .right .para {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  font-size: 18px;
+  color: #544c4c;
+  line-height: 25px; }
+
+.benifits .bottom {
+  position: relative;
+  height: 200px;
+  width: 1070px;
+  font-family: sans-serif;
+  border: 2px solid #C0C0C0;
+  background-color: #eceaea;
+  float: left;
+  left: 90px;
+  top: 180px;
+  padding: 5px 20px;
+  animation-name: rightpara;
+  animation-duration: 0.5s; }
+
+.benifits .bottom .para1 {
+  position: absolute;
+  top: 40px;
+  left: 120px;
+  color: #544c4c; }
+
+.benifits .bottom .para2 {
+  position: absolute;
+  top: 40px;
+  left: 460px;
+  color: #544c4c; }
+
+.benifits .bottom .para3 {
+  position: absolute;
+  top: 40px;
+  left: 860px;
+  color: #544c4c; }
+
+.benifits .bottom .para4 {
+  position: absolute;
+  top: 100px;
+  left: 120px;
+  color: #544c4c; }
+
+.benifits .bottom .para5 {
+  position: absolute;
+  top: 100px;
+  left: 530px;
+  color: #544c4c; }
+
+.benifits .bottom .para6 {
+  position: absolute;
+  top: 100px;
+  left: 860px;
+  color: #544c4c; }
+
+.container {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  font-family: sans-serif; }
+
+.container .image {
+  width: 100%;
+  height: 500px; }
+
+.container h2 {
+  color: #1a1a1a;
+  font-size: 35px; }
+
+.container h3 {
+  position: absolute;
+  color: #1a1a1ac7;
+  font-size: 20px;
+  top: 20px;
+  left: 37%;
+  font-weight: normal;
+  font-family: sans-serif; }
+
+.container .conatiner-text {
+  position: absolute;
+  top: 150px;
+  right: 160px;
+  background-color: white;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 25px;
+  animation-name: rightpara;
+  animation-duration: 0.5s; }
+
+.clients {
+  position: relative;
+  height: 450px;
+  font-family: sans-serif; }
+
+.clients h2 {
+  color: #1a1a1a;
+  font-size: 35px; }
+
+.clients h3 {
+  position: absolute;
+  color: #1a1a1ac7;
+  font-size: 20px;
+  top: 21px;
+  left: 39%;
+  font-weight: normal;
+  font-family: sans-serif; }
+
+.clients img {
+  padding-right: 20px;
+  padding-bottom: 20px; }
+
+.clients img:hover {
+  animation-name: clientzoom;
+  animation-duration: 0.5s; }
+
+.vl1 {
+  position: absolute;
+  left: 270px;
+  border-left: 2px solid #C0C0C0;
+  height: 275px; }
+
+.vl2 {
+  position: absolute;
+  left: 550px;
+  border-left: 2px solid #C0C0C0;
+  height: 275px; }
+
+.vl3 {
+  position: absolute;
+  left: 825px;
+  border-left: 2px solid #C0C0C0;
+  height: 275px; }
+
+hr {
+  border: 1px solid #C0C0C0; }
+
+.clients .row1 {
+  position: absolute;
+  top: 130px;
+  left: 90px; }
+
+.clients .row2 {
+  position: absolute;
+  top: 240px;
+  left: 90px; }
+
+.clients .row3 {
+  position: absolute;
+  top: 350px;
+  left: 90px; }
+
+.testimonial {
+  height: 950px;
+  position: relative;
+  font-family: sans-serif; }
+
+.testimonial-container {
+  position: absolute; }
+
+.testimonial h2 {
+  color: #1a1a1a;
+  font-size: 35px; }
+
+.testimonial h3 {
+  position: absolute;
+  color: #1a1a1ac7;
+  font-size: 20px;
+  top: 23px;
+  left: 32%;
+  font-weight: normal;
+  font-family: sans-serif; }
+
+.testimonial .testimonial1 {
+  border: 2px solid #C0C0C0;
+  width: 520px;
+  height: 430px;
+  position: relative;
+  top: 20px;
+  left: 120px;
+  line-height: 24px; }
+
+.testimonial1 .video {
+  width: 100%;
+  height: 50%; }
+
+.testimonial1 .image {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  left: 20px;
+  top: 300px; }
+
+.testimonial1 .para1 {
+  position: absolute;
+  left: 150px;
+  top: 280px; }
+
+.testimonial1 .learn {
+  position: absolute;
+  left: 220px;
+  top: 100px; }
+
+.testimonial .testimonial2 {
+  border: 2px solid #C0C0C0;
+  width: 520px;
+  position: relative;
+  left: 120px;
+  top: 30px;
+  height: 230px;
+  line-height: 24px; }
+
+.testimonial2 .image {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  left: 20px;
+  top: 100px; }
+
+.testimonial2 .para1 {
+  position: absolute;
+  left: 150px;
+  top: 100px; }
+
+.testimonial3 .learn {
+  position: absolute;
+  left: 230px;
+  top: 100px; }
+
+.testimonial3 .para1 {
+  position: absolute;
+  left: 150px;
+  top: 100px; }
+
+.testimonial2 .learn {
+  position: absolute;
+  left: 230px;
+  top: 100px; }
+
+.testimonial4 .learn {
+  position: absolute;
+  left: 380px;
+  top: 380px; }
+
+.testimonial .testimonial3 {
+  border: 2px solid #C0C0C0;
+  width: 500px;
+  height: 250px;
+  position: relative;
+  top: -648px;
+  left: 670px;
+  line-height: 24px; }
+
+.testimonial3 .image {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  left: 20px;
+  top: 120px; }
+
+.testimonial .testimonial4 {
+  border: 2px solid #C0C0C0;
+  width: 500px;
+  height: 410px;
+  position: relative;
+  top: -640px;
+  left: 670px;
+  line-height: 24px; }
+
+.testimonial4 .image {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  left: 0px;
+  top: 0px; }
+
+.testimonial button {
+  position: absolute;
+  top: 860px;
+  left: 550px;
+  border-style: solid;
+  border-color: #544c4c;
+  background-color: white;
+  color: #544c4c;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  width: 180px;
+  border-radius: 5px; }
+
+.getintouch {
+  position: relative;
+  background-color: #bfbfbf;
+  height: 200px;
+  font-family: sans-serif; }
+
+.getintouch .get {
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #544c4c; }
+
+.getintouch .g-mail {
+  position: absolute;
+  top: 35px;
+  left: 630px;
+  height: 40px;
+  width: 40px; }
+
+.getintouch .gmail {
+  position: absolute;
+  top: 110px;
+  left: 120px;
+  height: 40px;
+  width: 40px; }
+
+.getintouch .phone {
+  position: absolute;
+  top: 35px;
+  left: 350px;
+  height: 35px;
+  width: 40px; }
+
+.getintouch .number {
+  position: absolute;
+  top: 20px;
+  left: 320px;
+  font-size: 23px;
+  padding-left: 70px;
+  padding-right: 30px;
+  color: #544c4c; }
+
+.getintouch .mail {
+  position: absolute;
+  top: 20px;
+  left: 600px;
+  font-size: 23px;
+  padding-left: 80px;
+  color: #544c4c; }
+
+.getintouch .extra {
+  position: absolute;
+  top: 20px;
+  left: 940px;
+  font-size: 23px;
+  color: #bfbfbf;
+  padding-left: 30px; }
+
+.getintouch .ask {
+  font-weight: bold;
+  position: absolute;
+  top: 30px;
+  left: 970px;
+  padding-left: 30px;
+  color: #544c4c;
+  border-style: solid;
+  border-color: #544c4c;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  width: 180px;
+  background-color: #bfbfbf; }
+
+.getintouch .newsletter {
+  position: absolute;
+  font-weight: normal;
+  top: 100px;
+  left: 170px;
+  color: #544c4c; }
+
+.getintouch .subscribe {
+  position: absolute;
+  top: 80px;
+  left: 800px; }
+
+.getintouch h3:not(:first-child) {
+  border-left: 2px solid #544c4c; }
+
+.getintouch h3:last-child {
+  border-left: 2px solid #544c4c; }
+
+.input {
+  position: absolute;
+  height: 50px;
+  width: 430px;
+  font-size: 14pt;
+  left: 540px;
+  top: 100px; }
+
+.getintouch .subscribe {
+  position: absolute;
+  top: 100px;
+  left: 970px;
+  padding-left: 30px;
+  border-style: solid;
+  border-color: black;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  width: 180px;
+  height: 50px; }
+
+.footer {
+  position: relative;
+  height: 630px;
+  background-color: #262626;
+  color: white;
+  font-size: 15px; }
+
+.footer .footer-container {
+  position: absolute;
+  top: 20px;
+  height: 580px;
+  left: 100px;
+  width: 1100px;
+  color: #d2c7c7;
+  font-size: 15px;
+  font-family: sans-serif; }
+
+.support {
+  font-size: 18px;
+  position: absolute;
+  left: 15px;
+  color: #d2c7c7; }
+
+.footer-container h4:not(:first-child) {
+  border-left: 2px solid white; }
+
+.delhi {
+  position: absolute;
+  font-size: 16px;
+  left: 20px;
+  top: 60px; }
+
+.mumbai {
+  position: absolute;
+  font-size: 16px;
+  top: 55px;
+  left: 100px;
+  padding-left: 15px; }
+
+.kolkata {
+  position: absolute;
+  font-size: 16px;
+  top: 55px;
+  left: 220px;
+  padding-left: 20px; }
+
+.hyder {
+  position: absolute;
+  font-size: 16px;
+  top: 55px;
+  left: 350px;
+  padding-left: 20px; }
+
+.bangalore {
+  position: absolute;
+  font-size: 16px;
+  top: 55px;
+  left: 480px;
+  padding-left: 20px; }
+
+.chennai {
+  position: absolute;
+  font-size: 16px;
+  top: 55px;
+  left: 640px;
+  padding-left: 20px; }
+
+.guwahi {
+  position: absolute;
+  font-size: 16px;
+  top: 55px;
+  left: 780px;
+  padding-left: 20px; }
+
+.changarh {
+  position: absolute;
+  font-size: 16px;
+  top: 55px;
+  left: 900px;
+  padding-left: 20px; }
+
+.srinagar {
+  position: absolute;
+  font-size: 16px;
+  top: 95px;
+  left: 20px;
+  padding-left: 20px; }
+
+.ranchi {
+  position: absolute;
+  font-size: 16px;
+  top: 95px;
+  left: 150px;
+  padding-left: 20px; }
+
+.kochi {
+  position: absolute;
+  font-size: 16px;
+  top: 95px;
+  left: 280px;
+  padding-left: 20px; }
+
+.allahbad {
+  position: absolute;
+  font-size: 16px;
+  top: 95px;
+  left: 400px;
+  padding-left: 20px; }
+
+.dehra {
+  position: absolute;
+  font-size: 16px;
+  top: 95px;
+  left: 550px;
+  padding-left: 20px; }
+
+.lucknow {
+  position: absolute;
+  font-size: 16px;
+  top: 95px;
+  left: 700px;
+  padding-left: 20px; }
+
+.pondi {
+  position: absolute;
+  font-size: 16px;
+  top: 95px;
+  left: 850px;
+  padding-left: 20px; }
+
+.bottom1 {
+  position: absolute;
+  left: 15px;
+  top: 150px; }
+
+.solutions {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 24px; }
+
+.bottom2 {
+  position: absolute;
+  left: 200px;
+  top: 150px; }
+
+.aboutus {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 24px; }
+
+.bottom3 {
+  position: absolute;
+  left: 380px;
+  top: 150px; }
+
+.customer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 24px; }
+
+.bottom4 {
+  position: absolute;
+  left: 600px;
+  top: 150px; }
+
+.supports {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 24px; }
+
+.bottom5 {
+  position: absolute;
+  left: 800px;
+  top: 150px; }
+
+.facebook {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px; }
+
+.copyright {
+  position: absolute;
+  left: 340px;
+  top: 550px; }
+
+@keyframes specbee {
+  from {
+    transform: scale(1.3); }
+  to {
+    transform: scale(1); } }
+@keyframes leftvideo {
+  from {
+    transform: translateX(-1000px); }
+  to {
+    transform: translateX(0px); } }
+@keyframes rightpara {
+  from {
+    transform: translateX(1000px); }
+  to {
+    transform: translateX(0px); } }
+@keyframes clientzoom {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+@keyframes benifitszoom {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+
+/*# sourceMappingURL=specbee.css.map */

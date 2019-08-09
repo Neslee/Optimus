@@ -1,0 +1,50 @@
+.offer-section{
+    margin-top:20px;
+    margin-bottom:20px;
+    max-width: 100%;
+    .image{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:$screen-xs-min)
+{
+    .offer-section{
+        margin-top:20px;
+        margin-bottom:0px;
+        .image{
+            max-width: 100%;
+            height: auto;
+            margin-bottom:20px;
+        }
+    }
+}
+
+@media screen and (max-width:$screen-sm-min)
+{
+    .offer-section{
+        margin-top:20px;
+        margin-bottom:0px;
+        max-width: 100%;
+        .image{
+            max-width: 100%;
+            height: auto;
+            margin-bottom:40px;
+        }
+    }
+}
+
+@media screen and (max-width:$screen-md-min)
+{
+    .offer-section{
+        margin-top:20px;
+        margin-bottom:0px;
+        max-width: 100%;
+        .image{
+            max-width: 100%;
+            height: auto;
+            margin-bottom:40px;
+        }
+    }
+}

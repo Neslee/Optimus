@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String Functions</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/array.css">
+</head>
+
+<body>
+
+    <div class="col-md-12">
+        <div class="col-md-12">
+            <h3 class="text-center">
+                <span class="label label-info">String Properties</span>
+            </h3>
+        </div>
+
+        <!-- String Length -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Length</h3>
+            <input type="text" class="form-control text1" id="len__input" placeholder="String Length Input">
+            <input type="text" class="form-control text2" id="len__output" placeholder="String Length Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__len__fun()">Submit</button>
+        </div>
+        <!-- End of String Length -->
+
+    </div>
+
+    <div class="col-md-12" style="margin-bottom:100px;">
+        <div class="col-md-12">
+            <h3 class="text-center">
+                <span class="label label-info">String Methods</span>
+            </h3>
+        </div>
+
+        <!-- String fromCharCode -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String fromCharCode</h3>
+            <input type="text" class="form-control text1" id="string__fromcharcode__input" placeholder="String fromCharCode Input">
+            <input type="text" class="form-control text2" id="string__fromcharcode__output" placeholder="String fromCharCode Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__fromcharcode__fun()">Submit</button>
+        </div>
+        <!-- End of String fromCharCode -->
+
+        <!-- String fromCodePoint -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String fromCodePoint</h3>
+            <input type="text" class="form-control text1" id="string__fromcodepoint__input" placeholder="String fromCodePoint Input - 45 ">
+            <input type="text" class="form-control text2" id="string__fromcodepoint__output" placeholder="String fromCodePoint Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__fromcodepoint__fun()">Submit</button>
+        </div>
+        <!-- End of String fromCodePoint -->
+
+        <!-- String charAt -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String CharAt</h3>
+            <input type="text" class="form-control text1" id="string__charat__input" placeholder="String charAt Input">
+            <input type="text" class="form-control text1" id="string__charat__input1" placeholder="Enter Position">
+            <input type="text" class="form-control text2" id="string__charat__output" placeholder="String charAt Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__charat__fun()">Submit</button>
+        </div>
+        <!-- End of String charAt -->
+
+        <!-- String charCodeAt -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String charCodeAt</h3>
+            <input type="text" class="form-control text1" id="string__charcodeat__input" placeholder="String charCodeAt Input">
+            <input type="text" class="form-control text1" id="string__charcodeat__input1" placeholder="Enter Position">
+            <input type="text" class="form-control text2" id="string__charcodeat__output" placeholder="String charCodeAt Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__charcodeat__fun()">Submit</button>
+        </div>
+        <!-- End of String charCodeAt -->
+
+        <!-- String codePointAt -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String codePointAt</h3>
+            <input type="text" class="form-control text1" id="string__codepointat__input" placeholder="String codePointAt Input">
+            <input type="text" class="form-control text1" id="string__codepointat__input1" placeholder="Enter Position">
+            <input type="text" class="form-control text2" id="string__codepointat__output" placeholder="String codePointAt Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__codepointat__fun()">Submit</button>
+        </div>
+        <!-- End of String codePointAt -->
+
+        <!-- String endsWith -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String EndsWith</h3>
+            <input type="text" class="form-control text1" id="string__endswith__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__endswith__input1" placeholder="Enter Last Character">
+            <input type="text" class="form-control text2" id="string__endswith__output" placeholder="Concat Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__endswith__fun()">Submit</button>
+        </div>
+        <!-- End of String endsWith -->
+
+        <!-- String includes -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Includes</h3>
+            <input type="text" class="form-control text1" id="string__includes__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__includes__input1" placeholder="Enter String to Match">
+            <input type="text" class="form-control text2" id="string__includes__output" placeholder="Includes Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__includes__fun()">Submit</button>
+        </div>
+        <!-- End of String includes -->
+
+        <!-- String indexOf -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String IndexOf</h3>
+            <input type="text" class="form-control text1" id="string__indexof__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__indexof__input1" placeholder="Enter the Position">
+            <input type="text" class="form-control text2" id="string__indexof__output" placeholder="Indexof Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__indexof__fun()">Submit</button>
+        </div>
+        <!-- End of String includes -->
+
+        <!-- String LastIndexOf -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String LastIndexOf</h3>
+            <input type="text" class="form-control text1" id="string__lastindexof__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__lastindexof__input1" placeholder="Enter the Position">
+            <input type="text" class="form-control text2" id="string__lastindexof__output" placeholder="LastIndexof Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__lastindexof__fun()">Submit</button>
+        </div>
+        <!-- End of String LastIndexOf -->
+
+        <!-- String Match -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Match</h3>
+            <input type="text" class="form-control text1" id="string__match__input" placeholder="Enter First String">
+            <input type="text" class="form-control text1" id="string__match__input1" placeholder="Enter Second String">
+            <input type="text" class="form-control text2" id="string__match__output" placeholder="Match Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__match__fun()">Submit</button>
+        </div>
+        <!-- End of String Match -->
+
+
+        <!-- String PadEnd -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String PadEnd</h3>
+            <input type="text" class="form-control text1" id="string__padend__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__padend__input1" placeholder="Enter Padding Value">
+            <input type="text" class="form-control text1" id="string__padend__input2" placeholder="Enter Symbol to Pad">
+            <input type="text" class="form-control text2" id="string__padend__output" placeholder="PadEnd Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__padend__fun()">Submit</button>
+        </div>
+        <!-- End of String PadEnd -->
+
+        <!-- String Repeat -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Repeat</h3>
+            <input type="text" class="form-control text1" id="string__repeat__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__repeat__input1" placeholder="Enter Repeat Time">
+            <input type="text" class="form-control text2" id="string__repeat__output" placeholder="Repeat Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__repeat__fun()">Submit</button>
+        </div>
+        <!-- End of String Repeat -->
+
+        <!-- String Replace -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Replace</h3>
+            <input type="text" class="form-control text1" id="string__replace__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__replace__input1" placeholder="Enter String To Replace">
+            <input type="text" class="form-control text1" id="string__replace__input2" placeholder="Enter New String">
+            <input type="text" class="form-control text2" id="string__replace__output" placeholder="Replace Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__replace__fun()">Submit</button>
+        </div>
+        <!-- End of String Replace -->
+
+        <!-- String Search -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Search</h3>
+            <input type="text" class="form-control text1" id="string__search__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__search__input1" placeholder="Enter String To Search">
+            <input type="text" class="form-control text2" id="string__search__output" placeholder="Search Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__search__fun()">Submit</button>
+        </div>
+        <!-- End of String Search -->
+
+        <!-- String Slice -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Slice</h3>
+            <input type="text" class="form-control text1" id="string__slice__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__slice__input1" placeholder="Enter Start Point">
+            <input type="text" class="form-control text1" id="string__slice__input2" placeholder="Enter End Point">
+            <input type="text" class="form-control text2" id="string__slice__output" placeholder="Slice Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__slice__fun()">Submit</button>
+        </div>
+        <!-- End of String Slice -->
+
+        <!-- String Split -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Split</h3>
+            <input type="text" class="form-control text1" id="string__split__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__split__input1" placeholder="Enter Character To Split">
+            <input type="text" class="form-control text2" id="string__split__output" placeholder="Split Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__split__fun()">Submit</button>
+        </div>
+        <!-- End of String Split -->
+
+
+         <!-- String StartsWith -->
+         <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String StartsWith</h3>
+            <input type="text" class="form-control text1" id="string__startswith__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__startswith__input1" placeholder="Enter StartsWith String">
+            <input type="text" class="form-control text2" id="string__startswith__output" placeholder="StartsWith Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__startswith__fun()">Submit</button>
+        </div>
+        <!-- End of String StartsWith -->
+
+        <!-- String SubString -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String SubString</h3>
+            <input type="text" class="form-control text1" id="string__substring__input" placeholder="Enter String">
+            <input type="text" class="form-control text1" id="string__substring__input1" placeholder="Enter First Point">
+            <input type="text" class="form-control text1" id="string__substring__input2" placeholder="Enter Second Point">
+            <input type="text" class="form-control text2" id="string__substring__output" placeholder="SubString Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__substring__fun()">Submit</button>
+        </div>
+        <!-- End of String SubString -->
+
+         <!-- String toLocaleLowerCase -->
+         <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String toLocaleLowerCase</h3>
+            <input type="text" class="form-control text1" id="string__tolocalelowercase__input" placeholder="Enter String">
+            <input type="text" class="form-control text2" id="string__tolocalelowercase__output" placeholder="toLocaleLowerCase Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__tolocalelowercase__fun()">Submit</button>
+        </div>
+        <!-- End of String toLocaleLowerCase -->
+
+        <!-- String toLocaleUpperCase -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String toLocaleUpperCase</h3>
+            <input type="text" class="form-control text1" id="string__tolocaleuppercase__input" placeholder="Enter String">
+            <input type="text" class="form-control text2" id="string__tolocaleuppercase__output" placeholder="toLocaleUpperCase Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__tolocaleuppercase__fun()">Submit</button>
+        </div>
+        <!-- End of String toLocaleUpperCase -->
+
+        <!-- String Trim -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Trim</h3>
+            <input type="text" class="form-control text1" id="string__trim__input" placeholder="Enter String">
+            <input type="text" class="form-control text2" id="string__trim__output" placeholder="Trim Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__trim__fun()">Submit</button>
+        </div>
+        <!-- End of String Trim -->
+
+
+         <!-- String Trim End-->
+         <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Trim End</h3>
+            <input type="text" class="form-control text1" id="string__trimend__input" placeholder="Enter String">
+            <input type="text" class="form-control text2" id="string__trimend__output" placeholder="Trim End Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__trimend__fun()">Submit</button>
+        </div>
+        <!-- End of String Trim End -->
+
+          <!-- String Trim Start-->
+          <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String Trim Start</h3>
+            <input type="text" class="form-control text1" id="string__trimstart__input" placeholder="Enter String">
+            <input type="text" class="form-control text2" id="string__trimstart__output" placeholder="Trim Start Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__trimstart__fun()">Submit</button>
+        </div>
+        <!-- End of String Trim Start -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- String fromCodePoint -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">String fromCodePoint</h3>
+            <input type="text" class="form-control text1" id="string__fromcodepoint__input" placeholder="String fromCodePoint Input">
+
+            <input type="text" class="form-control text2" id="string__fromcodepoint__output" placeholder="String fromCodePoint Output">
+            <button type="submit" class="form-control btn btn-success" onclick="string__fromcodepoint__fun()">Submit</button>
+        </div>
+        <!-- End of String fromCodePoint -->
+
+    </div>
+
+
+
+    <script type="text/javascript" src="js/string.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

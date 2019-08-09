@@ -1,0 +1,104 @@
+.main__content {
+  width: 450px;
+  margin: auto;
+  margin-top: 50px; }
+  .main__content .main__section {
+    border: 1px solid #c9c4c4;
+    border-radius: 8px;
+    padding: 35px 40px 36px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+    .main__content .main__section .main__image {
+      height: 70px; }
+  .main__content .google__title {
+    font-size: 24px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif; }
+  .main__content .google__text {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #212121;
+    margin-top: 10px;
+    margin-bottom: 30px; }
+  .main__content .email {
+    padding-top: 40px; }
+    .main__content .email__search {
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #dfdada;
+      font-size: 16px;
+      font-weight: 600; }
+    .main__content .email__forgot {
+      padding-top: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none; }
+    .main__content .email__link {
+      padding-top: 28px;
+      color: #5D00EF;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none; }
+  .main__content .suggestion {
+    margin-top: 32px;
+    padding-bottom: 3px;
+    padding-top: 9px; }
+    .main__content .suggestion__text {
+      color: #757575;
+      font-size: 14px;
+      margin: 0px; }
+    .main__content .suggestion__link {
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0px;
+      padding: 0px;
+      font-size: 14px;
+      color: #5D00EF; }
+  .main__content .account {
+    margin-top: 40px;
+    padding-bottom: 20px; }
+    .main__content .account__create {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      color: #3b78e7;
+      font-weight: 600;
+      text-decoration: none; }
+    .main__content .account__next {
+      background-color: #3b78e7;
+      color: white;
+      font-size: 15px;
+      float: right;
+      padding: 8px 25px 8px 25px; }
+  .main__content .language {
+    padding: 24px 0 0; }
+    .main__content .language__select {
+      border: none;
+      background-color: #fff;
+      font-size: 13px; }
+    .main__content .language__suggestion {
+      display: inline; }
+    .main__content .language__text {
+      font-size: 13px;
+      float: right;
+      border-radius: 2px;
+      color: #757575;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0px 10px 0px 10px; }
+
+@media screen and (max-width: 767px) {
+  .main__content {
+    width: 330px; }
+
+  .main__section {
+    border: 1px solid #c9c4c4;
+    border-radius: 8px;
+    min-height: 550px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); } }
+
+/*# sourceMappingURL=bem.css.map */

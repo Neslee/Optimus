@@ -1,0 +1,329 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.header-main {
+	padding: 0;
+}
+
+.header-conatiner {
+	width: 100%;
+	padding: 0;
+	position: relative;
+}
+
+.header-conatiner .left-image-content {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.header-conatiner .right-image-content {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.header-conatiner .left-image {
+	width: 100%;
+	margin-top: 70px;
+	margin-left: -70px;
+	height: 480px;
+}
+
+.header-conatiner .right-image {
+	width: 100%;
+	height: 500px;
+	border-bottom-left-radius: 60%;
+}
+
+.header-section {
+	position: absolute;
+	top: 20px;
+}
+
+.navbar {
+	background: none;
+	border: none;
+}
+
+.navbar-default .navbar-nav> li> .main-link {
+  color: blue;
+}
+.navbar-default .navbar-nav> li> a {
+  color: white;
+}
+.navbar-default .navbar-nav> li> .main-link:hover {
+  color: blue;
+}
+.navbar-default .navbar-nav> li> a:hover {
+  color: white;
+}
+
+.navbar-nav .menu-link {
+	font-size: 18px;
+	padding-right: 10px;
+}
+
+.navbar-nav li:first-child {
+	margin-left: 200px;
+	margin-right: 50px;
+}
+
+.header-content {
+	position: absolute;
+	top: 170px;
+	left: 100px;
+}
+
+.header-content .header-head {
+	font-size: 28px;
+}
+
+.header-search {
+	position: absolute;
+	top: 360px;
+}
+
+.search-box {
+	height: 50px;
+	color: black;
+}
+
+.search-button {
+	background-color: rgb(241, 159, 7);
+	color: white;
+	border-radius: 20px;
+	width: 20%;
+}
+
+.search-icon {
+	color: rgb(241, 159, 7);
+	font-size: 30px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.mouse-down{
+  position: absolute;
+  top: 460px;
+  left:0;
+  right:0;
+  margin:auto;
+  width:50px;
+}
+
+
+
+.achivement
+{
+   background: url('../images/score-bg.jpg');
+   background-size: cover;
+}
+.achivement-header
+{
+   color: white;
+   padding-top: 20px;
+}
+.achivement-header h2
+{
+font-weight: 500px;
+}
+
+.achivement-header p
+{
+   font-size: 16px;
+   font-weight: 500;
+}
+
+.achivement-content
+{
+   color: white;
+   padding:50px 50px;
+}
+.achivement-content .icon
+{
+   font-size: 50px;
+}
+
+.achivement-content .number
+{
+   font-size: 30px;
+}
+.achivement-content .achivement-about
+{
+color: yellow;
+font-weight: 520;
+font-size: 20px;
+}
+
+
+
+.benifits
+{
+   background: #F0F2F2;
+
+}
+.benifit-header h2
+{
+margin-top: 0;
+padding-top: 20px;
+}
+
+.benifit-header p
+{
+   color: gray;
+   font-size: 18px;
+}
+.benifits-details
+{
+   padding: 30px 10px;
+}
+.benifits-one
+{
+   position: relative;
+}
+.benifits-two
+{
+   position: relative;
+}
+.benifits-three
+{
+   position: relative;
+}
+.benifits h3
+{
+   position: absolute;
+   color:white;
+   bottom:10px;
+   left: 30px;
+   font-weight: 600;
+
+}
+.benifit-line
+{
+   position: absolute;
+   bottom: 10px;
+   border-bottom: 3px solid yellow;
+   width: 50px;
+   left: 30px;
+}
+.benifits-one img
+{
+max-width: 100%;
+}
+.benifits-two img
+{
+max-width: 100%;
+}
+.benifits-three img
+{
+max-width: 100%;
+}
+.benifit-list
+{
+   list-style-type: none;
+   padding: 0;
+   padding-bottom: 10px;
+}
+.benifit-list li{
+   display: inline-block;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 10px;
+}
+.benifit-text
+{
+   padding: 10px;
+   background: white;
+   color: gray;
+}
+
+.benifit-text h5
+{
+   color:#6B6368;
+   font-weight: 550;
+   padding-left: 10px;
+}
+
+
+
+@media screen and (max-width:767px) {
+  .header-conatiner .left-image {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: -70px;
+    height: 550px;
+  }
+	.header-conatiner .right-image-content {
+		display: none;
+	}
+	.header-conatiner .right-image {
+		display: none;
+	}
+	.header-section {
+		width: 100%;
+		position: absolute;
+		top: 20px;
+		background-color: white;
+		border-bottom: 2px solid;
+	}
+	.logo-image {
+		width: 150px;
+	}
+	.navbar {
+		background-color: white;
+		border: none;
+		z-index: 1;
+		width: 105%;
+	}
+	.navbar-nav li {
+		font-size: 18px;
+		padding-right: 0px;
+	}
+	.navbar-nav li:first-child {
+		margin-left: 0px;
+		margin-right: 0px;
+  }
+  .navbar-default .navbar-nav> li> a {
+    color: blue;
+  }
+  .header-content .header-head {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .header-content {
+    position: absolute;
+    top: 170px;
+    left: 10px;
+  }
+	.header-text {
+		text-align: center;
+		font-size: 18px;
+  }
+  .header-search {
+    position: absolute;
+    top: 390px;
+  }
+
+  .achivement-header p
+{
+   font-size: 16px;
+   font-weight: 500;
+}
+
+.achivement-header h2
+{
+  font-size: 22px;
+font-weight: 500px;
+}
+.achivement-content
+{
+   color: white;
+   padding:20px 20px;
+}
+.benifit-header h2{
+  font-size:22px;
+}
+  
+}

@@ -1,0 +1,32 @@
+$max-width:100%;
+$white-color:white;
+$value_none:0;
+
+.slider-section{
+    clear: both;
+}
+
+@media screen and (max-width:$screen-xs-min)
+{
+    .slider-section{
+        border:2px solid red;
+        clear: both;
+        margin-top:40px;
+    }
+}
+
+@media screen and (max-width:$screen-sm-min)
+{
+    .slider-section{
+        clear: both;
+        margin-top:40px;
+    }
+}
+
+@media screen and (max-width:$screen-md-min)
+{
+    .slider-section{
+        clear: both;
+        margin-top:40px;
+    }
+}

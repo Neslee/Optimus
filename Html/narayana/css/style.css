@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9fafb;
+    font-size: 13px;
+}
+/* Logo Section */
+.logo{
+    max-width:250px;
+    margin-top:10px;
+    margin-left:3px;
+}
+/* Logo Section */
+
+/* Banner Section */
+.banner-section{
+    margin-top:13px;
+    margin-left:0px;
+    padding:0;
+}
+.banner-container{
+    padding:0;
+    margin-top:13px;
+    padding-left:3px;
+}
+.banner-container .banner-content{
+    width: 376px;
+    min-height: 363px;
+    background: #ea2e51;
+    color: #FFFFFF;
+    padding: 85px 40px 0;
+    font-size: 16px;
+    margin:0;  
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.banner-container .banner-content .banner-title {
+    font-size: 27px;
+    padding-bottom: 20px;
+    line-height: 30px;
+}
+.banner-container .banner-content .banner-para {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 17px;
+}
+.banner-container .banner-logo{
+    padding:0;
+    margin-right:27.5px;
+    max-width: 100%;  
+    float:right;
+}
+.banner-container .image-title{
+    background: #07a3e4;
+    color: #FFFFFF;
+    font-size: 32px;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 20px;
+    width: 96%;
+}
+/* End Banner Section */
+
+
+/* Enquire Form Section */
+.enquire-form {
+    width: 342px;
+    position: fixed;
+    right: 20px;
+    top: 113px;
+    background: rgba(28, 28, 30, 0.95);
+    color: #fff;
+    padding: 27px 25px;
+    text-align: center;
+    border-radius: 6px;
+}
+.enquire-form-title {
+    text-align: center;
+    border-bottom: 3px solid #ea2e51;
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+.enquire-form input{
+    border-left: 1px solid #5f5f5f;
+    border-top: 1px solid #5f5f5f;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    width: 100%;
+    color: #7c7c80;
+    font-size: 13px;
+    padding: 8px 10px;
+    background: none;
+    margin-top: 15px;
+    height: 33px;
+}
+.enquire-form input[name="mobile"] {
+    background: url(../images/india-flag.jpg) no-repeat 4px 7px;
+    padding-left: 35px;
+}
+.enquire-form textarea {
+    border-left: 1px solid #5f5f5f;
+    border-top: 1px solid #5f5f5f;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    width: 100%;
+    color: #7c7c80;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    background: none;
+    margin-top: 15px;
+    height: 75px;
+}
+.enquire-form button {
+    margin-top: 10px;
+    color: #FFFFFF;
+    background: #ea2e51;
+    font-size: 16px;
+    border: 0;
+    border-radius: 3px;
+    padding: 2px 20px;
+}
+/* End Enquire Form Section */
+
+/* Main Content Section */
+.main-container{
+    padding-right:40px;
+    padding-left:0;
+}
+.content-area {
+    padding-top: 20px;
+    padding-left:0;
+}
+.content-title {
+    color: #ea2e51;
+    font-size: 27px;
+    text-align: center;
+    padding: 20px 0 10px;
+    float: left;
+    width: 100%;
+}
+.why-nh{
+    color: #ea2e51;
+    font-size: 27px;
+    text-align: center;
+    padding: 20px 0 10px;
+}
+/* Column Section */
+.benifits {
+    padding-top: 10px;
+}
+.benifit {
+    text-align: center;
+    padding: 0 20px;
+    font-size: 13px;
+}
+.benifit-title {
+    color: #284695;
+    font-size: 21px;
+    padding: 10px;
+    line-height:20px;
+}
+.benifit-content{
+    line-height:14px;
+}
+/* End Column Section */
+
+
+/* List Section */
+.list-cardiac {
+    float: left;
+    width: 100%;
+    background: #ffffff;
+    padding: 0 30px;
+}
+.list-section {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #c7c8c9;
+    padding: 10px;
+}
+.last-list-section{
+    border-bottom: 1px solid white;
+}
+.list-section-title {
+    color: #284695;
+    font-weight: bold;
+    padding-bottom:10px;
+}
+.list-section ul {
+    padding-left: 20px;
+    width: 50%;
+    float: left;
+}
+.list-section ul li {
+    padding-bottom: 8px;
+    line-height: 15px;
+}
+/* End List Section */
+
+
+/* About Hospital Section */
+.about-hospital {
+    background: #383d45;
+    color: #FFFFFF;
+    padding: 25px 50px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px 6px 0 0;
+    margin-top: 20px;
+    margin-left:3px;
+    max-width:99%;
+}
+.hospital-head {
+    font-size: 27px;
+    padding-bottom: 20px;
+}
+.hospital-content{
+    line-height: 16px;
+}
+.about-nh {
+    float: left;
+    width: 100%;
+    background: #284695;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: 20px;
+    margin-left:3px;
+    max-width:99%;
+}
+.about-nh-inner {
+    margin: 20px 0;
+    position: relative;
+}
+.about-nh-left {
+    width: 280px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    border-right: 1px solid #697eb5;
+    padding: 10px 0;
+}
+.about-nh-right {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 320px;
+    padding-right: 20px;
+    color: #fff;
+    min-height: 180px;
+}
+.about-nh-title {
+    float: left;
+    width: 100%;
+    font-size: 28px;
+    padding: 20px 0;
+}
+.about-nh-content {
+    font-size: 14px;
+    float: left;
+    width: 100%;
+    line-height: 16px;
+}
+/* End  Hospital Section */
+/* End Main Content Section */
+
+/* Footer Section */
+.footer {
+    float: left;
+    width: 100%;
+    background: #000;
+    color: #FFFFFF;
+    font-size: 11px;
+}
+.footer-inner {
+    max-width: 1293px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+/* End Footer Section */
+
+
+/* Mobile View */
+@media screen and (max-width: 767px) {
+    .logo{
+        max-width:250px;
+        margin-top:10px;
+        margin-left:21px;
+    }
+    .banner-container{
+        padding:0;
+        margin-top:14px;
+        padding-left:0px;
+        width: 100%;
+    }
+    .banner-container .banner-content{
+        width: 100%;
+        min-height: 40px;
+        padding: 55px 20px 0;
+        padding-bottom:20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin:0;  
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .banner-container .banner-logo{
+        padding:0;
+        margin-right:0px;
+        max-width: 100%; 
+    }
+    .banner-container .image{
+        padding:0;
+        width: 100%; 
+    }
+    .banner-container .image-title{
+        background: #07a3e4;
+        color: #FFFFFF;
+        font-size: 20px;
+        text-align: center;
+        padding: 7px 0;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
+    .enquire-form {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top:20px;
+        width: auto;
+        position: static;
+        top: 113px;
+        background: rgba(28, 28, 30, 0.95);
+        color: #fff;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+    .content-title {
+        color: #ea2e51;
+        font-size: 26px;
+        padding-top: 20px;
+        padding-left:32px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .why-nh{
+        color: #ea2e51;
+        font-size: 27px;
+        padding: 20px 0 10px;
+        padding-left:40px;
+    }
+    .benifit {
+        width: 100%;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        padding:0;
+        margin-left:30px;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .list-cardiac {
+        width: 100%;
+        background: #ffffff;
+        padding: 0 30px;
+        box-sizing: border-box;
+        margin-left:30px;
+    }
+    .list-section ul {
+        width: 100%;
+        margin: 0;
+    }
+    .about-nh {
+        float: left;
+        width: 100%;
+        background: violet;
+        border-radius: 0 0 6px 6px;
+        margin-bottom: 20px;
+        margin-left:20px;
+        max-width:99%;
+    }
+    .about-hospital {
+        background: #383d45;
+        color: #FFFFFF;
+        padding: 25px 10px;
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 6px 6px 0 0;
+        margin-top: 20px;
+        margin-left:20px;
+        max-width:99%;
+    }
+    .about-hospital-title {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+    .hospital-content{
+        font-size: 12px;
+        line-height: 16px;
+        padding-left:0;
+    }
+    .about-nh-left {
+        width: 280px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        border-right: 1px solid #697eb5;
+        padding: 10px 0;
+    }
+    .about-nh-right {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 30px;
+        padding-right: 20px;
+        color: #fff;
+        min-height: 180px;
+    }
+    .about-nh-title {
+       text-align: center;
+        width: 100%;
+        font-size: 22px;
+        padding: 50px 0;
+    }
+    .about-nh-content {
+        font-size: 12px;
+        width: 100%;
+        line-height: 16px;
+    }
+    .footer {
+        text-align: center;
+        width: 100%;
+        background: #000;
+        color: #FFFFFF;
+        font-size: 11px;
+    }
+    .footer-inner {
+        max-width: 1293px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+}
+/* Mobile View */
+
+
+/* Tablet View */
+@media screen and (max-width: 991px) {
+    .logo{
+        max-width:250px;
+        margin-top:10px;
+        margin-left:16px;
+    }
+    .banner-container{
+        padding:0;
+        margin-top:14px;
+        padding-left:0px;
+        width: 100%;
+    }
+    .banner-container .banner-content{
+        width: 100%;
+        min-height: 40px;
+        padding: 55px 20px 0;
+        padding-bottom:20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin:0;  
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .banner-container .banner-logo{
+        padding:0;
+        margin-right:0px;
+        max-width: 100%; 
+    }
+    .banner-container .image{
+        padding:0;
+        width: 100%; 
+    }
+    .banner-container .image-title{
+        background: #07a3e4;
+        color: #FFFFFF;
+        font-size: 20px;
+        text-align: center;
+        padding: 7px 0;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
+    .enquire-form {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top:20px;
+        width: auto;
+        position: static;
+        top: 113px;
+        background: rgba(28, 28, 30, 0.95);
+        color: #fff;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+    .content-title {
+        color: #ea2e51;
+        font-size: 26px;
+        padding-top: 20px;
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .why-nh{
+        color: #ea2e51;
+        font-size: 27px;
+        padding: 20px 0 10px;
+        padding-left:60px;
+    }
+    .benifit {
+        width: 100%;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        padding:0;
+        margin-left:30px;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .list-cardiac {
+        float: left;
+        width: 100%;
+        background: #ffffff;
+        padding: 0 30px;
+        box-sizing: border-box;
+        margin-left:30px;
+    }
+    .list-section ul {
+        width: 100%;
+        margin: 0;
+    }
+    .about-nh {
+        float: left;
+        width: 100%;
+        background: #284695;
+        border-radius: 0 0 6px 6px;
+        margin-bottom: 20px;
+        margin-left:20px;
+        max-width:99%;
+    }
+    .about-hospital {
+        background: #383d45;
+        color: #FFFFFF;
+        padding: 25px 10px;
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 6px 6px 0 0;
+        margin-top: 20px;
+        margin-left:20px;
+        max-width:99%;
+    }
+    .hospital-head {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+    .hospital-content{
+        font-size: 15px;
+        line-height: 16px;
+        padding-left:0;
+    }
+    .about-nh-left {
+        width: 280px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        border-right: 1px solid #697eb5;
+        padding: 10px 0;
+    }   
+    .about-nh{
+        background: #2E034C;
+        padding-bottom:10px;
+    } 
+    .about-nh-right {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 30px;
+        padding-right: 20px;
+        color: #fff;
+        min-height: 140px;
+    }
+    .about-nh-title {
+        text-align: center;
+         width: 100%;
+         font-size: 26px;
+         padding: 10px 0;
+     }
+     .about-nh-content {
+         font-size: 14px;
+         width: 100%;
+         line-height: 16px;
+     }
+    .footer {
+        text-align: center;
+        width: 100%;
+        background: #000;
+        color: #FFFFFF;
+        font-size: 11px;
+    }
+    .footer-inner {
+        max-width: 1293px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}
+/* Tablet View */

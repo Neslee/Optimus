@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/calculator.css" rel="stylesheet">
+  <title>Calculator</title>
+</head>
+
+<body>
+
+  <!-- Calculator Container -->
+  <div class="calculator__container">
+
+    <div class="container-fluid text-center">
+
+      <div class="calculator__content col-xs-12 col-md-4 col-md-offset-4 text-center">
+        <!-- Textbox to Accept User Input -->
+        <div class="row">
+          <input type="text" class="form-control calculator__text1" id="adder" placeholder="0" readonly>
+          <input type="text" class="form-control calculator__text2" align="right" id="sum" placeholder="=" readonly>
+        </div>
+         <!--End Textbox Section -->
+
+         <!-- Calculator Button Section -->
+        <div class="row">
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__buttongrey" onclick="cleartext()">AC</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__buttongrey">+/-</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__buttongrey" value="%" onclick='calculate("%")'>%</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__buttongrey buttongrey__lastchild" value="*" onclick='calculate("*")'>X</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="7" onclick='calculate(7)'>7</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="8" onclick='calculate(8)'>8</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="9" onclick='calculate(9)'>9</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__buttongrey buttongrey__lastchild" value="/" onclick='calculate("/")'>/</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="4" onclick='calculate(4)'>4</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="5" onclick='calculate(5)'>5</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="6" onclick='calculate(6)'>6</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__buttongrey buttongrey__lastchild" value="-" onclick='calculate("-")'>
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="1" onclick='calculate(1)'>1</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="2" onclick='calculate(2)'>2</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="3" onclick='calculate(3)'>3</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__buttongrey buttongrey__lastchild" value="+" onclick='calculate("+")'>
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 col-md-6 calculator__operation">
+            <button class="btn btn-default calculator__number calculator__number--leftchild" value="0" onclick='calculate("0")'>0</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__number" value="." onclick='calculate(".")'>.</button>
+          </div>
+          <div class="col-xs-3 col-md-3 calculator__operation">
+            <button class="btn btn-default calculator__answer" value="=" onclick='answer()'>=</button>
+          </div>
+        </div>
+         <!-- End Calculator Button Section -->
+
+      </div>
+    </div>
+
+  </div>
+  <!-- End Calculator Container -->
+  <script src="js/calculator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Functions</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/array.css">
+</head>
+
+<body>
+
+    <div class="col-md-12">
+        <div class="col-md-12">
+            <h3 class="text-center">
+                <span class="label label-info">Array Properties</span>
+            </h3>
+        </div>
+        <!-- Array Length -->
+        <div class="col-md-6">
+            <h3 class="text-center">Array Length</h3>
+            <input type="text" class="form-control text1" id="len__input" placeholder="Array Length Input">
+            <input type="text" class="form-control text2" id="len__output" placeholder="Array Length Output">
+            <button type="submit" class="form-control btn btn-success" onclick="array__len__fun()">Submit</button>
+        </div>
+        <!-- End of Array Length -->
+
+        <!-- Array Prototype -->
+        <div class="col-md-6">
+            <h3 class="text-center">Array Prototype</h3>
+            <input type="text" class="form-control text1" id="proto__input">
+            <input type="text" class="form-control text2" id="proto__enter__input" placeholder="Enter Position">
+            <input type="text" class="form-control text2" id="proto__output" placeholder="Array Prototype Output">
+            <button type="submit" class="form-control btn btn-success" onclick="array__proto__fun()">Submit</button>
+        </div>
+        <!-- End of Array Prototype -->
+    </div>
+
+    <div class="col-md-12" style="margin-bottom:100px;">
+        <div class="col-md-12">
+            <h3 class="text-center">
+                <span class="label label-info">Array Methods</span>
+            </h3>
+        </div>
+
+        <!-- Array From -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">Array From</h3>
+            <input type="text" class="form-control text1" id="from__input" placeholder="Array From Input">
+            <input type="text" class="form-control text1" id="from__output" placeholder="Array From Output">
+            <input type="text" class="form-control text2" id="from__no__output" placeholder="Array Number From Output">
+            <button type="submit" class="form-control btn btn-success" onclick="from__fun()">Submit</button>
+        </div>
+        <!-- End of Array From -->
+
+        <!-- Array Is Array -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">Is Array</h3>
+            <input type="text" class="form-control text1" id="isarray__input" placeholder="Is Array Input">
+            <input type="text" class="form-control text1" id="isarray__output" placeholder="Is Array Output">
+            <input type="text" class="form-control text2" id="isarray__no__output" placeholder="1,2,3">
+            <button type="submit" class="form-control btn btn-success" onclick="isarray__fun()">Submit</button>
+        </div>
+        <!-- End of Is Array -->
+
+        <!-- Array of -->
+        <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">Array of</h3>
+            <input type="text" class="form-control text1" id="arrayof__input" placeholder="1,2,3">
+            <input type="text" class="form-control text2" id="arrayof__output" placeholder="Array of Output">
+            <button type="submit" class="form-control btn btn-success" onclick="arrayof__fun()">Submit</button>
+        </div>
+
+        <!-- End of Array of -->
+
+
+        <!-- Array Concat -->
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <h3 class="text-center">Array Concat</h3>
+            <input type="text" class="form-control text1" id="array__concat__input1">
+            <input type="text" class="form-control text1" id="array__concat__input2">
+            <input type="text" class="form-control text2" id="array__concat__output" placeholder="Array Concat Output">
+            <button class="form-control btn btn-success" onclick="array__concat__fun()">Submit</button>
+        </div>
+        <!-- End of Array Concat -->
+
+        <!-- Array Copy Within -->
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <h3 class="text-center">Array Copy Within</h3>
+            <input type="text" class="form-control text1" id="array__copy__input">
+            <input type="text" class="form-control text2" id="array__copy__output" placeholder="Array CopyWithin Output">
+            <button type="submit" class="form-control btn btn-success" onclick="array__copy__fun()">Submit</button>
+        </div>
+        <!-- End of Array Copy Within -->
+
+        <!-- Array Entries -->
+        <div class="col-md-4 col-md-offset-4 ">
+            <h3 class="text-center">Array Entries</h3>
+            <input type="text" class="form-control text1" id="array__entries__input" placeholder="1,2,3">
+            <input type="text" class="form-control text2" id="array__entries__output1" placeholder="Array Entry 1 Output">
+            <input type="text" class="form-control text2" id="array__entries__output2" placeholder="Array Entry 2 Output">
+            <button type="submit" class="form-control btn btn-success" onclick="array__entries__fun()">Submit</button>
+        </div>
+        <!-- End of Array Entries -->
+
+        <!-- Array Every -->
+        <div class="col-md-4 col-md-offset-4 ">
+            <h3 class="text-center">Array Every</h3>
+            <input type="text" class="form-control text1" id="array__every__input">
+            <input type="text" class="form-control text2" id="array__every__output" placeholder="Array Every Output">
+            <button type="submit" class="form-control btn btn-success" class="form-control btn btn-success" onclick="array__every__fun()">Submit</button>
+        </div>
+        <!-- End of Array Every -->
+
+    <!-- Array Fill -->
+    <div class="col-md-4 col-md-offset-4 ">
+        <h3 class="text-center">Array Fill</h3>
+        <input type="text" class="form-control text1" id="array__fill__input">
+        <input type="text" class="form-control text1" id="array__fill__output1" placeholder="Array Fill Output 1">
+        <input type="text" class="form-control text2" id="array__fill__output2" placeholder="Array Fill Output 2">
+        <button type="submit" class="form-control btn btn-success" onclick="array__fill__fun()">Submit</button>
+    </div>
+    <!-- End of Array Fill -->
+
+    <!-- Array Filter -->
+    <div class="col-md-4 col-md-offset-4 ">
+        <h3 class="text-center">Array Filter</h3>
+        <input type="text" class="form-control text1" id="array__filter__input">
+        <input type="text" class="form-control text1" id="array__filter__range" placeholder="Enter Range">
+        <input type="text" class="form-control text2" id="array__filter__output" placeholder="Array Filter Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__filter__fun()">Submit</button>
+    </div>
+    <!-- End of Array Filter -->
+
+    <!-- Array Find -->
+    <div class="col-md-4 col-md-offset-4 ">
+        <h3 class="text-center">Array Find</h3>
+        <input type="text" class="form-control text1" id="array__find__input">
+        <input type="text" class="form-control text1" id="array__find__ele" placeholder="Enter Element to Find">
+        <input type="text" class="form-control text2" id="array__find__output" placeholder="Array Find Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__find__fun()">Submit</button>
+    </div>
+    <!-- End of Array Find -->
+
+    <!-- Array Find Index -->
+    <div class="col-md-4 col-md-offset-4 ">
+        <h3 class="text-center">Array Find Index</h3>
+        <input type="text" class="form-control text1" id="array__findindex__input">
+        <input type="text" class="form-control text1" id="array__findindex__ele" placeholder="Enter Element to Find">
+        <input type="text" class="form-control text2" id="array__findindex__output" placeholder="Array Find Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__findindex__fun()">Submit</button>
+    </div>
+
+
+    <!-- Array ForEach -->
+    <div class="col-md-4 col-md-offset-4 ">
+        <h3 class="text-center">Array Foreach</h3>
+        <input type="text" class="form-control text1" id="array__foreach__input">
+        <input type="text" class="form-control text2" id="array__foreach__output" placeholder="Array Foreach Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__foreach__fun()">Submit</button>
+    </div>
+    <!-- End of Array ForEach-->
+
+    <!-- Array Includes -->
+    <div class="col-md-4 col-md-offset-4 ">
+        <h3 class="text-center">Array Includes</h3>
+        <input type="text" class="form-control text1" id="array__includes__input">
+        <input type="text" class="form-control text2" id="array__includes__output" placeholder="Array Include Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__includes__fun()">Submit</button>
+    </div>
+    <!-- End of Array Includes-->
+
+    <!-- Array IndexOf -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array IndexOf</h3>
+        <input type="text" class="form-control text1" id="array__indexof__input">
+        <input type="text" class="form-control text2" id="array__indexof__output" placeholder="Array Indexof Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__indexof__fun()">Submit</button>
+    </div>
+    <!-- End of Array IndexOf-->
+
+    <!-- Array Join -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Join</h3>
+        <input type="text" class="form-control text1" id="array__join__input">
+        <input type="text" class="form-control text1" id="array__join__output1" placeholder="Array Join Output 1">
+        <input type="text" class="form-control text2" id="array__join__output2" placeholder="Array Join Output 2">
+        <button type="submit" class="form-control btn btn-success" onclick="array__join__fun()">Submit</button>
+    </div>
+    <!-- End of Array Join-->
+
+    <!-- Array Key -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Key</h3>
+        <input type="text" class="form-control text1" id="array__key__input">
+        <input type="text" class="form-control text2" id="array__key__output" placeholder="Array Key Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__key__fun()">Submit</button>
+    </div>
+    <!-- End of Array Key-->
+
+    <!-- Array LastIndexOf -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array LastIndexOf</h3>
+        <input type="text" class="form-control text1" id="array__lastindex__input">
+        <input type="text" class="form-control text2" id="array__lastindex__output" placeholder="Array LastIndexOf Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__lastindex__fun()">Submit</button>
+    </div>
+    <!-- End of Array LastIndexOf-->
+
+    <!-- Array Map -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Map</h3>
+        <input type="text" class="form-control text1" id="array__map__input">
+        <input type="text" class="form-control text2" id="array__map__output" placeholder="Array Map Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__map__fun()">Submit</button>
+    </div>
+    <!-- End of Array Map-->
+
+    <!-- Array Pop -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Pop</h3>
+        <input type="text" class="form-control text1" id="array__pop__input">
+        <input type="text" class="form-control text2" id="array__pop__output" placeholder="Array Pop Output">
+        <input type="text" class="form-control text2" id="array__rest__output" placeholder="Array After Pop">
+        <button type="submit" class="form-control btn btn-success" onclick="array__pop__fun()">Submit</button>
+    </div>
+    <!-- End of Array Pop -->
+
+    <!-- Array Push -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Push</h3>
+        <input type="text" class="form-control text1" id="array__push__input">
+        <input type="text" class="form-control text2" id="array__push__output" placeholder="Enter Element To Push">
+        <input type="text" class="form-control text2" id="array__pushall__output" placeholder="Array After Push">
+        <button type="submit" class="form-control btn btn-success" onclick="array__push__fun()">Submit</button>
+    </div>
+    <!-- End of Array Push -->
+
+    <!-- Array Reduce -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Reduce</h3>
+        <input type="text" class="form-control text1" id="array__reduce__input">
+        <input type="text" class="form-control text2" id="array__reduce__output" placeholder="Array Reduce Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__reduce__fun()">Submit</button>
+    </div>
+    <!-- End of Array Reduce -->
+
+
+    <!-- Array Reduce Right -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Reduce Right</h3>
+        <input type="text" class="form-control text1" id="array__reduceright__input">
+        <input type="text" class="form-control text2" id="array__reduceright__output" placeholder="Array Reduce Right Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__reduceright__fun()">Submit</button>
+    </div>
+    <!-- End of Array Reduce Right -->
+
+    <!-- Array revesre -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Reverse</h3>
+        <input type="text" class="form-control text1" id="array__reverse__input">
+        <input type="text" class="form-control text2" id="array__reverse__output" placeholder="Array Reverse Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__reverse__fun()">Submit</button>
+    </div>
+    <!-- End of Array revesre -->
+
+    <!-- Array Shift -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Shift</h3>
+        <input type="text" class="form-control text1" id="array__shift__input">
+        <input type="text" class="form-control text1" id="array__shift__output" placeholder="Array Shift Output">
+        <input type="text" class="form-control text2" id="array__first__output" placeholder="Array First Element">
+        <button type="submit" class="form-control btn btn-success" onclick="array__shift__fun()">Submit</button>
+    </div>
+    <!-- End of Array Shift -->
+
+    <!-- Array Slice -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Slice</h3>
+        <input type="text" class="form-control text1" id="array__slice__input">
+        <input type="text" class="form-control text2" id="array__slice__output" placeholder="Array Slice Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__slice__fun()">Submit</button>
+    </div>
+    <!-- End of Array Slice -->
+
+    <!-- Array Some -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Some</h3>
+        <input type="text" class="form-control text1" id="array__some__input">
+        <input type="text" class="form-control text2" id="array__some__output" placeholder="Array Some Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__some__fun()">Submit</button>
+    </div>
+    <!-- End of Array Some -->
+
+    <!-- Array Sort -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Sort</h3>
+        <input type="text" class="form-control text1" id="array__sort__input">
+        <input type="text" class="form-control text2" id="array__sort__output" placeholder="Array Sort Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__sort__fun()">Submit</button>
+    </div>
+    <!-- End of Array Sort -->
+
+
+    <!-- Array Splice -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Splice</h3>
+        <input type="text" class="form-control text1" id="array__splice__input">
+        <input type="text" class="form-control text2" id="array__splice__output" placeholder="Array Splice Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__splice__fun()">Submit</button>
+    </div>
+    <!-- End of Array Splice -->
+
+    <!-- Array ToLocaleString -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array ToLocaleString</h3>
+        <input type="text" class="form-control text1" id="array__tolocale__input">
+        <input type="text" class="form-control text2" id="array__tolocale__output" placeholder="Array ToLocaleString Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__tolocale__fun()">Submit</button>
+    </div>
+    <!-- End of Array ToLocaleString -->
+
+    <!-- Array ToString -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array ToString</h3>
+        <input type="text" class="form-control text1" id="array__tostring__input">
+        <input type="text" class="form-control text2" id="array__tostring__output" placeholder="Array ToString Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__tostring__fun()">Submit</button>
+    </div>
+    <!-- End of Array ToString -->
+
+    <!-- Array Unshift -->
+    <div class="col-md-4 col-md-offset-4">
+        <h3 class="text-center">Array Unshift</h3>
+        <input type="text" class="form-control text1" id="array__unshift__input">
+        <input type="text" class="form-control text2" id="array__unshift__output" placeholder="Array Unshift Output">
+        <button type="submit" class="form-control btn btn-success" onclick="array__unshift__fun()">Submit</button>
+    </div>
+    <!-- End of Array Unshift -->
+
+     <!-- Array Value -->
+     <div class="col-md-4 col-md-offset-4">
+            <h3 class="text-center">Array Value</h3>
+            <input type="text" class="form-control text1" id="array__values__input">
+            <input type="text" class="form-control text2" id="array__values__output" placeholder="Array Value Output">
+            <button type="submit" class="form-control btn btn-success" onclick="array__values__fun()">Submit</button>
+        </div>
+        <!-- End of Array Value -->
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/array.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,947 @@
+/*Header Section*/
+.header{
+    padding: 20px 60px;
+    background-color: #fff;
+    border-bottom:none;
+}
+.navbar{
+    border:none;
+}
+.logo{
+    height:55px;
+    width:200px;
+}
+.header button{
+    background-color:#040404c7;
+    padding: 15px 15px;
+}
+.header  ul li{
+    padding-right: 15px;
+    color: #3a1717;
+}
+.header .navbar-nav li a {
+    color: #383b3c;
+}
+.header .dropdown-menu{
+    left: 0;
+    right: auto;
+}
+/*Header Section*/
+
+/*Hero Section*/
+.Hero{
+    width: 100%;
+    position: relative;
+}
+.Hero .image{
+    width:100%;
+}
+.Hero .Hero-text{
+    position: absolute;
+    left:0;
+    right: 0;
+    top:20%;
+    bottom: 0;
+    margin: auto;
+    color:white;
+    font-size:20px;
+}
+.Hero .play{
+    height:100px;
+    width: 100px;
+    background-color: white;
+}
+/*Hero Section*/
+
+/*Free Demo Section*/
+.free-demo{
+    padding:50px 0;
+}
+.free-demo .image{
+    height:320px;
+    width:100%;
+}
+.free-demo h2{
+    line-height: 10px;
+}
+.free-demo h3{
+    font-size: 20px;
+}
+.free-demo .right-content{
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right:120px;
+}
+.free-demo .right-content p{
+    line-height: 26px;
+    font-size: 18px;
+}
+.free-demo .right-content button{
+    background-color:#040404c7;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+/*Free Demo Section*/
+
+
+/*Benifits Section*/
+.benifits{
+    padding-top:20px;
+    padding-bottom: 250px;
+    position: relative;
+}
+.benifits .image{
+    width:100%;
+    height:500px;
+}
+.benifits .benifits-text{
+    position: absolute;
+    left:0;
+    right: 0;
+    top:50px;
+    bottom: 0;
+    font-size:20px;
+}
+.benifits .benifits-conatiner{
+    position: absolute;
+    top:200px;
+    font-size:20px;
+    margin: 0 60px;
+    background-color:white;
+}
+.benifits .benifits-conatiner .benifits-box{
+    padding:30px 60px;
+    position: relative;  
+}
+
+.benifits .benifits-conatiner .benifits-box:before{
+    content: "";
+    position: absolute;
+    top: 20%;
+    height: 70%;
+    right:0;
+    border-right: 1px solid #AAA ;
+}
+.benifits .benifits-conatiner .benifits-box:last-child{
+    border-right: none;
+}
+.benifits .benifits-conatiner .img-circle{
+    width:100px;
+    height: 100px;
+}
+.benifits .benifits-conatiner .benifits-box h3{
+    font-size:25px;
+    padding-top: 15px;
+}
+.benifits .benifits-conatiner .benifits-box p{
+    font-size:18px;
+    padding-top:10px;
+}
+.benifits .benifits-conatiner .benifits-bottom{
+    border-top:1px solid #AAA;
+    
+}
+.benifits .benifits-conatiner .benifits-bottom .text1{
+    font-size:40px;
+}
+.benifits .benifits-conatiner .benifits-bottom .text2{
+    font-size:20px;
+}
+.benifits .benifits-conatiner .benifits-bottom .container{
+    padding-top:30px;
+}
+/*Benifits Section*/
+
+/*Slider Content*/
+.slider-content{
+    position: relative;
+    padding-bottom:30px;
+}
+.slider-content h3{
+    font-size:18px;
+}
+.slider-content .slider-text h3{
+    font-size:22px;
+}
+.slider-content .slider-text p{
+    font-size:18px;
+}
+.slider-content .image{
+    width:100%;
+    height:500px;
+    padding-top:20px;
+}
+.slider-content .slider-text{
+    position: absolute;
+    left:750px;
+    right: 40px;
+    top:200px;
+    margin: auto;
+    color:black;
+    background-color: #fff;
+    font-size:20px;
+    padding:20px;
+}
+.clients{
+padding-bottom: 50px;
+}
+.clients h3{
+    font-size:18px;
+}
+.clients .client-content{
+    padding-top:30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.clients .row .c1{
+    height: 150px;
+    border-right:2px solid grey;
+    border-bottom:2px solid grey;
+}
+.clients .row .image{
+    padding-top:30px;
+    height:100px;
+    width:150px;
+}
+.clients .row .c1:last-child{
+    height: 150px;
+    border-right:none;
+    border-bottom:2px solid grey;
+}
+.testimonial-conatiner{
+padding-top: 20px;
+padding-bottom: 50px;
+}
+.testimonial-conatiner button{
+    color:#040404c7;
+    background-color: white;
+    padding: 10px 20px;
+    border-style: solid;
+    border-color: #040404c7;
+}
+.testimonial-conatiner .left-testimonial .left-image-testimonial .image{
+    width:100%;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.testimonial-conatiner .left-testimonial .left-image-testimonial {
+    border:2px solid grey;
+    margin:30px 0;
+    padding-bottom: 10px;
+    padding-left:-15px;
+}
+.testimonial-conatiner .left-testimonial .left-image-testimonial p{
+    padding:0 30px;
+}
+.testimonial-conatiner .left-testimonial .left-image-testimonial .img-circle{
+    width:100px;
+    height: 100px;
+}
+.testimonial-conatiner .left-testimonial .left-text-testimonial .qoute-image{
+    height:50px;
+    width:50px;
+}
+.testimonial-conatiner .left-testimonial .left-text-testimonial {
+    border:2px solid grey;
+}
+.testimonial-conatiner .left-testimonial .left-text-testimonial .media{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.testimonial-conatiner .left-testimonial .left-text-testimonial p{
+    padding:0 30px;
+}
+.testimonial-conatiner .left-testimonial .left-text-testimonial .img-circle{
+    width:100px;
+    height: 100px;
+}
+.testimonial-conatiner .right-testimonial .right-text-testimonial .qoute-image{
+    height:50px;
+    width:50px;
+}
+.testimonial-conatiner .right-testimonial .right-text-testimonial {
+    border:2px solid grey;
+    margin-top:30px;
+    padding-top: 10px;
+}
+.testimonial-conatiner .right-testimonial .right-text-testimonial .media{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.testimonial-conatiner .right-testimonial .right-text-testimonial p{
+    padding:0 30px;
+}
+.testimonial-conatiner .right-testimonial .right-text-testimonial .img-circle{
+    width:100px;
+    height: 100px;
+}
+.testimonial-conatiner .right-testimonial .right-image-testimonial .image{
+    width:100%;
+    padding-top: 10px;
+    
+}
+.testimonial-conatiner .right-testimonial .right-image-testimonial {
+    border:2px solid grey;
+    margin:30px 0;
+    padding-bottom: 40px;
+}
+.testimonial-conatiner .right-testimonial .right-image-testimonial p{
+    padding:0 30px;
+}
+.testimonial-conatiner .right-testimonial .right-image-testimonial .img-circle{
+    width:100px;
+    height: 100px;
+}
+.testimonial-conatiner .right-testimonial .right-image-testimonial .qoute-image{
+    height:50px;
+    width:50px;
+}
+.contact-us
+{
+    background-color: #29232363;
+}
+.contact-us .contact-us1
+{
+    padding:50px;
+}
+.contact-us .contact-us1 .contact
+{
+    font-size:22px;
+    border-right: 2px solid #040404c7;
+}
+.contact-us .contact-us1 .contact:last-child
+{
+    border-right: none;
+}
+.contact-us .contact-us1 button
+{
+    color:#040404c7;
+    background-color: white;
+    padding: 10px 20px;
+    border-style: solid;
+    border-color: #040404c7;
+}
+.contact-us .contact-us2 .subscribe
+{
+    font-size:22px;
+}
+.contact-us .contact-us2
+{
+    padding-bottom:50px;
+}
+.footer{
+    padding-top:20px;
+    padding-bottom:50px;
+    background-color: #262626;
+    color:white;
+}
+.footer .city-name1{
+    padding-top:10px;
+    padding-left:20px;
+}
+.footer .city{
+    border-right: 2px solid white;
+}
+.footer .city:last-child{
+    border-right: none;
+}
+
+.footer .links .footer1 .solutions h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .solutions ul li{
+    list-style-type: none;
+    line-height: 24px;
+}
+.footer .links .footer1 .solutions .solution{
+    padding:0;
+}
+.footer .links .footer1 .aboutus h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .aboutus ul li{
+    list-style-type: none;
+    line-height: 24px;
+}
+.footer .links .footer1 .aboutus .about{
+    padding:0;
+}
+.footer .links .footer1 .customer h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .customer ul li{
+    list-style-type: none;
+    line-height: 24px;
+}
+.footer .links .footer1 .customer .custom{
+    padding:0;
+}
+.footer .links .footer1 .supports h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .supports ul li{
+    list-style-type: none;
+    line-height: 24px;
+}
+.footer .links .footer1 .supports .support{
+    padding:0;
+}
+.footer .links .footer2 .contactus .image{
+    height: 40px;
+  width: 40px;
+  border-radius: 50px;
+}
+
+
+
+@media(max-width: 767px) {
+    .header{
+        padding: 15px 30px;
+    }
+    .logo{
+        height:65px;
+        width:160px;
+    }
+    .Hero{
+        width: 100%;
+        position: relative;
+    }
+    .Hero .image{
+        height:200px;
+    }
+    .Hero .Hero-text{
+        position: absolute;
+        left:0;
+        right: 0;
+        top:10%;
+        bottom: 0;
+        margin: auto;
+        color:white;
+        font-size:16px;
+    }
+    .Hero .Hero-text h1{
+        font-size:19px;
+    }
+    .Hero .Hero-text p{
+        font-size:14px;
+    }
+    .Hero .play{
+        height:50px;
+        width: 50px;
+        background-color: white;
+    }
+
+    .free-demo{
+        padding:20px 0;
+    }
+    .free-demo .image{
+        height:200px;
+        width:100%;
+    }
+    .free-demo h2{
+        line-height: 20px;
+        font-size:22px;
+    }
+    .free-demo h3{
+        font-size: 17px;
+    }
+    .free-demo .right-content{
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right:20px;
+    }
+    .free-demo .right-content h2{
+        line-height: 20px;
+        font-size:22px;
+    }
+    .free-demo .right-content p{
+        line-height: 26px;
+        font-size: 16px;
+    }
+    .free-demo .right-content button{
+        background-color:#040404c7;
+        padding: 10px 20px;
+        margin: 20px 0;
+    }
+    .benifits{
+        padding-top:10px;
+        padding-bottom: 220px;
+        position: relative;
+    }
+    .benifits .image{
+        width:100%;
+        height:550px;
+    }
+    .benifits .benifits-text h2{
+        font-size:24px;
+    }
+    .benifits .benifits-text p{
+        font-size:15px;
+    }
+    .benifits .benifits-conatiner{
+        position: absolute;
+        top:160px;
+        font-size:20px;
+        margin: 0 10px;
+        background-color:white;
+    }
+    .benifits .benifits-conatiner .benifits-box{
+        padding:20px 30px;
+        font-size:18px;
+        position: relative;  
+        border:2px solid grey;
+    }
+    .benifits .benifits-conatiner .benifits-box h3{
+        font-size:20px;
+    }
+    .benifits .benifits-conatiner .benifits-box p{
+        font-size:15px;
+    }
+    .benifits .benifits-conatiner .bottom-content{
+        font-size:18px;
+    }
+    .benifits .benifits-conatiner .benifits-bottom .text1{
+        font-size:20px;
+    }
+    .benifits .benifits-conatiner .benifits-bottom .text2{
+        font-size:18px;
+    }
+    .benifits .benifits-conatiner .benifits-box:last-child{
+        border:2px solid grey;
+    }
+    .benifits .benifits-conatiner .benifits-box:before{
+        content: "";
+        border-right: none ;
+    }
+    .slider-content {
+        padding-top:550px;
+        position: relative;
+        width:100%;
+    }
+    .slider-content .image{
+        height:400px;
+        width:100%;
+    }
+    .slider-content h2{
+        font-size:22px;
+    }
+    .slider-content h3{
+        font-size:15px;
+    }
+
+    .slider-content .slider-text h3{
+        font-size:18px;
+    }
+    .slider-content .slider-text p{
+        font-size:16px;
+    }
+
+    .slider-content .slider-text{
+        padding:5px;
+        position: absolute;
+        left:100px;
+        top:700px;
+        color:black;
+        background-color: #fff;
+        font-size:20px;
+    }
+    .clients{
+padding-bottom: 50px;
+}
+.clients h2{
+    font-size:20px;
+}
+.clients h3{
+    font-size:15px;
+}
+.clients .client-content{
+    padding-top:30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.clients .row .c1{
+    height: 150px;
+    border-right:2px solid grey;
+    border-bottom:2px solid grey;
+}
+.clients .row .image{ 
+    height:100px;
+    width:100px;
+}
+
+.clients .row .border-none-xs{
+    height: 150px;
+    border-right:none;
+    border-bottom:2px solid grey;
+}
+.testimonial-conatiner{
+    padding-top: 10px;
+    padding-bottom: 50px;
+    }
+.testimonial h2{
+    font-size: 20px;
+}
+.testimonial h3{
+    font-size: 15px;
+}
+.contact-us
+{
+    background-color: #29232363;
+}
+.contact-us .contact-us1
+{
+    padding:30px;
+}
+.contact-us .contact-us1 .contact
+{
+    padding-top:10px;
+    font-size:18px;
+    border:none;
+}
+.contact-us .contact-us1 .contact:last-child
+{
+    border-right: none;
+}
+.contact-us .contact-us1 button{
+    color:#040404c7;
+    background-color: white;
+    padding: 10px 20px;
+    border-style: solid;
+    border-color: #040404c7;
+}
+.contact-us .contact-us2 .subscribe
+{
+    padding-top: 10px;
+    font-size:18px;
+}
+.contact-us .contact-us2
+{
+    padding-bottom:50px;
+}
+.footer{
+    padding-top:20px;
+    padding-bottom:50px;
+    background-color: #262626;
+    color:white;
+}
+
+.footer .city-name1{
+    padding-top:10px;
+    padding-left: 15px;
+}
+.footer .city{
+    border-right: none;
+}
+.footer .city:last-child{
+    border-right: none;
+}
+
+
+.footer .links .footer1 .solutions h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .solutions ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .solutions .solution{
+    padding:0;
+}
+.footer .links .footer1 .aboutus h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .aboutus ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .aboutus .about{
+    padding:0;
+}
+.footer .links .footer1 .customer h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .customer ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .customer .custom{
+    padding:0;
+}
+.footer .links .footer1 .supports h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .supports ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .supports .support{
+    padding:0;
+}
+.footer .links .footer2 .contactus .image{
+    height: 40px;
+  width: 40px;
+  border-radius: 50px;
+}
+
+}
+
+
+
+@media (min-width: 768px) and (max-width:1200px) {
+    .header{
+        padding: 20px 10px;
+    }
+    .logo{
+        height:55px;
+        width:130px;
+    }
+    .header button{
+        background-color:#040404c7;
+        padding: 10px 10px;
+    }
+    .header  ul li{
+        padding-right: 5px;
+        color: #3a1717;
+    }
+    .header  ul li a{
+       font-size:12px;
+    }
+ 
+    .Hero{
+        width: 100%;
+        position: relative;
+    }
+    .Hero .image{
+        height:280px;
+    }
+    .Hero .Hero-text{
+        position: absolute;
+        left:0;
+        right: 0;
+        top:10%;
+        bottom: 0;
+        margin: auto;
+        color:white;
+        font-size:16px;
+    }
+    .Hero .Hero-text h1{
+        font-size:20px;
+    }
+    .Hero .Hero-text p{
+        font-size:16px;
+    }
+    .Hero .play{
+        height:50px;
+        width: 50px;
+        background-color: white;
+    }
+    .free-demo{
+        padding:20px 0;
+    }
+    .free-demo .image{
+        height:350px;
+        width:100%;
+    }
+    .free-demo .right-content{
+        padding-top: 5px;
+        padding-left: 20px;
+        padding-right:20px;
+    }
+    .free-demo .right-content h2{
+        line-height: 20px;
+        font-size:22px;
+    }
+    .benifits{
+        padding-top:10px;
+        padding-bottom: 50px;
+        position: relative;
+        height:750px;
+    }
+    .benifits .image{
+        width:100%;
+        height:500px;
+    }
+    .benifits .benifits-text h2{
+        font-size:24px;
+    }
+    .benifits .benifits-text p{
+        font-size:17px;
+    }
+    .benifits .benifits-conatiner{
+        position: absolute;
+        top:200px;
+        font-size:20px;
+        margin: 0 50px;
+        background-color:white;
+    }
+    .benifits .benifits-conatiner .benifits-box{
+        padding:20px 30px;
+        position: relative;  
+        border:2px solid grey;
+    }
+    .benifits .benifits-conatiner .benifits-box:last-child{
+        border:2px solid grey;
+    }
+    .benifits .benifits-conatiner .benifits-box:before{
+        content: "";
+        border-right: none ;
+    }
+    .slider-content {
+        padding-top:100px;
+        position: relative;
+        width:100%;
+    }
+    .slider-content .image{
+        height:400px;
+        width:100%;
+    }
+    .slider-content h2{
+        font-size:24px;
+    }
+    .slider-content h3{
+        font-size:18px;
+    }
+    .slider-content p{
+        font-size:15px;
+    }
+    .slider-content .slider-text h3{
+        font-size:18px;
+    }
+    .slider-content .slider-text{
+        position: absolute;
+        padding:20px;
+        left:350px;
+        top:280px;
+        margin: auto;
+        color:black;
+        background-color: #fff;
+        font-size:20px;
+    }
+    .clients{
+        padding-bottom: 50px;
+        }
+        .clients .client-content{
+            padding-top:30px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .clients .row .c1{
+            height: 150px;
+            border-right:2px solid grey;
+            border-bottom:2px solid grey;
+        }
+        .clients .row .image{ 
+            height:100px;
+            width:100px;
+        }
+        
+        .clients .row .c1:last-child{
+            height: 150px;
+            border-right:none;
+            border-bottom:2px solid grey;
+        }
+        .clients .row .border-none-xs{
+            height: 150px;
+            border-right:none;
+            border-bottom:2px solid grey;
+        }
+        .clients .row .border-none-sm{
+            height: 150px;
+            border-right:none;
+            border-bottom:2px solid grey;
+        }
+        .contact-us
+{
+    background-color: #29232363;
+}
+.contact-us .contact-us1
+{
+    padding:10px;
+}
+.contact-us .contact-us1 .contact
+{
+    padding-top:20px;
+    font-size:18px;
+    border:none;
+    width:100%;
+}
+.contact-us .contact-us1 .contact:last-child
+{
+    border-right: none;
+}
+.contact-us .contact-us1 button{
+    color:#040404c7;
+    background-color: white;
+    padding: 10px 20px;
+    border-style: solid;
+    border-color: #040404c7;
+}
+.contact-us .contact-us2 .subscribe
+{
+    padding-top: 10px;
+    font-size:18px;
+    width:100%;
+}
+.contact-us .contact-us2
+{
+    padding-bottom:50px;
+}
+.footer{
+    padding-top:20px;
+    padding-bottom:50px;
+    background-color: #262626;
+    color:white;
+}
+
+.footer .city-name1{
+    padding-top:10px;
+    padding-left: 15px;
+}
+.footer .city{
+    border-right: none;
+}
+.footer .city:last-child{
+    border-right: none;
+}
+
+
+.footer .links .footer1 .solutions h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .solutions ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .solutions .solution{
+    padding:0;
+}
+.footer .links .footer1 .aboutus h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .aboutus ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .aboutus .about{
+    padding:0;
+}
+.footer .links .footer1 .customer h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .customer ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .customer .custom{
+    padding:0;
+}
+.footer .links .footer1 .supports h3{
+    padding-left:0px;
+}
+.footer .links .footer1 .supports ul li{
+    list-style-type: none;
+}
+.footer .links .footer1 .supports .support{
+    padding:0;
+}
+.footer .links .footer2 .contactus .image{
+    height: 40px;
+  width: 40px;
+  border-radius: 50px;
+}
+    
+}

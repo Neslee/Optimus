@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/montserrat.css" rel="stylesheet">
+    <link href="css/lora.css" rel="stylesheet">
+    <link href="css/maven.css" rel="stylesheet">
+    <link rel='stylesheet' id='activello-icons-css'  href='https://cdn.colorlib.com/activello/wp-content/themes/activello/assets/css/font-awesome.min.css' type='text/css' media='all' />
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+
+    <title>Page Markup And Formatting</title>
+</head>
+<body>
+
+<header>
+		<nav class="navbar navbar-default">
+			<div class="container header">
+						<div class="navbar-header">
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-bar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+            </div>
+            
+						<div class="collapse navbar-collapse navbar-bar-collapse">
+              <ul class="nav navbar-nav">
+                    <li ><a title="Home" href="activello.html">Home</a></li>
+                    <li class="drop-menu links"><a href="about_the_test.html">About The Tests&nbsp;&nbsp;<i class="fa fa-angle-down" style="font-size:16px"></i></a>
+                    <ul class="dropdown-menu">
+                      <li class="active"><a href="page_markup.html">Page Markup And Formatting</a></li>
+                      <li><a href="clearing_float.html">Clearing Floats</a></li>
+                      <li><a href="page-with-comment.html">Page with comments</a></li>
+                      <li><a href="pwcd.html">Page with comments disabled</a></li>
+                      <li><a href="lorem.html">Lorem Ipsum</a></li>
+                    </ul>
+                    </li>
+                    <li class="drop-menu links"><a href="level1.html">Level 1&nbsp;&nbsp;<i class="fa fa-angle-down" style="font-size:16px"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="level2.html">Level 2</a></li>
+                      <li><a href="level3.html">Level 3</a></li>
+                    </ul>
+                    </li>
+                    <li class="links"><a href="shop1.html">Shop</a></li>
+                </ul>
+                
+              </div>
+              <div class="nav-search">
+                  <input type="text" placeholder="Search" class="input-search">
+                  <span class="glyphicon glyphicon-search search-icon"></span>            
+              </div>
+					</div>
+			</div>
+		</nav>
+  </header>
+
+  <main>
+   <section class="logo-section">
+     <div class="container">
+       <div class="row text-center">
+            <a href="activello.html"><img src="images/logo.png" class="image"></a><br>
+         <p>Just another colorlib.com site</p>
+       </div>
+       <hr>
+     </div>
+   </section>
+
+  
+  <section class="content-section container">
+    <div class="col-xs-12 col-md-12">
+      <div class="col-xs-12 col-md-8 pagemarkup-left-content">
+        <h1 class="text-center page_markup_header">Page Markup And Formatting</h1>
+       <p>
+           <strong>Headings</strong>
+       </p>
+       <h1>Header one</h1>
+       <h2>Header two</h2>
+       <h3>Header three</h3>
+       <h4>Header four</h4>
+       <h5>Header five</h5>
+       <h6>Header six</h6>
+       <h2>Blockquotes</h2>
+       <p>Single line blockquote:</p>
+       <img src="images/double_qoute.jpg" class="block_image"><p class="hungry">Stay hungry. Stay foolish.</p>
+       <p>Multi line blockquote with a cite reference:</p>
+       <img src="images/double_qoute.jpg" class="block_image"><p class="hungry">People think focus means saying yes to the thing you’ve got to focus on. 
+           But that’s not what it means at all. It means saying no to the hundred other good
+            ideas that there are. You have to pick carefully. I’m actually as proud of the
+             things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.
+              <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p>
+       
+              <h2>Tables</h2>
+
+              <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                    <th>Employee</th>
+                    <th class="views">Salary</th>
+                    <th></th>
+                    </tr>
+                    <tr class="odd">
+                    <td><a href="">Jane</a></td>
+                    <td>$1</td>
+                    <td>Because that’s all Steve Job’ needed for a salary.</td>
+                    </tr>
+                    <tr class="even">
+                    <td><a href="">John</a></td>
+                    <td>$100K</td>
+                    <td>For all the blogging he does.</td>
+                    </tr>
+                    <tr class="odd">
+                    <td><a href="">Jane</a></td>
+                    <td>$100M</td>
+                    <td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+                    </tr>
+                    <tr class="even">
+                    <td><a href="">Jane</a></td>
+                    <td>$100B</td>
+                    <td>With hair like that?! Enough said…</td>
+                    </tr>
+                    </tbody>
+             </table>
+
+             <h2>Definition Lists</h2>
+
+             <dl>
+                    <dt>Definition List Title</dt>
+                    <dd>Definition list division.</dd>
+                    <dt>Startup</dt>
+                    <dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+                    <dt>#dowork</dt>
+                    <dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+                    <dt>Do It Live</dt>
+                    <dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+            </dl>
+
+                    <h2>Unordered Lists (Nested)</h2>
+
+
+                    <ul>
+                            <li>List item one
+                            <ul>
+                            <li>List item one
+                            <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                            </ul>
+                            </li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                            </ul>
+                            </li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                    </ul>
+                    <h2>Ordered List (Nested)</h2>
+
+                    <ol>
+                            <li>List item one
+                            <ol>
+                            <li>List item one
+                            <ol>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                            </ol>
+                            </li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                            </ol>
+                            </li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                            <li>List item four</li>
+                     </ol>
+
+                     <h2>HTML Tags</h2>
+                     <p>These supported tags come from the WordPress.com code <a title="Code" href="">FAQ</a>.</p>
+                     <p><strong>Address Tag</strong></p>
+
+                     <address>1 Infinite Loop<br>
+                        Cupertino, CA 95014<br>
+                        United States</address>
+
+                        <p><strong>Anchor Tag (aka. Link)</strong></p>
+                        <p>This is an example of a <a title="Apple" href="">link</a>.</p>
+                        <p><strong>Abbreviation Tag</strong></p>
+                        <p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+                        <p><strong>Acronym Tag</strong></p>
+                        <p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+                        <p><strong>Big Tag</strong></p>
+                        <p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+                        <p><strong>Cite Tag</strong></p>
+                        <p>“Code is poetry.” —<cite>Automattic</cite></p>
+                        <p><strong>Code Tag</strong></p>
+                        <p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+                        <p><strong>Delete Tag</strong></p>
+                        <p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+                        <p><strong>Emphasize Tag</strong></p>
+                        <p>The emphasize tag should <em>italicize</em> text.</p>
+                        <p><strong>Insert Tag</strong></p>
+                        <p>This tag should denote <ins>inserted</ins> text.</p>
+                        <p><strong>Keyboard Tag</strong></p>
+                        <p>This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+                        <p><strong>Preformatted Tag</strong></p>
+                        <p>This tag styles large blocks of code.</p>
+                        <pre>.post-title {
+                                margin: 0 0 5px;
+                                font-weight: bold;
+                                font-size: 38px;
+                                line-height: 1.2;
+                            }</pre>
+                            <p><strong>Quote Tag</strong></p>
+                            <p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+                            <p><strong>Strong Tag</strong></p>
+                            <p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+                            <p><strong>Subscript Tag</strong></p>
+                            <p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+                            <p><strong>Superscript Tag</strong></p>
+                            <p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+                            <p><strong>Teletype Tag</strong></p>
+                            <p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+                            <p><strong>Variable Tag</strong></p>
+                            <p>This allows you to denote <var>variables</var>.</p>
+
+	
+                            <h3 class="comment text-center">Leave a Reply</h3>		
+                            <form class="comment-form">
+                            <textarea id="comment" name="comment" cols="76" rows="12" aria-required="true" placeholder="Comment"></textarea>
+                            <br><br>
+                            <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" aria-required="true" placeholder="Email">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text"  placeholder="Website">
+                            </div>
+                            </div>
+                            <p class="form-submit"><input name="submit" type="submit" class="submit" value="Post Reply">                          		
+                            </form>
+                            </div>
+                
+    
+      <div class="col-xs-12 col-md-4 right-content text-center">
+          <aside>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 aboutme text-left">
+                <p>ABOUT ME</p>
+                <hr class="line1">
+                <img src="images/aboutme.jpg" class="image">
+                <p class="para text-left">My name is <strong style="color:black;">Activello</strong> and I am an awesome
+                   WordPress blog theme for photography, food, travel and other blogs. 
+                   I was created by <a href=""><strong>colorlib.</strong></a></p>
+                </div>     
+        </div>
+      </aside>
+
+      <aside>
+        <div class="row">
+          <div class="col-xs-12 col-md-12 social-icons text-left">
+              <p>FOLLOW ME</p>
+              <hr class="line1">
+              <nav class="social text-center">
+                <ul>
+                  <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+                  <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+                  <li><a href=""><i class="fa fa-youtube fa-lg"></i></a></li>
+                  <li><a href=""><i class="fa fa-google fa-lg"></i></a></li>
+                  <li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
+                  <li><a href=""><i class="fa fa-github fa-lg"></i></a></li>
+                </ul>
+              </nav> 
+              </div>     
+      </div>
+    </aside>
+
+    <aside>
+            <div class="row">
+                <div class="col-xs-12 col-md-12 recent-posts text-left">
+                    <p>RECENT POSTS</p>
+                    <hr class="line1">
+                    <div class="col-xs-12 col-md-12 recent1">
+                        <img src="images/recent1.jpg" class="post-image">
+                        <p class="post-text">Post Format: Standard</p><br><br><br>
+                        <p class="post-date">-05 Oct, 2016</p>
+                    </div>             
+                    <div class="col-xs-12 col-md-12 recent2" class="image">
+                        <img src="images/recent2.jpg" class="post-image">
+                        <p class="post-text">Post Format: Gallery</p><br><br><br>
+                        <p class="post-date">- 12 Nov , 2015</p>
+                      </div>   
+                      <div class="col-xs-12 col-md-12 recent3" class="image">
+                          <img src="images/recent3.jpg" class="post-image">
+                          <p class="post-text">Template: Featured Image<br> (No Sidebar Layout)</p><br><br><br>
+                          <p class="post-date">- 11 Nov , 2015</p>
+                        </div>   
+                </div>     
+            </div>
+          </aside>
+
+      <aside>
+      <div class="row">
+          <div class="col-xs-12 col-md-12 input-text">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">SEARCH</button>
+                  </span>
+                </div>
+          </div>     
+      </div>
+    </aside>
+
+      <aside>
+      <div class="row">
+          <div class="col-xs-12 col-md-12 categories text-left">
+              <p>CATEGORIES</p>
+              <hr class="line1">
+              
+              <div class="col-xs-12 col-md-12 category">
+                  <span class="text-left"><a href="">Post Formats</a></span>
+                  <span class="pull-right">11</span>
+                  <hr class="line2">
+              </div>
+              <div class="col-xs-12 col-md-12 category">
+                  <span class="text-left"><a href="">Template</a></span>
+                  <span class="pull-right">5</span>
+                  <hr class="line2">
+              </div>
+              <div class="col-xs-12 col-md-12 category">    
+                  <span class="text-left"><a href=""></a>Cat A</a></span>
+                  <span class="pull-right">3</span>
+                  <hr class="line2">
+               </div>
+               <div class="col-xs-12 col-md-12 category">   
+                  <span class="text-left"><a href="">Edge Case</a></span>
+                  <span class="pull-right">3</span>
+                  <hr class="line2">
+              </div>
+              <div class="col-xs-12 col-md-12 category">   
+                  <span class="text-left"><a href="">Cat B</a></span>
+                  <span class="pull-right">2</span>
+                  <hr class="line2">
+              </div>
+          </div>     
+      </div>
+    </aside>
+
+    <aside>
+            <div class="row">
+                <div class="col-xs-12 col-md-12 adsense text-left">
+                    <p>Any text goes here</p>
+                    <h3 class="adsense">This Theme Is AdSense Ready</h3>
+                    <hr class="line1">
+                </div>     
+            </div>
+          </aside>
+
+        </div>
+    </div>
+  </section>
+
+
+   <footer class="col-xs-12 col-md-12 footer">
+    <div class="container col-md-12 social-icons text-center">
+        <nav class="social">
+            <ul>
+              <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+              <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li><a href=""><i class="fa fa-youtube fa-lg"></i></a></li>
+              <li><a href=""><i class="fa fa-google fa-lg"></i></a></li>
+              <li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
+              <li><a href=""><i class="fa fa-github fa-lg"></i></a></li>
+            </ul>
+          </nav> 
+    </div>
+    <div class="container col-xs-12 col-md-12 copyright text-center">
+        <p>Activello.	Theme by Colorlib Powered by WordPress</p>
+    </div>
+  </footer>
+     
+</main>
+     
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+</body>
+</html>

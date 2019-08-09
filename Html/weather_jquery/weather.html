@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/weather.css" rel="stylesheet">
+  <title>Weather Report</title>
+</head>
+
+<body>
+
+  <div class="container text-center">
+    <div class="main-content col-xs-12 col-md-12">
+
+      <div class="col-xs-12 col-md-12 main-section">
+        <!-- Left Content -->
+        <div class="col-xs-6 col-md-4 left-content text-center">
+          <span id="week-day0"></span>
+          <img id="weather-image0">
+          <div class="left-temperature">
+            <span id="day0_high_temperature"></span>
+            <span id="day0_low_temperature"></span>
+          </div>
+        </div>
+        <!-- End Left Content -->
+
+        <!-- Right Content -->
+        <div class="col-xs-6 col-md-8 right-content text-left">
+          <img src="images/weatherapp.jpg" class="main-image">
+          <h3 id="greetings"></h3>
+          <h3 id="city_name"></h3>
+
+          <ul class="right-menu">
+              <li><a href="#"><i class="fa fa-navicon"></i></a>
+                  <ul class="inner-menu">
+                              <li class="active" id="bangalore"><a href="#">Bangalore</a></li>
+                              <li id="mangalore"><a href="#">Mangalore</a></li>
+                              <li id="goa"><a href="#">Goa</a></li>
+                              <li id="chennai"><a href="#">Chennai</a></li>
+                              <li id="rajasthan"><a href="#">Rajasthan</a></li>
+                  </ul>
+              </li>
+          </ul>
+
+        </div>
+        <!-- End Right Content -->
+      </div>
+
+      <!-- Bottom Content -->
+      <div class="col-md-12 bottom-content">
+        <div class="col-xs-4 col-md-2 week-container">
+          <span id="week-day1" class="bottom_days"></span>
+          <img id="weather-image1">
+          <div class="bottom-temperature">
+            <span id="day1_high_temperature" class="bottom_high_temperature"></span>
+            <span id="day1_low_temperature" class="bottom_low_temperature"></span>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-2 week-container">
+          <span id="week-day2" class="bottom_days"></span>
+          <img id="weather-image2">
+          <div class="bottom-temperature">
+            <span id="day2_high_temperature" class="bottom_high_temperature"></span>
+            <span id="day2_low_temperature" class="bottom_low_temperature"></span>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-2 week-container">
+          <span id="week-day3" class="bottom_days"></span>
+          <img id="weather-image3">
+          <div class="bottom-temperature">
+            <span id="day3_high_temperature" class="bottom_high_temperature"></span>
+            <span id="day3_low_temperature" class="bottom_low_temperature"></span>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-2 week-container">
+          <span id="week-day4" class="bottom_days"></span>
+          <img id="weather-image4">
+          <div class="bottom-temperature">
+            <span id="day4_high_temperature" class="bottom_high_temperature"></span>
+            <span id="day4_low_temperature" class="bottom_low_temperature"></span>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-2 week-container">
+          <span id="week-day5" class="bottom_days"></span>
+          <img id="weather-image5">
+          <div class="bottom-temperature">
+            <span id="day5_high_temperature" class="bottom_high_temperature"></span>
+            <span id="day5_low_temperature" class="bottom_low_temperature"></span>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-2 week-container">
+          <span id="week-day6" class="bottom_days"></span>
+          <img id="weather-image6">
+          <div class="bottom-temperature">
+            <span id="day6_high_temperature" class="bottom_high_temperature"></span>
+            <span id="day6_low_temperature" class="bottom_low_temperature"></span>
+          </div>
+        </div>
+      </div>
+      <!-- End Bottom Content -->
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

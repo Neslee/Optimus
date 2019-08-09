@@ -1,0 +1,11 @@
+@import 'bootstrap/_variables';
+@import '_owl.carousel.min';
+#owl-demo.item{
+    margin: 3px;
+    
+  }
+  #owl-demo .item img{
+    display: block;
+    width: 10%;
+    height:10%;
+  }

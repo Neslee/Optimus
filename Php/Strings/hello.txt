@@ -1,0 +1,1 @@
+Hello the variable value is 100.345000

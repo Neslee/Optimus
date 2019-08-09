@@ -1,0 +1,115 @@
+.arrival-section{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom:20px;
+    .head{
+        margin-bottom: 30px;
+    h2{
+        margin-bottom: 15px;
+       font-weight: 600;
+    }
+    .view-all {
+        margin-top:20px;
+        font-size: 18px;
+        color: #ff5d73;
+    }
+}
+    .arrival-slider{         
+        .item{
+            background-color: white;
+            border: 1px solid #f4f4f6;
+            margin-bottom:40px;
+            margin-right:0;
+            .image{
+                margin-top:20px;
+                margin-left:20px;
+                margin-right:50px;
+                margin-bottom: 20px;
+                height:200px;
+                width:auto;
+            }
+
+            .image:hover{
+                transform: scale(1.1); 
+                transition: all 0.5s ease;
+            }
+        }
+    }   
+}
+
+.arrival-section{
+    padding:  0 30px;
+    .owl-nav{
+        display: block!important; 
+        .owl-prev{
+            position: absolute;
+            top: 30%;
+            border-radius: 50%;
+            background-color:rgb(214, 79, 79);
+            span{
+                font-size:40px;
+                
+            }
+        }
+        .owl-next{
+            position: absolute;
+            top:30%;
+            right: 30px;
+            span{
+                font-size:40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$screen-xs-min){
+    .arrival-section{
+        margin-left:0px;
+        margin-right: 0px;
+        margin-bottom:20px;
+        h2{
+            font-size:20px;
+            margin-left: 20px;
+        }
+        .arrival-slider{         
+            .item{
+                background-color: white;
+                border: 1px solid #f4f4f6;
+                margin-bottom:10px;
+                margin-right:0;
+                .image{
+                    margin-top:10px;
+                    margin-bottom: 20px;
+                    height:auto;
+                }
+            }
+        }   
+    }
+    
+}
+
+@media screen and (max-width:$screen-sm-min){
+    .arrival-section{
+        margin-left:0px;
+        margin-right: 0px;
+        margin-bottom:20px;
+        h2{
+            font-size:20px;
+            margin-left: 20px;
+        }
+        .arrival-slider{         
+            .item{
+                background-color: white;
+                border: 1px solid #f4f4f6;
+                margin-bottom:10px;
+                margin-right:0;
+                .image{
+                    margin-top:10px;
+                    margin-bottom: 20px;
+                    height:auto;
+                }
+            }
+        }   
+    }
+    
+}
