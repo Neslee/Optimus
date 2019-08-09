@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * GSH Dialog Data.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function gsh_dialog_data_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the gsh_dialog_data module.
+    case 'help.page.gsh_dialog_data':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Implementation and overrides for GSH Dialog Data.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function gsh_dialog_data_theme($existing, $type, $theme, $path) {
+  return [
+    'property-popup-dialog-data' => [
+      'variables' => ['node' => NULL],
+    ],
+    'property-community-dialog-data' => [
+      'variables' => ['node' => NULL],
+    ],
+    'nearby-places-dialog-data' => [
+      'variables' => ['node' => NULL],
+    ],
+    'floorplan-popup-dialog-data' => [
+      'variables' => ['term' => NULL],
+    ],
+    'community-popup-dialog-data' => [
+      'variables' => [
+        'term' => NULL,
+        'sqft' => NULL,
+        'bedrooms' => NULL,
+        'bath' => NULL,
+        'garage' => NULL,
+        'storey' => NULL,
+        'startprice' => NULL,
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,7 @@
+name: 'Image Sizer'
+type: module
+description: 'Resizing the image and displaying Black and White'
+package: Custom
+core: 8.x
+dependencies:
+  - drupal:node

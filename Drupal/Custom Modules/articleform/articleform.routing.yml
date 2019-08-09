@@ -1,0 +1,7 @@
+article_forms:
+  path: '/form'
+  defaults:
+    _form: '\Drupal\articleform\Form\ArticleForm'
+    _title: 'Article Form Page'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,37 @@
+gsh_blocks.hers_block:
+  path: '/admin/config/content/hers_index'
+  defaults:
+    _form: '\Drupal\gsh_blocks\Form\HersIndex'
+    _title: 'HERS Index'
+  requirements:
+    _permission: 'gsh_blocks hers_permission'
+
+gsh_blocks.finance_get_in_touch_popup_content:
+  path: '/finance/{id}'
+  defaults:
+    _controller: '\Drupal\gsh_blocks\Controller\FinancePopupController::content'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    parameters:
+      id:
+      type: 'id'
+
+gsh_blocks.county_map_data:
+  path: '/county-map-data/{id}'
+  defaults:
+    _controller: '\Drupal\gsh_blocks\Controller\CountyMapData::content'
+  options:
+    no_cache: TRUE
+  requirements:
+    _permission: 'access content'
+
+gsh_blocks.homepage_map_data:
+  path: '/homepage-map-data/{id}'
+  defaults:
+    _controller: '\Drupal\gsh_blocks\Controller\HomePageMapData::content'
+  options:
+    no_cache: TRUE
+  requirements:
+    _permission: 'access content'

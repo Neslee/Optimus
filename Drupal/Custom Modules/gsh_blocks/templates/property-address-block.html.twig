@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme implementation for property page address block.
+#}
+
+<div class="address-section">
+  <a href="https://www.google.com/maps/search/?api=1&query={{ node.address }},{{ node.city }},{{ node.state }},{{ node.zip_code }}"
+     target="_blank">
+    {% if node.address|render is not empty %}
+      <span>{{ node.address }}</span>
+    {% endif %}
+    {% if node.city|render is not empty %}
+      <span>{{ node.city }}</span>
+    {% endif %}
+    {% if node.state|render is not empty %}
+      <span>{{ node.state }}</span>
+    {% endif %}
+    {% if node.zip_code|render is not empty %}
+      <span>{{ node.zip_code }}</span>
+    {% endif %}
+  </a>
+</div>
+{% if node.display_name|render is not empty %}
+  <span class="display-name">{{ node.display_name }}</span>
+{% endif %}

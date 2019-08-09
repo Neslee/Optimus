@@ -1,0 +1,79 @@
+{#
+/**
+ * @file
+ * Theme implementation for GSH Layout Builder.
+#}
+{% set classes = [
+  'layout',
+  'layout--gsh-layout',
+] %}
+{% if content %}
+  <div{{attributes.addClass(classes)}}>
+    {% if content.top_sticky %}
+      <div {{ region_attributes.top_sticky.addClass('layout__region', 'layout__region--top_sticky') }}>
+        <div class="layout--gsh-wrapper">
+          {{ content.top_sticky }}
+        </div>
+      </div>
+    {% endif %}
+    <div class="layout--gsh-wrapper container-fluid">
+      {% if content.header_left %}
+        <div {{ region_attributes.header_left.addClass('layout__region', 'layout__region--header_left') }}>
+          {{ content.header_left }}
+        </div>
+      {% endif %}
+      {% if content.header_right %}
+        <div {{ region_attributes.header_right.addClass('layout__region', 'layout__region--header_right') }}>
+          {{ content.header_right }}
+        </div>
+      {% endif %}
+      {% if content.sub_header_left %}
+        <div {{ region_attributes.sub_header_left.addClass('layout__region', 'layout__region--sub_header_left') }}>
+          {{ content.sub_header_left }}
+        </div>
+      {% endif %}
+      {% if content.sub_header_right %}
+        <div {{ region_attributes.sub_header_right.addClass('layout__region', 'layout__region--sub_header_right') }}>
+          {{ content.sub_header_right }}
+        </div>
+      {% endif %}
+      {% if content.content %}
+        <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+          {{ content.content }}
+        </div>
+      {% endif %}
+      {% if content.sidebar %}
+        <div {{ region_attributes.sidebar.addClass('layout__region', 'layout__region--sidebar') }}>
+          {{ content.sidebar }}
+        </div>
+      {% endif %}
+    </div>
+    {% if content.secondary_header %}
+      <div {{ region_attributes.secondary_header.addClass('layout__region', 'layout__region--secondary_header') }}>
+        {{ content.secondary_header }}
+      </div>
+    {% endif %}
+    <div class="layout--gsh-wrapper gsh-layout-leftright-section">
+      {% if content.secondary_left %}
+        <div {{ region_attributes.secondary_left.addClass('layout__region', 'layout__region--secondary_left') }}>
+          <div class="layout__region--secondary_left--first">
+            {{ content.secondary_left }}
+          </div>
+        </div>
+      {% endif %}
+      {% if content.secondary_right %}
+        <div {{ region_attributes.secondary_right.addClass('layout__region', 'layout__region--secondary_right') }}>
+          <div class="school-district-container">
+            {{ content.secondary_right }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    {% if content.secondary_content %}
+      <div {{ region_attributes.secondary_content.addClass('layout__region', 'layout__region--secondary_content') }}>
+        {{ content.secondary_content }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}

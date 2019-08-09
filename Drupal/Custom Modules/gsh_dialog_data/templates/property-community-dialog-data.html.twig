@@ -1,0 +1,110 @@
+{#
+/**
+ * @file
+ * Theme implementation for property pages, community popup data.
+#}
+
+{{ attach_library('gsh_theme/property') }}
+<div class="property__dialog--section">
+  <div class="container-fluid property__popup-header">
+    <div class="layout--gsh-wrapper">
+      <div class="property__information--section">
+        {% if node.property_title|render is not empty %}
+          <span>{{ node.property_title }}</span>
+        {% endif %}
+        {% if node.property_price|render is not empty %}
+          <span>${{ node.property_price }}</span>
+        {% endif %}
+      </div>
+      <div class="property__information--section">
+        {% if node.property_lot_number|render is not empty %}
+          <span>Lot #{{ node.property_lot_number }}</span>
+        {% endif %}
+        {% if node.property_sqft|render is not empty %}
+          <span aria-label="Area size" class="icon icon-area-size">
+            {{ node.property_sqft }} Sqft
+          </span>
+        {% endif %}
+        {% if node.property_bed|render is not empty %}
+          <span aria-label="Rooms" class="icon icon-rooms">
+            {{ node.property_bed }} Beds
+          </span>
+        {% endif %}
+        {% if node.property_bath|render is not empty %}
+          <span aria-label="Baths" class="icon icon-baths">
+            {{ node.property_bath }} Baths
+          </span>
+        {% endif %}
+        {% if node.property_cars|render is not empty %}
+          <span aria-label="Garage" class="icon icon-garage">
+            {{ node.property_cars }} Garage
+          </span>
+        {% endif %}
+        {% if node.property_floors|render is not empty %}
+          <span aria-label="Storey Home" class="icon icon-storey-home">
+            {{ node.property_floors }} Story
+          </span>
+        {% endif %}
+      </div>
+      <div class="property__information--section">
+        <a class="property__information--map"
+           href="http://maps.google.com/maps?daddr={{ node.latitude }},{{ node.longitude }}"
+           target="_blank"></a>
+        {% if node.property_brochure|render is not empty %}
+          <a class="property__information--borchure" href="{{ node.property_brochure }}"
+             type="application/pdf;" target="_blank">Brochure</a>
+        {% endif %}
+        {{ drupal_block("better_social_sharing_buttons_block") }}
+        <a class="property__dialogue--close" href="#">
+          <i class="icon icon-close"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="property__popup--count container">
+    {% if node.gallery_images_count|render is not empty %}
+      <a href="#gallery-image">
+        <span class="icon icon-picture">
+          Image ({{ node.gallery_images_count }})
+        </span>
+      </a>
+    {% endif %}
+    {% if node.community_video_count|render is not empty %}
+      <a href="#popup-video">
+        <span class="icon icon-play-02">
+          Videos ({{ node.community_video_count }})
+        </span>
+      </a>
+    {% endif %}
+    {% if node.latitude|render is not empty or node.longitude|render is not empty %}
+      <a href="#popup-location">
+        <span class="icon icon-location">Location Map</span>
+      </a>
+    {% endif %}
+  </div>
+  <div class="property__popup--slider container popup--slider owl-carousel owl-theme">
+    {% for gallery_image in node.gallery_image %}
+      <img src="{{ gallery_image }}" class="gallery-image">
+    {% endfor %}
+    {% if node.community_video|render is not empty %}
+    <iframe frameborder="0" height='59px' src='{{ node.community_video }}'></iframe>
+    {% endif %}
+    {% if node.latitude|render is not empty or node.longitude|render is not empty %}
+      <iframe frameborder="0"
+              src="https://maps.google.com/maps?q={{ node.latitude }},{{ node.longitude }}&output=embed"></iframe>
+    {% endif %}
+  </div>
+  <div class="property__popup--slidersync popup--slidersync container owl-carousel owl-theme">
+    {% for gallery_image in node.gallery_image %}
+      <img src="{{ gallery_image }}" class="marketing-image" id="gallery-image">
+    {% endfor %}
+    {% if node.community_video_count|render is not empty %}
+      <img class="illustration-image" id="popup-video"
+           src="../../../themes/custom/gsh_theme/assets/images/popup-thumb-video.jpg">
+    {% endif %}
+    {% if node.latitude|render is not empty or node.longitude|render is not empty %}
+      <img class="illustration-image" id="popup-location"
+           src="../../../themes/custom/gsh_theme/assets/images/popup-thumb-map.jpg">
+    {% endif %}
+  </div>
+</div>

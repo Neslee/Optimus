@@ -1,0 +1,109 @@
+id: gsh_migration_communities
+label: 'Migrate Communities data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/communities.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+  field_featured_image: featured_image
+  field_featured_image/alt: featured_image_alt_text
+  field_featured_image/title: featured_image_title_text
+  field_community_id: community_id
+  field_form_id: form_id
+  description/value: term_description
+  description/format:
+      plugin: default_value
+      default_value: "full_html"
+  field_quadrant:
+    plugin: entity_lookup
+    source: quadrant
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: areas
+    value_key: name
+  field_latitude: latitude
+  field_longitude: longitude
+  field_is_outside_of_community: is_outside_of_community
+  field_street_1: street_1
+  field_street_2: street_2
+  field_sales_city: city
+  field_state: state
+  field_zip: zip
+  field_community_floorplans:
+    - plugin: explode
+      delimiter: "|"
+      source: fcid
+    - plugin: skip_on_empty
+      method: process
+    - plugin: migration_lookup
+      migration: gsh_migration_field_collection_community_floorplan
+      no_stub: true
+    - plugin: iterator
+      process:
+        target_id: '0'
+        target_revision_id: '1'
+  field_schools:
+  - plugin: explode
+    delimiter: ','
+    source: school(s)
+  - plugin: entity_lookup
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: schools
+    value_key: name
+  field_school_district:
+    plugin: entity_lookup
+    source: school_district
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: school_district
+    value_key: name
+  field_community_representatives:
+    - plugin: explode
+      delimiter: '|'
+      source: community_representative(s)
+  field_community_rep_video: community_rep_video
+  field_new_homes_starting_at: new_homes_starting_at
+  field_marketing_tagline: marketing_tagline
+  field_marketing_copy: marketing_copy
+  field_community_siteplan: community_siteplan
+  field_community_siteplan_desc: community_siteplan_description
+  field_gallery_images:
+    - plugin: explode
+      delimiter: '|'
+      source: gallery_images
+  field_include_in_bdx_export: include_this_community_in_BDX_export
+  field_include_in_zillow_export: include_this_community_in_zillow_xport
+  field_subdivision_status: subdivision_status
+  field_sales_manager_email: sales_manager_email
+  field_physical_street_1: substreet_1
+  field_physical_street_2: substreet_2
+  field_physical_city: subcity
+  field_physical_state: substate
+  field_physical_zip: subzip
+  field_community_video: community_video
+  field_nearby_places: nearby_places
+  field_community_banner/value: highlight_news
+  field_community_banner/format:
+    plugin: default_value
+    default_value: "full_html"
+  field_is_published: is_published
+  field_is_coming_soon: is_coming_soon
+  field_project_id: project_id
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: communities
+migration_dependencies:
+  required:
+    - gsh_migration_field_collection_community_floorplan
+    - gsh_migration_areas
+    - gsh_migration_schools
+    - gsh_migration_school_district
+dependencies: { }

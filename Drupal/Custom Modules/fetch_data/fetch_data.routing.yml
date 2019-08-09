@@ -1,0 +1,7 @@
+fetch_data.content:
+  path: '/fetch'
+  defaults:
+    _controller: '\Drupal\fetch_data\Controller\FetchData::content'
+    _title: 'User Data'
+  requirements:
+    _permission: 'access content'

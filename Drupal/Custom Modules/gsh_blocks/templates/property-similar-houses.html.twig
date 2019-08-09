@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Theme implementation for property page, similar houses heading block.
+#}
+
+{% if node.community_name|render is not empty %}
+  {% set community_name %}
+    {{ node.community_name }}
+  {% endset %}
+  <h2>Similar Houses in {{ community_name|striptags('<h2>')|raw }}</h2>
+{% endif %}

@@ -1,0 +1,24 @@
+id: gsh_migration_master_option
+label: 'Migrate Master Option data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/master-option.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+  description/value: term_description
+  description/format:
+    plugin: default_value
+    default_value: "full_html"
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: master_options
+migration_dependencies:
+  required: { }
+dependencies: { }

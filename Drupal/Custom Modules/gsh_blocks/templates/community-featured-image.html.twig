@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Theme implementation for community page popup block.
+#}
+
+{{ attach_library('gsh_theme/community') }}
+<div class="community-hero-section">
+  <div class="community-slider--wrapper">
+    {% if term.featured_image|render is not empty %}
+    <div class="community-hero--slider owl-carousel owl-theme">
+      <img src="{{ term.featured_image }}" class="featured-image">
+      {% for gallery_image in term.gallery_image %}
+        <img src="{{ gallery_image }}" class="featured-image">
+      {% endfor %}
+    </div>
+    {% if term.marketing_tagline|render is not empty %}
+      <div class="marketing-tagline">
+        {{ term.marketing_tagline }}
+      </div>
+    {% endif %}
+    {% if term.coming_soon == '1' %}
+    <div class="coming-soon">
+      <img src="../../../themes/custom/gsh_theme/assets/images/coming-soon.svg">
+    </div>
+    {% endif %}
+    <div class="community-popup-links">
+      <div class="community-popup-links--info tooltip">
+        <a class="use-ajax featured-picture" data-dialog-options="{&quot;width&quot;:1300}"
+           data-dialog-type="modal" href="/community_popup/{{ term.term_id }}"></a>
+        <span class="tooltiptext">Pictures</span>
+      </div>
+      <div class="community-popup-links--info tooltip">
+        <a class="use-ajax featured-location" data-dialog-options="{&quot;width&quot;:1300}"
+           data-dialog-type="modal" href="/community_popup/{{ term.term_id }}"></a>
+        <span class="tooltiptext">Location</span>
+      </div>
+      <div class="community-popup-links--info tooltip">
+        <a class="featured-get-direction" href="http://maps.google.com/maps?daddr={{ term.latitude }},{{ term.longitude }}" target="_blank"></a>
+        <span class="tooltiptext">Get Directions</span>
+      </div>
+    </div>
+  </div>
+  <div class="community-hero--slidersync owl-carousel owl-theme">
+    <img src="{{ term.featured_image }}" class="gallery-image">
+    {% for gallery_image in term.gallery_image %}
+      <img src="{{ gallery_image }}" class="gallery-image">
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>

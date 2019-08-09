@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Fetch Data.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function fetch_data_theme($existing, $type, $theme, $path) {
+  return [
+    'data-theme' => [
+      'variables' => ['data' => NULL],
+    ],
+  ];
+}

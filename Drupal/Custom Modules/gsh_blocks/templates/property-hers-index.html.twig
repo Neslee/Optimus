@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme implementation for property hers rating block.
+#}
+
+{{ attach_library('gsh_blocks/her-section') }}
+{% if node.hers_index|render is not empty %}
+  <h2>HERS Rating</h2>
+  <div class="property_hers_index">
+    <div class="property_hers_index__content">
+      <div class="property_hers_index__left">
+        <span class="d-none" id="herValue">{{ node.hers_index }}</span>
+        <p>{{ node.hers_index }} <span>rating</span></p>
+      </div>
+      <div class="property_hers_index__right">
+        <h2>{{ node.hers_title }}</h2>
+        <p>{{ node.hers_description }}</p>
+      </div>
+      <div id="slider" class="property_hers_index__slider">
+        <input type="hidden" name="tea1" class="range" id="herIndex" value=""/>
+      </div>
+    </div>
+  </div>
+{% endif %}

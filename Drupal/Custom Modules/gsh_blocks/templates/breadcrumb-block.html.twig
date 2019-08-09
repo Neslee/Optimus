@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme implementation for breadcrumb block for property, community, area, city and floorplan page.
+#}
+
+<div class="layout--gsh-wrapper container-fluid">
+  <div class="breadcrump__block">
+    {% if breadcrumb.floorplan_url|render is not empty %}
+      <div class="breadcrump__links">
+        <p>Floorplan / {{ breadcrumb.floorplan_url }}</p>
+      </div>
+    {% endif %}
+    {% if breadcrumb.city_url|render is not empty %}
+      <div class="breadcrump__links">
+        {{ breadcrumb.city_url }}
+      </div>
+    {% endif %}
+    {% if breadcrumb.area_url|render is not empty %}
+      <div class="breadcrump__links">
+        {{ breadcrumb.area_url }}
+      </div>
+    {% endif %}
+    {% if breadcrumb.community_url|render is not empty %}
+      <div class="breadcrump__links">
+        {{ breadcrumb.community_url }}
+      </div>
+    {% endif %}
+    {% if breadcrumb.property_url|render is not empty %}
+      <div class="breadcrump__links">
+        {{ breadcrumb.property_url }}
+      </div>
+    {% endif %}
+  </div>
+</div>

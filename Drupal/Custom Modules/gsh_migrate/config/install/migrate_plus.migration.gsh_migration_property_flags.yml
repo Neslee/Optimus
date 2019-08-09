@@ -1,0 +1,21 @@
+id: gsh_migration_property_flags
+label: 'Migrate Property Flag data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/property-flag.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+  field_additional_css_classes: additional_css
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: property_flags
+migration_dependencies:
+  required: { }
+dependencies: { }

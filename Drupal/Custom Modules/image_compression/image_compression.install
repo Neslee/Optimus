@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Utility install file.
+ */
+
+/**
+ * Implements hook_install().
+ */

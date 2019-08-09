@@ -1,0 +1,268 @@
+<?php
+
+/**
+ * @file
+ * GSH Blocks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\user\Entity\User;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_help().
+ */
+function gsh_blocks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the gsh_blocks module.
+    case 'help.page.gsh_blocks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Implementation and overrides for GSH Blocks.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function gsh_blocks_theme($existing, $type, $theme, $path) {
+  return [
+    'property-featured-image' => [
+      'variables' => ['node' => NULL],
+    ],
+    'property-address-block' => [
+      'variables' => ['node' => NULL],
+    ],
+    'property-hers-index' => [
+      'variables' => ['node' => NULL],
+    ],
+    'property-similar-houses' => [
+      'variables' => ['node' => NULL],
+    ],
+    'property-get-direction-block' => [
+      'variables' => ['node' => NULL],
+    ],
+    'property-community-image' => [
+      'variables' => ['node' => NULL],
+    ],
+    'breadcrumb-block' => [
+      'variables' => ['breadcrumb' => NULL],
+    ],
+    'community-featured-image' => [
+      'variables' => ['term' => NULL],
+    ],
+    'floorplan-featured-image' => [
+      'variables' => ['term' => NULL],
+    ],
+    'community-information-block' => [
+      'variables' => [
+        'term' => NULL,
+        'sqft' => NULL,
+        'bedrooms' => NULL,
+        'bath' => NULL,
+        'garage' => NULL,
+        'storey' => NULL,
+        'startprice' => NULL,
+      ],
+    ],
+    'community-quicktabs-block' => [
+      'variables' => [
+        'link' => NULL,
+        'count' => NULL,
+      ],
+    ],
+    'community-nearby-places-block' => [
+      'variables' => ['term' => NULL],
+    ],
+    'area-banner-block' => [
+      'variables' => ['term' => NULL],
+    ],
+    'city-banner-block' => [
+      'variables' => ['term' => NULL],
+    ],
+    'finance-popup' => [
+      'variables' => [
+        'term' => NULL,
+        'subject' => NULL,
+        'mail_body' => NULL,
+        'base_url' => NULL,
+      ],
+    ],
+    'homepage-maps' => [
+      'variables' => ['term' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function gsh_blocks_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  $uid = \Drupal::currentUser()->id();
+  $user = User::load($uid);
+  $communities = $user->get('field_communities')->getValue();
+  foreach ($communities as $community) {
+    $target[$community['target_id']] = $community['target_id'];
+  }
+
+  if ($view->id() == 'community_representative_dashboard') {
+    $query->where[0]['conditions'][0]['value'][':node__field_community_field_community_target_id[]'] = $target;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function gsh_blocks_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'webform_submission_get_in_touch_finance_add_form':
+      $finance_node = \Drupal::entityTypeManager()->getStorage('node')->load($form['elements']['nid']['#default_value']);
+      $form['elements']['bank_name']['#default_value'] = $finance_node->getTitle();
+      break;
+
+    case 'node_property_spec_edit_form':
+      (string) $form['promote']['widget']['#title'] = t('Featured');
+      (string) $form['promote']['widget']['value']['#title'] = t('Featured');
+      break;
+
+    case 'webform_submission_contact_us_paragraph_2245_add_form':
+      $community_options = ['9899' => 'Other'] + $form['elements']['community_of_interest']['#options'];
+      $form['elements']['community_of_interest']['#options'] = $community_options;
+      break;
+
+    case 'webform_submission_customer_care_paragraph_2395_add_form':
+      $community_options = ['9899' => 'Other'] + $form['elements']['community_of_interest']['#options'];
+      $form['elements']['community_of_interest']['#options'] = $community_options;
+      break;
+
+    case 'taxonomy_term_floorplans_form':
+      $form['#validate'][] = 'check_for_tagged_properties_and_communities';
+  }
+
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function gsh_blocks_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  $bundle = $node->bundle();
+  if ($bundle == "property_spec") {
+    $user = User::load(\Drupal::currentUser()->id());
+    $user_communities = $user->get('field_communities')->getValue();
+    $user_communities_arr = [];
+    foreach ($user_communities as $user_community) {
+      array_push($user_communities_arr, $user_community['target_id']);
+    }
+    $node_community = $node->get("field_community")->getString();
+    switch ($op) {
+      case 'update':
+      case 'delete':
+        if (in_array($node_community, $user_communities_arr)) {
+          return AccessResult::allowed()
+            ->cachePerPermissions();
+        }
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function gsh_blocks_node_insert(Node $node) {
+  if ($node->gettype() == 'property_spec') {
+    $tid = $node->field_floorplan->target_id;
+    if (!empty($tid)) {
+      $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+      if (empty($node->field_square_feet->value)) {
+        $node->field_square_feet->value = $term->field_square_feet->value;
+      }
+      if (empty($node->field_bedrooms->value)) {
+        $node->field_bedrooms->value = $term->field_bedrooms->value;
+      }
+      if (empty($node->field_full_baths->value)) {
+        $node->field_full_baths->value = $term->field_full_baths->value;
+      }
+      if (empty($node->field_half_baths->value)) {
+        $node->field_half_baths->value = $term->field_half_baths->value;
+      }
+      if (empty($node->field_garages->value)) {
+        $node->field_garages->value = $term->field_garages->value;
+      }
+      if (empty($node->field_floors->value)) {
+        $node->field_floors->value = $term->field_floors->value;
+      }
+    }
+    $community_id = $node->field_community->target_id;
+    if (!empty($community_id)) {
+      $community_term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($community_id);
+      if (empty($node->field_property_location->lat)) {
+
+        $node->field_property_location->lat = $community_term->field_latitude->value;
+        $node->field_latitude->value = $community_term->field_latitude->value;
+      }
+      if (empty($node->field_property_location->lng)) {
+        $node->field_property_location->lng = $community_term->field_longitude->value;
+        $node->field_longitude->value = $community_term->field_longitude->value;
+      }
+      if(!empty($node->field_property_location->lat)){
+        $node->field_latitude->value = $node->field_property_location->lat;
+      }
+      if (!empty($node->field_property_location->lng)) {
+        $node->field_longitude->value = $node->field_property_location->lng;
+      }
+
+    }
+    $node->save();
+  }
+}
+
+/**
+ * Implements function to check for tagged properties and communities for floorplans  ().
+ */
+function check_for_tagged_properties_and_communities(&$form, FormStateInterface $form_state) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $properties = $communities = '';
+  if (isset($entity) && $entity->bundle() == 'floorplans' && $form_state->getValue('status')['value'] == 0) {
+    $conn = \Drupal::database();
+    $query = $conn->select('node_field_data', 'nfd');
+    $query->leftJoin('node__field_floorplan', 'nff', 'nfd.nid = nff.entity_id');
+    $query->condition('nff.field_floorplan_target_id', $entity->id());
+    $query->condition('nfd.status', 1);
+    $properties = $query->countQuery()->execute()->fetchField();
+
+    if (empty($properties)) {
+      $query = $conn->select('taxonomy_term_field_data', 'ttd');
+      $query->leftJoin('taxonomy_term__field_community_floorplans', 'ttfcf', 'ttd.tid = ttfcf.entity_id');
+      $query->leftJoin('paragraph__field_floorplan', 'pff', 'ttfcf.field_community_floorplans_target_id = pff.entity_id');
+      $query->condition('pff.field_floorplan_target_id', $entity->id());
+      $query->condition('pff.bundle', 'community_floorplans');
+      $query->condition('ttd.status', 1);
+      $communities = $query->countQuery()->execute()->fetchField();
+    }
+    if (!empty($properties) || !empty($communities)) {
+      $form_state->setErrorByName('status', t('Floor plan is tagged to Properties or Comminities and so cannot be unpublished.'));
+    }
+  }
+
+}
+
+/**
+ *
+ */
+function gsh_blocks_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  if ($view->id() == 'bank_of_finance') {
+    $variables['#attached']['drupalSettings']['gsh_blocks'];
+  }
+}
+

@@ -1,0 +1,50 @@
+id: gsh_migration_schools
+label: 'Migrate Schools from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/school.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+  field_school_type:
+    plugin: entity_lookup
+    source: school_type
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: school_types
+    value_key: name
+  field_school_district:
+    plugin: entity_lookup
+    source: school_district
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: school_district
+    value_key: name
+  field_quadrant:
+    plugin: entity_lookup
+    source: quadrant
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: areas
+    value_key: name
+  description/value: term_description
+  description/format:
+      plugin: default_value
+      default_value: "full_html"
+  weight: weight
+  parent: parent
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: schools
+migration_dependencies:
+  required:
+    - gsh_migration_school_district
+    - gsh_migration_school_type
+    - gsh_migration_areas
+dependencies: { }

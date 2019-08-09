@@ -1,0 +1,9 @@
+imagecompression.settings:
+  path: '/admin/config/user-interface/image_compression'
+  defaults:
+    _form: '\Drupal\image_compression\Form\ImageCompression'
+    _title: 'Image Compression'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

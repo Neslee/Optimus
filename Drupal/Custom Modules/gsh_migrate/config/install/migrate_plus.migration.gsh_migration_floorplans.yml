@@ -1,0 +1,66 @@
+id: gsh_migration_floorplans
+label: 'Migrate Floorplans data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/floorplan.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+  description/value: term_description
+  description/format:
+      plugin: default_value
+      default_value: "full_html"
+  field_plan_number: plan_number
+  field_featured_image: featured_image
+  field_square_feet: square_feet
+  field_bedrooms: bedrooms
+  field_full_baths: full_baths
+  field_half_baths: half_baths
+  field_floors: floors
+  field_garages: garage(s)
+  field_master:
+     plugin: entity_lookup
+     source: master
+     entity_type: taxonomy_term
+     bundle_key: vid
+     bundle: master_options
+     value_key: name
+#  field_savings_information:
+#    - plugin: explode
+#      delimiter: "|"
+#      source: fcid
+#    - plugin: skip_on_empty
+#      method: process
+#    - plugin: migration_lookup
+#      migration: gsh_migration_field_collection_savings_information
+#      no_stub: true
+#    - plugin: iterator
+#      process:
+#        target_id: '0'
+#        target_revision_id: '1'
+  field_floorplan_illustrations:
+    - plugin: explode
+      delimiter: '|'
+      source: floorplan_illustration(s)
+  field_downloadable_brochure:
+    - plugin: floorplan_pdf_import_process
+      source: downloadable_brochure
+  field_floorplan_video: floorplan_video
+  field_marketing_images:
+    - plugin: explode
+      delimiter: '|'
+      source: marketing_images
+  field_is_published: is_published
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: floorplans
+migration_dependencies:
+  required:
+    - gsh_migration_master_option
+dependencies: { }

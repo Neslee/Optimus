@@ -1,0 +1,37 @@
+name: 'GSH Migration'
+type: module
+description: 'Migrate gsh data from csv file'
+core: 8.x
+package: 'Migration'
+dependencies:
+  - migrate_source_csv:migrate_source_csv
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+config_devel:
+  install:
+    - migrate_plus.migration_group.gsh_migration
+    - migrate_plus.migration.gsh_migration_areas
+    - migrate_plus.migration.gsh_migration_cities
+    - migrate_plus.migration.gsh_migration_regions
+    - migrate_plus.migration.gsh_migration_school_type
+    - migrate_plus.migration.gsh_migration_school_district
+    - migrate_plus.migration.gsh_migration_schools
+    - migrate_plus.migration.gsh_migration_master_option
+    - migrate_plus.migration.gsh_migration_floorplans
+    - migrate_plus.migration.gsh_migration_elevation
+    - migrate_plus.migration.gsh_migration_communities
+    - migrate_plus.migration.gsh_migration_spec_type
+    - migrate_plus.migration.gsh_migration_property_flags
+    - migrate_plus.migration.gsh_migration_users
+    - migrate_plus.migration.gsh_migration_property
+    - migrate_plus.migration.gsh_migration_news
+    - migrate_plus.migration.gsh_migration_news_category
+    - migrate_plus.migration.gsh_migration_field_collection_benefits
+    - migrate_plus.migration.gsh_migration_field_collection_community_floorplan
+    - migrate_plus.migration.gsh_migration_field_collection_savings_information
+    - migrate_plus.migration.gsh_migration_url_alias_property
+    - migrate_plus.migration.gsh_migration_url_alias_taxonomy
+    - migrate_plus.migration.gsh_migration_images
+    - migrate_plus.migration.gsh_migration_document
+    - migrate_plus.migration.gsh_migration_property_new
+    - migrate_plus.migration.gsh_migration_users_new

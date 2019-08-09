@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme implementation for property page, about community section popup block.
+#}
+
+{{ attach_library('gsh_theme/property') }}
+<div class="property-community-image__popup">
+  {% if node.gallery_image_count|render is not empty %}
+  <div class="property-community-image__popup--links tooltip">
+    <a class="use-ajax featured-picture" data-dialog-options="{&quot;width&quot;:1300}"
+       data-dialog-type="modal" href="/property_community_popup/{{ node.node_id }}"></a>
+    <span class="tooltiptext">Pictures</span>
+  </div>
+  {% endif %}
+  {% if node.community_video_count|render is not empty %}
+  <div class="property-community-image__popup--links tooltip">
+    <a class="use-ajax featured-video" data-dialog-options="{&quot;width&quot;:1300}"
+       data-dialog-type="modal" href="/property_community_popup/{{ node.node_id }}"></a>
+    <span class="tooltiptext">Videos</span>
+  </div>
+  {% endif %}
+  <div class="property-community-image__popup--links tooltip">
+    <a class="use-ajax featured-location" data-dialog-options="{&quot;width&quot;:1300}"
+       data-dialog-type="modal" href="/property_community_popup/{{ node.node_id }}"></a>
+    <span class="tooltiptext">Location</span>
+  </div>
+</div>

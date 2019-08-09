@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme implementation for community quicktabs block.
+#}
+
+<div class="community-quicktabs">
+  <div class="community-quicktabs__community">
+    <span class="community-quicktabs__communityinfo">{{ link.community }}</span>
+  </div>
+  {% if not count.quickmovein == '0' %}
+    <div class="community-quicktabs__quickmovein">
+      <span class="community-quicktabs__quickmovein-label">{{ link.quickmovein }}</span>
+      <span class="community-quicktabs__quickmovein-count">{{ count.quickmovein }}</span>
+    </div>
+  {% endif %}
+  {% if not count.availablehomes == '0' %}
+    <div class="community-quicktabs__availabehomes">
+      <span class="community-quicktabs__availabehomes-label">{{ link.availablehomes }}</span>
+      <span class="community-quicktabs__availablehhomes-count">{{ count.availablehomes }}</span>
+    </div>
+  {% endif %}
+  {% if not count.hotdeals == '0' %}
+    <div class="community-quicktabs__hotdeals">
+      <span class="community-quicktabs__hotdeals-label">{{ link.hotdeals }}</span>
+      <span class="community-quicktabs__hotdeals-count">{{ count.hotdeals }}</span>
+    </div>
+  {% endif %}
+</div>

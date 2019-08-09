@@ -1,0 +1,7 @@
+name: 'Article Form'
+type: module
+description: 'Article form Which Links to Node After Creation'
+package: Custom
+core: 8.x
+dependencies:
+  - drupal:node

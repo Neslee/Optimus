@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme implementation for community nearby places block.
+#}
+
+{% set latitude %}
+  {{ term.latitude }}
+{% endset %}
+{% set longitude %}
+  {{ term.longitude }}
+{% endset %}
+<div class="community-nearby-places">
+  <a class="know-more bordered-link btn--animate-horizontal-maroon use-ajax"  data-dialog-options="{&quot;width&quot;:1300}" data-dialog-type="modal"
+     href="/explore_nearby_places/{{ latitude|striptags('<a>')|trim }}&{{ longitude|striptags('<a>')|trim }}">
+    <span>
+      <i class="icon icon-map-01"></i>
+    </span>
+    Explore Nearby Places
+  </a>
+</div>

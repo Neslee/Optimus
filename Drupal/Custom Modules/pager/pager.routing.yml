@@ -1,0 +1,7 @@
+pager.content:
+  path: '/articles'
+  defaults:
+    _controller: '\Drupal\pager\Controller\PagerController::content'
+    _title: 'List of Articles'
+  requirements:
+    _permission: 'access content'

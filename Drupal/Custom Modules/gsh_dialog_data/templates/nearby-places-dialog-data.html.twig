@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Theme implementation for property and community page explore nearby places popup data.
+#}
+
+<script>
+    var latitude;
+    var longitude;
+    function initMap() {
+        // Create the map.
+         latitude = {{ node.latitude }};
+         longitude = {{ node.longitude }};
+        var location = new google.maps.LatLng(latitude, longitude);
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: location,
+            zoom: 16
+        });
+
+        // Create the places service.
+        var service = new google.maps.places.PlacesService(map);
+
+        // Perform a nearby search.
+        service.nearbySearch(
+            {location: location, radius: 1000},
+            function (results, status, pagination) {
+                if (status !== 'OK') return;
+                createMarkers(results,location );
+            });
+    }
+
+    function createMarkers(places,location) {
+        var bounds = new google.maps.LatLngBounds();
+        var infoWindow = new google.maps.InfoWindow({
+            content: name
+        });
+        var icon = {
+            url: "../../../../themes/custom/gsh_theme/assets/images/map_yellow.svg",
+            scaledSize: new google.maps.Size(40, 40)
+         };
+        var propertyMarker=new mapIcons.Marker({
+             map:map,
+             position: {
+                lat: latitude,
+                lng: longitude
+            },
+            icon:icon
+          });
+        for (var i = 0, place; place = places[i]; i++) {
+            var marker = new mapIcons.Marker({
+                map: map,
+                position: places[i].geometry.location,
+                icon: config[places[i].types[0]].icon,
+                map_icon_label: config[places[i].types[0]].map_icon_label,
+            });
+            marker.addListener('click', (function (marker, i, infowindow) {
+                return function () {
+                    var htmlData = '<div class="maps-content">' +
+                        '<h3>' + places[i].name + '</h3>' +
+                        '<p>' + places[i].vicinity + '</p>' +
+                        '</div>';
+                    infowindow.setContent(htmlData);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i, infoWindow));
+        }
+    }
+</script>
+
+{{ attach_library('gsh_dialog_data/map-icons') }}
+{{ attach_library('gsh_theme/property') }}
+<div class="property__dialog--section explore-nearby">
+  <div class="close--btn"><span>X</span></div>
+  <div id="map" class="map"></div>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key={{ Your Api Key }}&libraries=places&callback=initMap">
+  </script>
+</div>

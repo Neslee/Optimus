@@ -1,0 +1,26 @@
+id: gsh_migration_field_collection_benefits
+label: 'Migrate Field Collection Benefits'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/benefits-field-collection.csv'
+  header_row_count: 1
+  keys:
+    - id
+process:
+  id: id
+  revision_id: revision_id
+  field_label:
+    - plugin: explode
+      delimiter: " - "
+      source: label
+    - plugin: callback
+      callable: trim
+  field_description:
+    - plugin: callback
+      callable: trim
+      source: description
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: benefits

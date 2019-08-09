@@ -1,0 +1,31 @@
+.article-title {
+  font-size: 25px;
+  text-align: center;
+  background-color: #2074a5;
+  color: white;
+  padding: 3%;
+  border-radius: 50%;
+}
+.article-container {
+  background-color: #f8f8f8;
+  padding: 5%;
+}
+.article-body {
+  background-color: #2074a5;
+  color: white;
+  padding: 3%;
+  font-size: 20px;
+}
+.article-image {
+  width: 100%;
+}
+.article-tags {
+  padding-top: 20px;
+  clear: both;
+}
+.section-left {
+  float: left;
+}
+.section-right {
+  float: left;
+}

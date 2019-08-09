@@ -1,0 +1,9 @@
+map-icons:
+  css:
+    theme:
+      css/map-icons.css: {}
+  js:
+    js/map-icons.js: {}
+    js/custom-icons.js: {}
+  dependencies:
+    - core/jquery

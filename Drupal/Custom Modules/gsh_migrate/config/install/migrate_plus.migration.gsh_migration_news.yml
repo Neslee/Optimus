@@ -1,0 +1,40 @@
+id: gsh_migration_news
+label: 'Migrate News data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/news.csv'
+  header_row_count: 1
+  keys:
+    - nid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  nid: nid
+  vid: vid
+  title: title
+  uid: author_uid
+  status: status
+  created: post_date
+  changed: updated_date
+  promote: promoted_to_front_page
+  sticky: sticky
+  field_news_image: news_image
+  body/value: news_description
+  body/format:
+    plugin: default_value
+    default_value: "full_html"
+  field_news_category:
+    plugin: entity_lookup
+    source: news_category
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: news_category
+    value_key: name
+destination:
+  plugin: 'entity:node'
+  default_bundle: news
+migration_dependencies:
+  required:
+    - gsh_migration_news_category
+dependencies: { }

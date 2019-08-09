@@ -1,0 +1,150 @@
+<?php
+/**
+ * @file
+ * Utility module file.
+ */
+
+/**
+ * Function called while uploading of images.
+ *
+ * @param object $file
+ *   File object with file info.
+ *
+ * @return mixed
+ *   Function checks the validity
+
+/**
+ * Function to compress png images.
+ *
+ * @param string $src
+ *   The source path to the file.
+ * @param int $quality
+ *   The quality for the file.
+ *
+ * @return mixed
+ *   Returns a compressed file.
+ */
+function compress_png($src, $quality) {
+  $source = imagecreatefrompng($src);
+  $destination = $src;
+  //  imagealphablending($source, FALSE);
+  //  imagesavealpha($source, TRUE);
+  //  imagecolortransparent($source);
+  imagepng($source, $destination, $quality);
+  return $destination;
+}
+
+/**
+ * Function to compress jpeg/jpg images.
+ *
+ * @param string $source
+ *   The source path to the file.
+ * @param int $quality
+ *   The quality for the file.
+ *
+ * @return array
+ *   Returns a compressed file.
+ */
+function compress_jpg($source, $quality) {
+  $src = imagecreatefromjpeg($source);
+  $dest = $source;
+  imagejpeg($src, $dest, $quality);
+  return $dest;
+}
+
+/**
+ * Function to get all the files inside a directory and subdirectory.
+ *
+ * @param string $dir
+ *   Path to the files directory.
+ * @param array $results
+ *   Array which stores all the files inside a directory.
+ *
+ * @return array
+ *   Returns the array of files.
+ */
+function get_dir_contents($dir, &$results = []) {
+  $files = scandir($dir);
+  foreach ($files as $key => $value) {
+    $path = $dir . DIRECTORY_SEPARATOR . $value;
+    if (filesize($path) == 0) {
+      continue;
+    }
+    if (!is_dir($path)) {
+      $results[] = $path;
+    }
+    elseif ($value != "." && $value != "..") {
+      get_dir_contents($path, $results);
+      $results[] = $path;
+    }
+  }
+  return $results;
+}
+
+/**
+ * Function to compress images.
+ *
+ * @param object $file
+ *   Object to implement compress.
+ *
+ * @return mixed
+ *   returns a file which is compressed.
+ */
+function compress($file) {
+  $source = $file->uri;
+  $size = $file->filesize;
+  $info = getimagesize($source);
+  switch ($info['mime']) {
+    case 'image/jpg':
+    case 'image/jpeg':
+      if ($size > 1000000) {
+        compress_jpg($source, 25);
+      }
+
+      if ($size > 900000 && $size < 1000000) {
+        compress_jpg($source, 25);
+      }
+
+      if ($size > 600000 && $size < 900000) {
+        compress_jpg($source, 50);
+      }
+
+      if ($size > 300000 && $size < 600000) {
+        compress_jpg($source, 75);
+      }
+      break;
+
+    case 'image/png':
+      compress_png($source, 9);
+      break;
+  }
+  return $source;
+}
+
+function image_compression_form_alter() {
+  $config = \Drupal::config('image_compression.settings');
+  $url=$config->get('path');
+  $dir = $url;
+  $file = get_dir_contents($dir);
+
+  foreach ($file as $value) {
+    $filename = basename($value);
+    $source = $value;
+    $dest = $source;
+    $exploding = explode(".", $value);
+    $ext = end($exploding);
+    switch ($ext) {
+      case "png":
+        compress_png($source,9);
+        break;
+
+      case "jpg":
+      case "jpeg":
+        compress_jpg($source, 75);
+        break;
+    }
+  }
+}
+
+
+

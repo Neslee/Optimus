@@ -1,0 +1,7 @@
+parameters:
+  fetch_data.url:
+    base_uri: 'https://jsonplaceholder.typicode.com/posts'
+services:
+  fetch_data.content:
+        class: Drupal\fetch_data\ListData
+        arguments: ["%fetch_data.url%"]

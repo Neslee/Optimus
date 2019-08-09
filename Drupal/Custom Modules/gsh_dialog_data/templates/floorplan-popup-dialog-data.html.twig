@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Theme implementation for floorplan page popup data.
+#}
+
+{{ attach_library('gsh_theme/floorplan') }}
+<div class="floorplan__dialog--section">
+  <div class="container-fluid floorplan__popup-header">
+    <div class="layout--gsh-wrapper">
+      <div class="floorplan__information--section">
+        {% if term.floorplan_title|render is not empty %}
+          <span>{{ term.floorplan_title }}</span>
+        {% endif %}
+        {% if term.floorplan_price|render is not empty %}
+          <span>${{ term.floorplan_price }}</span>
+        {% endif %}
+      </div>
+      <div class="floorplan__information--section">
+        {% if term.floorplan_sqft|render is not empty %}
+          <span aria-label="Area size" class="icon icon-area-size">
+            {{ term.floorplan_sqft }} Sq.ft
+          </span>
+        {% endif %}
+        {% if term.floorplan_bed|render is not empty %}
+          <span aria-label="Rooms" class="icon icon-rooms">
+            {{ term.floorplan_bed }} Beds
+          </span>
+        {% endif %}
+        {% if term.floorplan_bath|render is not empty %}
+          <span aria-label="Baths" class="icon icon-baths">
+            {{ term.floorplan_bath }} Baths
+          </span>
+        {% endif %}
+        {% if term.floorplan_cars|render is not empty %}
+          <span aria-label="Garage" class="icon icon-garage">
+            {{ term.floorplan_cars }} Cars
+          </span>
+        {% endif %}
+        {% if term.floorplan_floors|render is not empty %}
+          <span aria-label="Storey Home" class="icon icon-storey-home">
+            {{ term.floorplan_floors }} Storey Home
+          </span>
+        {% endif %}
+      </div>
+      <div class="floorplan__information--section">
+        {% if term.floorplan_brochure|render is not empty %}
+          <a class="floorplan__information--borchure" href="{{ term.floorplan_brochure }}"
+             type="application/pdf;" target="_blank">Brochure</a>
+        {% endif %}
+        {{ drupal_block("better_social_sharing_buttons_block") }}
+        <a class="floorplan__dialogue--close" href="#">
+          <i class="icon icon-close"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="floorplan__popup--count container">
+    {% if term.marketing_images_count|render is not empty %}
+      <a href="#marketing-image">
+        <span class="icon icon-picture">
+          Image ({{ term.marketing_images_count }})
+        </span>
+      </a>
+    {% endif %}
+    {% if term.floorplan_video_count|render is not empty %}
+      <a href="#popup-video">
+        <span class="icon icon-play-02">
+          Videos ({{ term.floorplan_video_count }})
+        </span>
+      </a>
+    {% endif %}
+  </div>
+  <div class="floorplan__popup--slider popup--slider owl-carousel owl-theme">
+    {% for marketing_image in term.marketing_image %}
+      <img src="{{ marketing_image }}" class="marketing-image">
+    {% endfor %}
+    {% if term.floorplan_video|render is not empty %}
+    <iframe frameborder="0" src='{{ term.floorplan_video }}' width='100px'></iframe>
+    {% endif %}
+  </div>
+  <div class="floorplan__popup--slidersync popup--slidersync owl-carousel owl-theme">
+    {% for marketing_image in term.marketing_image %}
+      <img src="{{ marketing_image }}" class="marketing-image" id="marketing-image">
+    {% endfor %}
+    {% if term.floorplan_video_count|render is not empty %}
+      <img class="illustration-image" id="popup-video"
+           src="../../../themes/custom/gsh_theme/assets/images/popup-thumb-video.jpg">
+    {% endif %}
+  </div>
+</div>

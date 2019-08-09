@@ -1,0 +1,4 @@
+gsh_blocks hers_permission:
+  title: 'Permission for HERS Block'
+  description: 'A custom permission for gsh hers block.'
+  restrict access: true

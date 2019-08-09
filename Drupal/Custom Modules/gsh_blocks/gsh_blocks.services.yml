@@ -1,0 +1,6 @@
+services:
+  gsh_blocks.elevation_redirect:
+    class: Drupal\gsh_blocks\EventSubscriber\ElevationRedirect
+    arguments: []
+    tags:
+    - { name: event_subscriber }

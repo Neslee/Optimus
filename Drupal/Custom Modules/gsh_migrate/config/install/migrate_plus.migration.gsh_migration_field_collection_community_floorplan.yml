@@ -1,0 +1,29 @@
+id: gsh_migration_field_collection_community_floorplan
+label: 'Migrate Field Collection Community Floorplan'
+migration_group: gsh_migration
+source:
+  plugin: csv
+    # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/community-field-collection.csv'
+  header_row_count: 1
+  keys:
+    - id
+process:
+  id: id
+  revision_id: revision_id
+  field_floorplan:
+    - plugin: callback
+      callable: trim
+      source: floorplan
+    - plugin: entity_lookup
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: floorplans
+      value_key: name
+  field_base_price:
+    - plugin: callback
+      callable: trim
+      source: base_price
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: community_floorplans

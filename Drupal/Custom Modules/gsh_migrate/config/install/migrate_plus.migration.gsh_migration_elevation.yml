@@ -1,0 +1,33 @@
+id: gsh_migration_elevation
+label: 'Migrate Elevation data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/elevation.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+  field_floorplan:
+    plugin: entity_lookup
+    source: floorplan
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: floorplans
+    value_key: name
+  field_featured_image: featured_image
+  description/value: term_description
+  description/format:
+      plugin: default_value
+      default_value: "full_html"
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: elevations
+migration_dependencies:
+  required:
+    - gsh_migration_floorplans
+dependencies: { }

@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\node\Entity\Node;
+/**
+ * @file
+ * hook update function.
+ */
+function gsh_blocks_update_8704(&$sandbox) {
+    $nids = \Drupal::entityQuery('node')
+        ->condition('type', 'property_spec')
+        ->execute();
+    foreach($nids as $nid) {
+      $node = Node::load($nid);
+      if(empty($node->field_property_location->lat))
+      {
+      $node->field_property_location->lat = $node->field_latitude->value;
+      }
+      if(empty($node->field_property_location->lng))
+      {
+      $node->field_property_location->lng = $node->field_longitude->value;
+      }
+      $node->save();
+    }
+}

@@ -1,0 +1,36 @@
+id: gsh_migration_field_collection_savings_information
+label: 'Migrate Field Collection Savings Information'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/savings-field-collection.csv'
+  header_row_count: 1
+  keys:
+    - id
+process:
+  id: id
+  revision_id: revision_id
+  field_project_total_costs:
+    - plugin: callback
+      callable: trim
+      source: field_project_total_energy_costs
+  field_compared_2_5:
+    - plugin: callback
+      callable: trim
+      source: field_compared_2_5
+  field_added_value_2_5:
+    - plugin: callback
+      callable: trim
+      source: field_added_value_2_5
+  field_compared_10	:
+    - plugin: callback
+      callable: trim
+      source: field_compared_10
+  field_added_value_10:
+    - plugin: callback
+      callable: trim
+      source: field_added_value_10
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: savings_information

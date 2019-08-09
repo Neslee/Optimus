@@ -1,0 +1,90 @@
+/*
+ * @file
+ * Provides the layout styles for GSH Layout.
+ */
+
+.layout--gsh-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.layout__region {
+  position: relative;
+}
+
+@media screen and (min-width: 40em) {
+  .layout--gsh-wrapper {
+    max-width: 1090px;
+    margin: auto;
+  }
+
+  .layout--gsh-layout .layout__region--top_sticky {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+  .layout--gsh-layout .layout__region--header_left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 70%;
+    flex: 0 1 70%;
+  }
+
+  .layout--gsh-layout .layout__region--header_right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 30%;
+    flex: 0 1 30%;
+  }
+
+  .layout--gsh-layout .layout__region--sub_header_left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 70%;
+    flex: 0 1 70%;
+  }
+
+  .layout--gsh-layout .layout__region--sub_header_right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 30%;
+    flex: 0 1 30%;
+  }
+
+  .layout--gsh-layout .layout__region--content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 70%;
+    flex: 0 1 70%;
+  }
+
+  .layout--gsh-layout .layout__region--sidebar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 30%;
+    flex: 0 1 30%;
+  }
+
+  .layout--gsh-layout .layout__region--secondary_header {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+  .layout--gsh-layout .layout__region--secondary_left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+
+  .layout--gsh-layout .layout__region--secondary_right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+
+  .layout--gsh-layout .layout__region--secondary_content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+}

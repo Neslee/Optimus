@@ -1,0 +1,5 @@
+gsh_blocks.hers_block:
+  title: 'HERS Rating'
+  description: 'Manage settings for HERS Rating'
+  parent: system.admin_config_content
+  route_name: gsh_blocks.hers_block

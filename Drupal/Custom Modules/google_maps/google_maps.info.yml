@@ -1,0 +1,5 @@
+name: 'Google Maps'
+type: module
+description: 'Get The Map Of Particular Location'
+core: 8.x
+package: 'Custom'

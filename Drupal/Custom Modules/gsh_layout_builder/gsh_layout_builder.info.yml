@@ -1,0 +1,13 @@
+name: 'GSH Layout Builder'
+type: module
+description: 'Provides a way for building layout'
+core: 8.x
+package: 'GSH'
+dependencies:
+  - layout_builder:layout_builder
+  - field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user

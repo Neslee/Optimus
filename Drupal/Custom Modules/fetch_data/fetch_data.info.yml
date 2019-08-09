@@ -1,0 +1,5 @@
+name: 'Fetch Data Services'
+type: module
+description: 'Fetch Data From API Using Services'
+core: 8.x
+package: 'Custom'

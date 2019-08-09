@@ -1,0 +1,41 @@
+gsh_layout:
+  label: 'GSH Layout'
+  path: layouts/gsh_layout
+  category: 'GSH Layouts'
+  template: gsh-layout
+  library: gsh_layout_builder/gsh_layout
+  default_region: content
+  icon_map:
+    - [top_sticky]
+    - [header_left, header_left, header_right]
+    - [sub_header_left, sub_header_left, sub_header_right]
+    - [content, content, sidebar]
+    - [content, content, sidebar]
+    - [content, content, sidebar]
+    - [secondary_header]
+    - [secondary_left, secondary_right]
+    - [secondary_content]
+
+  regions:
+    top_sticky:
+      label: Top Sticky
+    header_left:
+      label: Header Left
+    header_right:
+      label: Header Right
+    sub_header_left:
+      label: Subtitle Header Left
+    sub_header_right:
+      label: Subtitle Header Right
+    sidebar:
+      label: Sidebar
+    content:
+      label: Content
+    secondary_header:
+      label: Secondary Header
+    secondary_left:
+      label: Secondary Left
+    secondary_right:
+      label: Secondary Right
+    secondary_content:
+      label: Secondary Content

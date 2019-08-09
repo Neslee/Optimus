@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Theme implementation for area banner block.
+#}
+
+{{ attach_library('gsh_theme/modal-popup') }}
+<div class="area_banner__wrapper">
+  {% if term.featured_image|render is not empty %}
+    <img src="{{ term.featured_image }}" class="featured-image">
+  {% endif %}
+  <div class=" large-screen-wrapper">
+    {{ drupal_block('breadcrumb_block') }}
+    <div class="area_banner__content large-screen-wrapper">
+
+      <div class="area_banner__title">
+        {{ term.field_sub_title }}
+        {{ term.name }}
+      </div>
+      <div class="area_banner__intro">
+        {{ term.field_intro }}
+      </div>
+      <a href="/search/property/community?community_area%5B%5D={{ term.tid }}">View all communities</a>
+      <a href="#" data-toggle="modal" data-target="#modalpopup">Get in touch</a>
+    </div>
+  </div>
+</div>
+{#  Modal popup for Hero slider banner#}
+<div class="modal modalpopup" id="modalpopup">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="popup-left-image">
+        <img src="../../../../../themes/custom/gsh_theme/assets/images/popup-form-img.png">
+      </div>
+      <div class="popup-form-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Get in touch with us</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          {{ drupal_entity('webform', 'get_in_touch_with_us') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

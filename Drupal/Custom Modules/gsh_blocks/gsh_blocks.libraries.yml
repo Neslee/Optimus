@@ -1,0 +1,18 @@
+her-section:
+  css:
+    theme:
+      css/jquery.range-control.css: {}
+  js:
+    js/jquery.range-control.js: {}
+    js/hers-index.js: {}
+  dependencies:
+    - core/jquery
+
+homepage-map:
+  js:
+    js/homepage-map.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - gsh_search/google.maps
+    - core/drupalSettings

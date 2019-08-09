@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Theme implementation for property page popup block.
+#}
+
+{{ attach_library('gsh_theme/property') }}
+<div class="property-hero-section">
+  <div class="property-slider--wrapper">
+    <div class="property-hero--slider owl-carousel owl-theme">
+      {% if node.featured_image|render is not empty %}
+      <img src="{{ node.featured_image }}" class="featured-image">
+      {% endif %}
+      {% for marketing_image in node.marketing_image %}
+        <img src="{{ marketing_image }}" class="featured-image">
+      {% endfor %}
+    </div>
+    {% if node.marketing_tagline|render is not empty %}
+      <div class="marketing-tagline">
+        {{ node.marketing_tagline }}
+      </div>
+    {% endif %}
+    {% if node.maketing_flag_name|render is not empty %}
+      <div class="green-tag-section">
+        <div class="green-tag-section--info">
+          <img src="../../../themes/custom/gsh_theme/assets/images/green-tag.svg">
+        </div>
+        <div class="green-tag-section--info">
+          <h3>{{ node.maketing_flag_name }}</h3>
+          {{ node.incentive|raw }}
+        </div>
+      </div>
+    {% endif %}
+    {% if node.hot_deal_flag|render is not empty %}
+    <div class="green-tag-section hot-deal-section">
+      <div class="green-tag-section--info">
+        <img src="../../../themes/custom/gsh_theme/assets/images/hot-deal.svg">
+      </div>
+    </div>
+    {% endif %}
+    <div class="property-popup-links">
+      <div class="property-popup-links--info tooltip">
+        <a class="use-ajax featured-picture" data-dialog-options="{&quot;width&quot;:1300}"
+           data-dialog-type="modal" href="/property_popup/{{ node.node_id }}"></a>
+        <span class="tooltiptext">Pictures</span>
+      </div>
+      <div class="property-popup-links--info tooltip">
+        <a class="use-ajax featured-floorplan" data-dialog-options="{&quot;width&quot;:1300}"
+           data-dialog-type="modal" href="/property_popup/{{ node.node_id }}"></a>
+        <span class="tooltiptext">Floorplans</span>
+      </div>
+      {% if node.property_video_count|render is not empty %}
+      <div class="property-popup-links--info tooltip">
+        <a class="use-ajax featured-video" data-dialog-options="{&quot;width&quot;:1300}"
+           data-dialog-type="modal" href="/property_popup/{{ node.node_id }}"></a>
+        <span class="tooltiptext">Videos</span>
+      </div>
+      {% endif %}
+      <div class="property-popup-links--info tooltip">
+        <a class="use-ajax featured-location" data-dialog-options="{&quot;width&quot;:1300}"
+           data-dialog-type="modal" href="/property_popup/{{ node.node_id }}"></a>
+        <span class="tooltiptext">Location</span>
+      </div>
+      <div class="property-popup-links--info tooltip">
+        <a class="featured-get-direction"href="http://maps.google.com/maps?daddr={{ node.latitude }},{{ node.longitude }}" target="_blank"></a>
+        <span class="tooltiptext">Get Directions</span>
+      </div>
+    </div>
+  </div>
+  <div class="property-hero--slidersync owl-carousel owl-theme">
+    {% if node.featured_image|render is not empty %}
+    <img src="{{ node.featured_image }}" class="marketing-image">
+    {% endif %}
+    {% for marketing_image in node.marketing_image %}
+      <img src="{{ marketing_image }}" class="marketing-image">
+    {% endfor %}
+  </div>
+</div>

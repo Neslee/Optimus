@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * @file
+ * Image Sizer.
+ * */
+
+use Drupal\Core\Render\Element;
+use Drupal\file\Entity\File;
+
+/**
+ * Implement hook Form_alter().
+ */
+function image_sizer_form_node_form_alter(&$form, &$form_state, $form_id) {
+  $node = $form_state->getFormObject()->getEntity();
+  if ($node->getType() == 'page') {
+    $values = $node->field_image->target_id;
+    $form['field_image'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Image'),
+      '#upload_location' => 'public://optimus',
+      '#default_value' => [$values],
+      '#description' => t('One file only. 1 MB limit.
+                         Allowed extensions: gif png jpg jpeg'),
+      '#upload_validators' => [
+        'file_validate_is_image'      => [],
+        'file_validate_extensions'    => ['gif png jpg jpeg'],
+        'file_validate_size'          => [25600000],
+        'file_validate_image_resolution' => ['300x200'],
+      ],
+      '#theme' => 'image_widget',
+      '#preview_image_style' => 'medium',
+      '#required' => TRUE,
+    ];
+    $form['actions']['submit']['#submit'][] = 'image_sizer_submit';
+  }
+}
+
+/**
+ * Implement hook node_submit.
+ */
+function image_sizer_submit($form, &$form_state) {
+  $node = $form_state->getFormObject()->getEntity();
+  if ($node->getType() == 'page') {
+    $fid = $form_state->getValue('field_image');
+    $file = File::load(current($fid));
+    if (!empty($file)) {
+      $node->field_image[] = [
+        'target_id' => current($fid),
+        'alt' => 'Alt text',
+        'title' => $file->getFilename(),
+      ];
+      $node->save();
+      $file->setPermanent();
+      $file->save();
+    }
+  }
+}
+
+/**
+ * Implement hook node_view.
+ */
+function image_sizer_node_view(array &$build, &$entity, &$display, $view_mode) {
+  if ($entity->bundle() == 'page' && ($view_mode == 'full' || $view_mode == 'teaser')) {
+    $build['field_image'][0]['#image_style'] = 'custom_image';
+  }
+}
+
+/**
+ * Implement hook image_widget.
+ */
+function image_sizer_preprocess_image_widget(&$variables) {
+  $element = $variables['element'];
+  $variables['attributes'] = [
+    'class' => [
+      'image-widget',
+      'js-form-managed-file',
+      'form-managed-file',
+      'clearfix',
+    ],
+  ];
+  if (!empty($element['fids']['#value'])) {
+    $file = reset($element['#files']);
+    $element['file_' . $file->id()]['filename']['#suffix'] = ' <span class="file-size">(' . format_size($file->getSize()) . ')</span> ';
+    $file_variables = [
+      'style_name' => $element['#preview_image_style'],
+      'uri' => $file->getFileUri(),
+    ];
+    if (isset($element['#value']['width']) && isset($element['#value']['height'])) {
+      $file_variables['width'] = $element['#value']['width'];
+      $file_variables['height'] = $element['#value']['height'];
+    }
+    else {
+      $image = \Drupal::service('image.factory')->get($file->getFileUri());
+      if ($image->isValid()) {
+        $file_variables['width'] = $image->getWidth();
+        $file_variables['height'] = $image->getHeight();
+      }
+      else {
+        $file_variables['width'] = $file_variables['height'] = NULL;
+      }
+    }
+    $element['preview'] = [
+      '#weight' => -10,
+      '#theme' => 'image_style',
+      '#width' => $file_variables['width'],
+      '#height' => $file_variables['height'],
+      '#style_name' => $file_variables['style_name'],
+      '#uri' => $file_variables['uri'],
+    ];
+    $element['width'] = [
+      '#type' => 'hidden',
+      '#value' => $file_variables['width'],
+    ];
+    $element['height'] = [
+      '#type' => 'hidden',
+      '#value' => $file_variables['height'],
+    ];
+  }
+  $variables['data'] = [];
+  foreach (Element::children($element) as $child) {
+    $variables['data'][$child] = $element[$child];
+  }
+}

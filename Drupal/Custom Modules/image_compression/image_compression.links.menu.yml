@@ -1,0 +1,5 @@
+imagecompression.admin:
+  title: 'Image Compression'
+  description: 'Manage settings for image compression'
+  parent: system.admin_config_ui
+  route_name: imagecompression.settings

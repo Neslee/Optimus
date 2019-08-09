@@ -1,0 +1,55 @@
+gsh_dialog_data.property_popup_content:
+  path: '/property_popup/{id}'
+  defaults:
+    _controller: '\Drupal\gsh_dialog_data\Controller\PropertyPopupDialogController::content'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    parameters:
+      id:
+      type: 'id'
+gsh_dialog_data.property_community_content:
+  path: '/property_community_popup/{id}'
+  defaults:
+    _controller: '\Drupal\gsh_dialog_data\Controller\PropertyCommunityPopupDialogController::content'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    parameters:
+      id:
+      type: 'id'
+gsh_dialog_data.nearby_places_content:
+  path: '/explore_nearby_places/{location}'
+  defaults:
+    _controller: '\Drupal\gsh_dialog_data\Controller\NearbyPlacesDialogController::content'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+  parameters:
+    location:
+    type: 'location'
+gsh_dialog_data.community_popup_content:
+  path: '/community_popup/{id}'
+  defaults:
+    _controller: '\Drupal\gsh_dialog_data\Controller\CommunityPopupDialogController::content'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    parameters:
+      id:
+      type: 'id'
+gsh_dialog_data.floorplan_popup_content:
+  path: '/floorplan_popup/{id}'
+  defaults:
+    _controller: '\Drupal\gsh_dialog_data\Controller\FloorplanPopupDialogController::content'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    parameters:
+      id:
+      type: 'id'

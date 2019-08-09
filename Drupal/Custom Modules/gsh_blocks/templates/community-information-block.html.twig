@@ -1,0 +1,289 @@
+{#
+/**
+ * @file
+ * Theme implementation for community information block.
+#}
+
+<div class="community-header community-header__information-block">
+  <div class="community-header__information">
+    {% if term.title|render is not empty %}
+      <div class="community-header__title">
+        {{ term.title }}</div>
+    {% endif %}
+    <div class="community-header__address">
+        {% if term.is_outside_community == '1' %}
+        <a href="https://www.google.com/maps/search/?api=1&query={{ term.physical_state }},{{ term.physical_city }}"
+           target="_blank">
+            {% if term.physical_city|render is not empty %}
+                <span class="community-header__city">{% spaceless %}{{ term.physical_city|render|trim  }}{% endspaceless %}</span>
+            {% endif %}
+            {% if term.physical_state|render is not empty %}
+                <span class="community-header__state">{% spaceless %}{{ term.physical_state|render|trim  }}{% endspaceless %}</span>
+            {% endif %}
+        </a>
+        {% else %}
+      <a href="https://www.google.com/maps/search/?api=1&query={{ term.street }},{{ term.city }},{{ term.state }},{{ term.zip }}"
+         target="_blank">
+        {% if term.street|render is not empty %}
+          <span class="community-header__street">{% spaceless %}{{ term.street|render|trim  }}{% endspaceless %}</span>
+        {% endif %}
+        {% if term.city|render is not empty %}
+          <span class="community-header__city">{% spaceless %}{{ term.city|render|trim  }}{% endspaceless %}</span>
+        {% endif %}
+        {% if term.state|render is not empty %}
+          <span class="community-header__state">{% spaceless %}{{ term.state|render|trim  }}{% endspaceless %}</span>
+        {% endif %}
+        {% if term.zip|render is not empty %}
+          <span class="community-header__zip">{% spaceless %}{{ term.zip|render|trim  }}{% endspaceless %}</span>
+        {% endif %}
+      </a>
+        {% endif %}
+    </div>
+    {% if term.sub_title|render is not empty %}
+      <span class="community-header__display-name">{{ term.sub_title }}</span>
+    {% endif %}
+  </div>
+  <div class="community-header__price">
+    {% if startprice.min|render is not empty %}
+      <div class="community-header__price-title">Starting Price</div>
+      <span class="community-header__price-value">
+        ${{ startprice.min }}
+      </span>
+    {% endif %}
+  </div>
+  <div class="community-header__spec">
+    {% if sqft.max and sqft.min|render is not empty %}
+      {% if sqft.max == sqft.min %}
+        <div class="community-header__spec-sqft">
+          <span aria-label="Area size" class="icon icon-area-size">
+            {{ sqft.max }} SQFT
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-sqft">
+          <span aria-label="Area size" class="icon icon-area-size">
+            {{ sqft.min }}
+          </span>
+          <span>-
+            {{ sqft.max }} SQFT
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if bedrooms.max and bedrooms.min|render is not empty %}
+      {% if bedrooms.max == bedrooms.min %}
+        <div class="community-header__spec-rooms">
+          <span aria-label="Rooms" class="icon icon-rooms">
+            {{ bedrooms.max }} BEDS
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-rooms">
+          <span aria-label="Rooms" class="icon icon-rooms">
+            {{ bedrooms.min }}
+          </span>
+          <span>-
+            {{ bedrooms.max }} BEDS
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if bath.max and bath.min|render is not empty %}
+      {% if bath.max == bath.min %}
+        <div class="community-header__spec-baths">
+          <span aria-label="Baths" class="icon icon-baths">
+            {{ bath.max }} BATHS
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-baths">
+          <span aria-label="Baths" class="icon icon-baths">
+            {{ bath.min }}
+          </span>
+          <span>-
+            {{ bath.max }} BATHS
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if garage.max and garage.min|render is not empty %}
+      {% if garage.max == garage.min %}
+        <div class="community-header__spec-garage">
+          <span aria-label="Garage" class="icon icon-garage">
+            {{ garage.max }} GARAGE
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-garage">
+          <span aria-label="Garage" class="icon icon-garage">
+            {{ garage.min }}
+          </span>
+          <span>-
+            {{ garage.max }} GARAGE
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if storey.max and storey.min|render is not empty %}
+      {% if storey.max == storey.min %}
+        <div class="community-header__spec-storeyhome">
+          <span aria-label="Storey Home" class="icon icon-storey-home">
+            {{ storey.max }} STORY
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-storeyhome">
+          <span aria-label="Storey Home" class="icon icon-storey-home">
+            {{ storey.min }}
+          </span>
+          <span>-
+            {{ storey.max }} STORY
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+  <div class="community-header__share">{{ drupal_block('better_social_sharing_buttons_block') }}</div>
+</div>
+<div class="community-header community-header__information-block community-header-affix">
+  <div class="community-header__information">
+    {% if term.title|render is not empty %}
+      <div class="community-header__title">
+        {{ term.title }}</div>
+    {% endif %}
+    <div class="community-header__address">
+      <a href="https://www.google.com/maps/search/?api=1&query={{ term.street }},{{ term.city }},{{ term.state }},{{ term.zip }}"
+         target="_blank">
+        {% if term.street|render is not empty %}
+          <span class="community-header__street">
+                    {{ term.street }}</span>
+        {% endif %}
+        {% if term.city|render is not empty %}
+          <span class="community-header__city">
+                    {{ term.city }}</span>
+        {% endif %}
+        {% if term.state|render is not empty %}
+          <span class="community-header__state">
+                    {{ term.state }}</span>
+        {% endif %}
+        {% if term.zip|render is not empty %}
+          <span class="community-header__zip">
+                    {{ term.zip }}</span>
+        {% endif %}
+      </a>
+    </div>
+    {% if term.sub_title|render is not empty %}
+      <span class="community-header__display-name">{{ term.sub_title }}</span>
+    {% endif %}
+  </div>
+  <div class="community-header__price">
+    {% if startprice.min|render is not empty %}
+      <div class="community-header__price-title">Starting Price</div>
+      <span class="community-header__price-value">
+        ${{ startprice.min }}</span>
+    {% endif %}
+
+  </div>
+
+  <div class="community-header__spec">
+    {% if sqft.max and sqft.min|render is not empty %}
+      {% if sqft.max == sqft.min %}
+        <div class="community-header__spec-sqft">
+          <span aria-label="Area size" class="icon icon-area-size">
+            {{ sqft.max }} SQFT
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-sqft">
+          <span aria-label="Area size" class="icon icon-area-size">
+            {{ sqft.min }}
+          </span>
+          <span>-
+            {{ sqft.max }} SQFT
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if bedrooms.max and bedrooms.min|render is not empty %}
+      {% if bedrooms.max == bedrooms.min %}
+        <div class="community-header__spec-rooms">
+          <span aria-label="Rooms" class="icon icon-rooms">
+            {{ bedrooms.max }} BEDS
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-rooms">
+          <span aria-label="Rooms" class="icon icon-rooms">
+            {{ bedrooms.min }}
+          </span>
+          <span>-
+            {{ bedrooms.max }} BEDS
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if bath.max and bath.min|render is not empty %}
+      {% if bath.max == bath.min %}
+        <div class="community-header__spec-baths">
+          <span aria-label="Baths" class="icon icon-baths">
+            {{ bath.max }} BATHS
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-baths">
+          <span aria-label="Baths" class="icon icon-baths">
+            {{ bath.min }}
+          </span>
+          <span>-
+            {{ bath.max }} BATHS
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if garage.max and garage.min|render is not empty %}
+      {% if garage.max == garage.min %}
+        <div class="community-header__spec-garage">
+          <span aria-label="Garage" class="icon icon-garage">
+            {{ garage.max }} GARAGE
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-garage">
+          <span aria-label="Garage" class="icon icon-garage">
+            {{ garage.min }}
+          </span>
+          <span>-
+            {{ garage.max }} GARAGE
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if storey.max and storey.min|render is not empty %}
+      {% if storey.max == storey.min %}
+        <div class="community-header__spec-storeyhome">
+          <span aria-label="Storey Home" class="icon icon-storey-home">
+            {{ storey.max }} STORY
+          </span>
+        </div>
+      {% else %}
+        <div class="community-header__spec-storeyhome">
+          <span aria-label="Storey Home" class="icon icon-storey-home">
+            {{ storey.min }}
+          </span>
+          <span>-
+            {{ storey.max }} STORY
+          </span>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+  <div class="community-header__share">{{ drupal_block('better_social_sharing_buttons_block') }}</div>
+</div>

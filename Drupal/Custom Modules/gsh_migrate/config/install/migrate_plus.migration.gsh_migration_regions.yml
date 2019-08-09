@@ -1,0 +1,42 @@
+id: gsh_migration_regions
+label: 'Migrate Regions data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/region.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+  description/value: term_description
+  description/format:
+      plugin: default_value
+      default_value: "full_html"
+  field_featured_image: featured_image
+  field_sub_title: sub_title
+  field_intro: intro
+  field_image: image
+  field_benefits:
+    - plugin: explode
+      delimiter: "|"
+      source: fcid
+    - plugin: skip_on_empty
+      method: process
+    - plugin: migration_lookup
+      migration: gsh_migration_field_collection_benefits
+      no_stub: true
+    - plugin: iterator
+      process:
+        target_id: '0'
+        target_revision_id: '1'
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: regions
+migration_dependencies:
+  required:
+    - gsh_migration_field_collection_benefits
+dependencies: { }

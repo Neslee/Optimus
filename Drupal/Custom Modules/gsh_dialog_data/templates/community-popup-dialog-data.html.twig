@@ -1,0 +1,135 @@
+{#
+/**
+ * @file
+ * Theme implementation for community page popup data.
+#}
+
+{{ attach_library('gsh_theme/community') }}
+<div class="community__dialog--section">
+  <div class="container-fluid property__popup-header">
+    <div class="layout--gsh-wrapper">
+      <div class="community__information--section">
+        {% if term.title|render is not empty %}
+          <span>{{ term.title }}</span>
+        {% endif %}
+        {% if startprice.min|render is not empty %}
+          <span>${{ startprice.min }}</span>
+        {% endif %}
+      </div>
+      <div class="community__information--section community-header__spec">
+        {% if sqft.max and sqft.min|render is not empty %}
+          {% if sqft.max == sqft.min %}
+            <div class="community-header__spec-sqft">
+              <span aria-label="Area size" class="icon icon-area-size">
+                {{ sqft.max }} SQFT
+              </span>
+            </div>
+          {% else %}
+            <div class="community-header__spec-sqft">
+              <span aria-label="Area size" class="icon icon-area-size">
+                {{ sqft.min }}
+              </span>
+              <span>-
+                {{ sqft.max }} SQFT
+              </span>
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% if bedrooms.max and bedrooms.min|render is not empty %}
+          {% if bedrooms.max == bedrooms.min %}
+            <div class="community-header__spec-rooms">
+              <span aria-label="Rooms" class="icon icon-rooms">
+                {{ bedrooms.max }} Bedrooms
+              </span>
+            </div>
+          {% else %}
+            <div class="community-header__spec-rooms">
+              <span aria-label="Rooms" class="icon icon-rooms">
+                {{ bedrooms.min }}
+              </span>
+              <span>-
+                {{ bedrooms.max }} Bedrooms
+              </span>
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% if bath.max and bath.min|render is not empty %}
+          {% if bath.max == bath.min %}
+            <div class="community-header__spec-baths">
+              <span aria-label="Baths" class="icon icon-baths">
+                {{ bath.max }} Baths
+              </span>
+            </div>
+          {% else %}
+            <div class="community-header__spec-baths">
+              <span aria-label="Baths" class="icon icon-baths">
+                {{ bath.min }}
+              </span>
+              <span>-
+                {{ bath.max }} Baths
+              </span>
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% if garage.max and garage.min|render is not empty %}
+          {% if garage.max == garage.min %}
+            <div class="community-header__spec-garage">
+              <span aria-label="Garage" class="icon icon-garage">
+                {{ garage.max }} Garage
+              </span>
+            </div>
+          {% else %}
+            <div class="community-header__spec-garage">
+              <span aria-label="Garage" class="icon icon-garage">
+                {{ garage.min }}
+              </span>
+              <span>-
+                {{ garage.max }} Garage
+              </span>
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+      {{ drupal_block("better_social_sharing_buttons_block") }}
+      <div class="community__information--section">
+        <a class="property__dialogue--close" href="#">
+          <i class="icon icon-close"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="community__popup--count container">
+    {% if term.gallery_images_count|render is not empty %}
+      <a href="#gallery-image">
+            <span class="icon icon-picture">
+                Image ({{ term.gallery_images_count }})</span>
+      </a>
+    {% endif %}
+    {% if term.latitude|render is not empty or term.longitude|render is not empty %}
+      <a href="#popup-location">
+        <span class="icon icon-location">Location Map</span>
+      </a>
+    {% endif %}
+  </div>
+  <div class="community__popup--slider owl-carousel owl-theme">
+    {% for gallery_image in term.gallery_image %}
+      <img src="{{ gallery_image }}" class="gallery-image">
+    {% endfor %}
+    {% if term.latitude|render is not empty or term.longitude|render is not empty %}
+      <iframe frameborder="0"
+              src="https://maps.google.com/maps?q={{ term.latitude }},{{ term.longitude }}&output=embed"></iframe>
+    {% endif %}
+  </div>
+  <div class="community__popup--slidersync owl-carousel owl-theme">
+    {% for gallery_image in term.gallery_image %}
+      <img src="{{ gallery_image }}" class="gallery-image" id="gallery-image">
+    {% endfor %}
+    {% if term.latitude|render is not empty or term.longitude|render is not empty %}
+      <img class="illustration-image" id="popup-location"
+           src="../../../themes/custom/gsh_theme/assets/images/popup-thumb-map.jpg">
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,5 @@
+name: 'GSH Dialog Data'
+type: module
+description: 'Provides a way for building Dialog Data'
+core: 8.x
+package: 'GSH'

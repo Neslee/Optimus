@@ -1,0 +1,20 @@
+id: gsh_migration_spec_type
+label: 'Migrate Spec Type data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/spec-type.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  tid: tid
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: spec_type
+migration_dependencies:
+  required: { }
+dependencies: { }

@@ -1,0 +1,4 @@
+name: Image Compression
+description: Activia utility module
+type: module
+core: 8.x

@@ -1,0 +1,55 @@
+id: gsh_migration_images
+label: 'Migrate Image data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/images.csv'
+  header_row_count: 1
+  keys:
+    - fid
+process:
+  destination_basename:
+    plugin: callback
+    callable: basename
+    source: path
+  destination_basepath:
+    plugin: default_value
+    default_value: public://gsh-images/
+  destination_path:
+    plugin: concat
+    source:
+      - '@destination_basepath'
+      - '@destination_basename'
+
+  # Adding the mapping between the fields and the csv columns.
+  mid: fid
+  bundle:
+    plugin: default_value
+    default_value: image
+  name: name
+  'field_media_image/target_id':
+    -
+      plugin: skip_on_empty
+      method: process
+      source: path
+    -
+      plugin: file_copy
+      source:
+        - path
+        - '@destination_path'
+    -
+      plugin: entity_generate
+      values:
+        uid: uid
+  status:
+    plugin: default_value
+    default_value: 1
+  created: created
+  changed: created
+
+destination:
+  plugin: 'entity:media'
+migration_dependencies:
+  required: { }
+dependencies: { }

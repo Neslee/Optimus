@@ -1,0 +1,5 @@
+gsh_layout:
+  version: VERSION
+  css:
+    theme:
+      css/gsh_layout.css: {}

@@ -1,0 +1,22 @@
+id: gsh_migration_url_alias_taxonomy
+label: 'Migrate URL Aliases for Taxonomy from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/url-alias-taxonomy.csv'
+  header_row_count: 1
+  keys:
+    - tid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  source: source
+  alias: path
+  langcode:
+    plugin: default_value
+    default_value: und
+destination:
+  plugin: 'url_alias'
+migration_dependencies:
+  required: {}
+dependencies: { }

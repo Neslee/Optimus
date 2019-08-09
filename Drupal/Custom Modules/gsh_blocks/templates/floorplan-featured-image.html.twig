@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme implementation for floorplan page popup block.
+#}
+
+{{ attach_library('gsh_theme/floorplan') }}
+<div class="floorplan-hero-section">
+  <div class="floorplan-slider--wrapper">
+    {% if term.featured_image|render is not empty %}
+    <div class="floorplan-hero--slider owl-carousel owl-theme">
+      <img src="{{ term.featured_image }}" class="featured-image">
+      {% for marketing_image in term.marketing_image %}
+        <img src="{{ marketing_image }}" class="featured-image">
+      {% endfor %}
+      {% for elevation_image, elevation_name in term.elevation_image %}
+        <div class="elevation-section-images">
+          <img src="{{ elevation_image }}" class="featured-image">
+          <h3>{{ elevation_name }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="floorplan-popup-links">
+      {% if term.marketing_images_count|render is not empty %}
+      <div class="floorplan-popup-links--info tooltip">
+        <a class="use-ajax featured-picture" data-dialog-options="{&quot;width&quot;:1300}" data-dialog-type="modal"
+           href="/floorplan_popup/{{ term.term_id }}"></a>
+        <span class="tooltiptext">Pictures</span>
+      </div>
+      {% endif %}
+      {% if term.floorplan_video_count|render is not empty %}
+      <div class="floorplan-popup-links--info tooltip">
+        <a class="use-ajax featured-video" data-dialog-options="{&quot;width&quot;:1300}" data-dialog-type="modal"
+           href="/floorplan_popup/{{ term.term_id }}"></a>
+        <span class="tooltiptext">Videos</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="floorplan-hero--slidersync owl-carousel owl-theme">
+    <img src="{{ term.featured_image }}" class="gallery-image">
+    {% for marketing_image in term.marketing_image %}
+      <img src="{{ marketing_image }}" class="gallery-image">
+    {% endfor %}
+    {% for elevation_image, elevation_name in term.elevation_image %}
+      <img src="{{ elevation_image }}" class="featured-image">
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>

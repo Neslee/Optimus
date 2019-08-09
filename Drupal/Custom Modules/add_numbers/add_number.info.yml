@@ -1,0 +1,6 @@
+name: 'add_numbers'
+type: module
+description: 'Adding 2 Numbers and Showing the Result'
+core: 8.x
+package: 'Custom'
+dependencies: node

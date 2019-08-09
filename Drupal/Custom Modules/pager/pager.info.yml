@@ -1,0 +1,5 @@
+name: 'Article Pager'
+type: module
+description: 'Display 8 Articles in a Page'
+core: 8.x
+package: 'Custom'

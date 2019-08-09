@@ -1,0 +1,35 @@
+id: gsh_migration_users_new
+label: 'Migrate New Users data from the csv file'
+migration_group: gsh_migration
+source:
+  plugin: csv
+  # Full path to the file.
+  path: 'modules/custom/gsh_migrate/assets/csv/users-new.csv'
+  header_row_count: 1
+  keys:
+    - uid
+process:
+  # Adding the mapping between the fields and the csv columns.
+  name: title
+  uid: uid
+  mail: email
+  pass: password_hash
+  status: active
+  roles:
+    - plugin: explode
+      delimiter: ','
+      source: roles
+  field_first_name: first_name
+  field_last_name: last_name
+  field_phone_number: phone_number
+  user_picture:
+    - plugin: user_image_import_process
+      source: picture
+  created: created_date
+  access: last_access
+  login: last_login
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  required: { }
+dependencies: { }
